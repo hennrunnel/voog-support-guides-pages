@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voog Support Guides - Complete Index</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #007cba;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .stats {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007cba;
+            text-align: center;
+        }
+        .search-container {
+            margin-bottom: 20px;
+        }
+        .search-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.2s ease;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #007cba;
+        }
+        .controls {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 8px 16px;
+            border: 1px solid #007cba;
+            background: white;
+            color: #007cba;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #007cba;
+            color: white;
+        }
+        .btn.active {
+            background: #007cba;
+            color: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        th {
+            background: #f8f9fa;
+            padding: 12px 8px;
+            text-align: left;
+            border-bottom: 2px solid #dee2e6;
+            font-weight: 600;
+            color: #495057;
+        }
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #dee2e6;
+            vertical-align: top;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        .title-link {
+            color: #007cba;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .title-link:hover {
+            text-decoration: underline;
+        }
+        .original-link {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .original-link:hover {
+            text-decoration: underline;
+        }
+        .estonian-link {
+            color: #ff6b35;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .estonian-link:hover {
+            text-decoration: underline;
+        }
+        .section-badge {
+            background: #e9ecef;
+            color: #495057;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        .size {
+            font-family: monospace;
+            color: #6c757d;
+            font-size: 12px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        .hidden {
+            display: none;
+        }
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .language-switch a {
+            color: #007cba;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #007cba;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .language-switch a:hover {
+            background: #007cba;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-switch">
+            <a href="../et/index.html">Eesti</a>
+        </div>
+        <h1>Voog Support Guides - Complete Index</h1>
+        
+        <div class="stats">
+            <strong>📊 Total: <span id="totalArticles">0</span> articles</strong> | 
+            <strong>📁 Sections: <span id="totalSections">0</span></strong> | 
+            <strong>📅 Last updated: <span id="lastUpdated"></span></strong>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title or section...">
+        </div>
+
+        <div class="controls">
+            <button class="btn active" data-filter="all">All Articles</button>
+            <button class="btn" data-filter="all-about-languages">Languages</button>
+            <button class="btn" data-filter="content-areas">Content Areas</button>
+            <button class="btn" data-filter="creating-and-managing-forms">Forms</button>
+            <button class="btn" data-filter="managing-your-blog">Blog</button>
+            <button class="btn" data-filter="managing-your-content">Content</button>
+            <button class="btn" data-filter="managing-your-website-pages">Pages</button>
+            <button class="btn" data-filter="online-store">Online Store</button>
+            <button class="btn" data-filter="seo">SEO</button>
+            <button class="btn" data-filter="setting-up-your-account">Account</button>
+            <button class="btn" data-filter="stats-and-maintenance">Stats & Maintenance</button>
+            <button class="btn" data-filter="video-tutorials">Video Tutorials</button>
+            <button class="btn" data-filter="webinars">Webinars</button>
+            <button class="btn" data-filter="your-pictures-and-files">Pictures & Files</button>
+            <button class="btn" data-filter="your-subscriptions">Subscriptions</button>
+            <button class="btn" data-filter="your-website-addresses">Addresses</button>
+            <button class="btn" data-filter="your-websites-design">Design</button>
+        </div>
+
+        <table id="articlesTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Section</th>
+                    <th>Original URL</th>
+                    <th>Estonian</th>
+                    <th>Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-section="all-about-languages">
+                    <td><a href="all-about-languages/building-your-website-in-multiple-languages.html" class="title-link">Build your website in multiple languages</a></td>
+                    <td><span class="section-badge">Languages</span></td>
+                    <td><a href="https://www.voog.com/support/all-about-languages/building-your-website-in-multiple-languages" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/keeled/sinu-saidi-ehitamine-mitmes-keeles.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">151KB</td>
+                </tr>
+                <tr data-section="all-about-languages">
+                    <td><a href="all-about-languages/changing-the-interface-language.html" class="title-link">Change the interface language</a></td>
+                    <td><span class="section-badge">Languages</span></td>
+                    <td><a href="https://www.voog.com/support/all-about-languages/changing-the-interface-language" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/keeled/kasutajaliidese-keele-muutmine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="all-about-languages">
+                    <td><a href="all-about-languages/changing-the-language-code-in-your-site-menu.html" class="title-link">Change the language code in your site menu</a></td>
+                    <td><span class="section-badge">Languages</span></td>
+                    <td><a href="https://www.voog.com/support/all-about-languages/changing-the-language-code-in-your-site-menu" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="all-about-languages">
+                    <td><a href="all-about-languages/choosing-the-default-language-for-your-visitors.html" class="title-link">Choose the default language for your visitors</a></td>
+                    <td><span class="section-badge">Languages</span></td>
+                    <td><a href="https://www.voog.com/support/all-about-languages/choosing-the-default-language-for-your-visitors" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="all-about-languages">
+                    <td><a href="all-about-languages/configuring-the-flags-menu.html" class="title-link">Configure the flags menu</a></td>
+                    <td><span class="section-badge">Languages</span></td>
+                    <td><a href="https://www.voog.com/support/all-about-languages/configuring-the-flags-menu" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="content-areas">
+                    <td><a href="content-areas/adding-and-removing-content-areas.html" class="title-link">Add and remove content areas</a></td>
+                    <td><span class="section-badge">Content Areas</span></td>
+                    <td><a href="https://www.voog.com/support/content-areas/adding-and-removing-content-areas" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/sisualad/sisualade-lisamine-ja-eemaldamine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">144KB</td>
+                </tr>
+                <tr data-section="content-areas">
+                    <td><a href="content-areas/rearranging-content-areas.html" class="title-link">Rearrange content areas</a></td>
+                    <td><span class="section-badge">Content Areas</span></td>
+                    <td><a href="https://www.voog.com/support/content-areas/rearranging-content-areas" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">142KB</td>
+                </tr>
+                <tr data-section="content-areas">
+                    <td><a href="content-areas/what-is-a-content-area.html" class="title-link">What is a content area?</a></td>
+                    <td><span class="section-badge">Content Areas</span></td>
+                    <td><a href="https://www.voog.com/support/content-areas/what-is-a-content-area" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/sisualad/mis-on-sisuala.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">156KB</td>
+                </tr>
+                <tr data-section="creating-and-managing-forms">
+                    <td><a href="creating-and-managing-forms/creating-a-new-form.html" class="title-link">Create a new form</a></td>
+                    <td><span class="section-badge">Forms</span></td>
+                    <td><a href="https://www.voog.com/support/creating-and-managing-forms/creating-a-new-form" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="creating-and-managing-forms">
+                    <td><a href="creating-and-managing-forms/editing-your-form-fields.html" class="title-link">Edit your form fields</a></td>
+                    <td><span class="section-badge">Forms</span></td>
+                    <td><a href="https://www.voog.com/support/creating-and-managing-forms/editing-your-form-fields" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">145KB</td>
+                </tr>
+                <tr data-section="creating-and-managing-forms">
+                    <td><a href="creating-and-managing-forms/managing-submitted-form-entries.html" class="title-link">Manage submitted form entries</a></td>
+                    <td><span class="section-badge">Forms</span></td>
+                    <td><a href="https://www.voog.com/support/creating-and-managing-forms/managing-submitted-form-entries" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="creating-and-managing-forms">
+                    <td><a href="creating-and-managing-forms/say-hello-to-forms.html" class="title-link">Say “hello” to forms</a></td>
+                    <td><span class="section-badge">Forms</span></td>
+                    <td><a href="https://www.voog.com/support/creating-and-managing-forms/say-hello-to-forms" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/vormid/utle-tere-vormidele.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">142KB</td>
+                </tr>
+                <tr data-section="managing-your-blog">
+                    <td><a href="managing-your-blog/adding-new-or-removing-old-posts.html" class="title-link">Add or delete blog posts</a></td>
+                    <td><span class="section-badge">Blog</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-blog/adding-new-or-removing-old-posts" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">145KB</td>
+                </tr>
+                <tr data-section="managing-your-blog">
+                    <td><a href="managing-your-blog/going-live-with-your-blog-post.html" class="title-link">How do I publish my blog post?</a></td>
+                    <td><span class="section-badge">Blog</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-blog/going-live-with-your-blog-post" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">142KB</td>
+                </tr>
+                <tr data-section="managing-your-blog">
+                    <td><a href="managing-your-blog/how-to-modify-your-post-for-social-media.html" class="title-link">How do I modify my article for social media?</a></td>
+                    <td><span class="section-badge">Blog</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-blog/how-to-modify-your-post-for-social-media" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="managing-your-blog">
+                    <td><a href="managing-your-blog/managing-blog-comments.html" class="title-link">How can I manage comments on my blog?</a></td>
+                    <td><span class="section-badge">Blog</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-blog/managing-blog-comments" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/blogi/blogi-kommentaaride-haldamine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="managing-your-blog">
+                    <td><a href="managing-your-blog/reviewing-blog-author-and-date.html" class="title-link">Review blog author and date</a></td>
+                    <td><span class="section-badge">Blog</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-blog/reviewing-blog-author-and-date" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="managing-your-blog">
+                    <td><a href="managing-your-blog/starting-your-first-blog-with-voog.html" class="title-link">Start your first blog with Voog</a></td>
+                    <td><span class="section-badge">Blog</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-blog/starting-your-first-blog-with-voog" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">144KB</td>
+                </tr>
+                <tr data-section="managing-your-blog">
+                    <td><a href="managing-your-blog/using-tags-with-your-blog.html" class="title-link">Use tags for your blog</a></td>
+                    <td><span class="section-badge">Blog</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-blog/using-tags-with-your-blog" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">142KB</td>
+                </tr>
+                <tr data-section="managing-your-content">
+                    <td><a href="managing-your-content/add-booklux-booking-widget-to-your-website.html" class="title-link"> Add a BookLux booking widget to your website</a></td>
+                    <td><span class="section-badge">Content</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-content/add-booklux-booking-widget-to-your-website" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">146KB</td>
+                </tr>
+                <tr data-section="managing-your-content">
+                    <td><a href="managing-your-content/adding-a-live-chat-to-your-site.html" class="title-link">Add live chat to your site</a></td>
+                    <td><span class="section-badge">Content</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-content/adding-a-live-chat-to-your-site" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">139KB</td>
+                </tr>
+                <tr data-section="managing-your-content">
+                    <td><a href="managing-your-content/adding-smaily-newsletter-subscription-form-to-voog-website.html" class="title-link">Add a Smaily newsletter subscription form to your website</a></td>
+                    <td><span class="section-badge">Content</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-content/adding-smaily-newsletter-subscription-form-to-voog-website" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">156KB</td>
+                </tr>
+                <tr data-section="managing-your-content">
+                    <td><a href="managing-your-content/building-tables.html" class="title-link">Build tables</a></td>
+                    <td><span class="section-badge">Content</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-content/building-tables" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/sisu-haldamine/tabelite-ehitamine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">151KB</td>
+                </tr>
+                <tr data-section="managing-your-content">
+                    <td><a href="managing-your-content/creating-buttons.html" class="title-link">Create buttons</a></td>
+                    <td><span class="section-badge">Content</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-content/creating-buttons" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/sisu-haldamine/nuppude-loomine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">144KB</td>
+                </tr>
+                <tr data-section="managing-your-content">
+                    <td><a href="managing-your-content/creating-links.html" class="title-link">Create links</a></td>
+                    <td><span class="section-badge">Content</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-content/creating-links" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/sisu-haldamine/linkide-loomine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">151KB</td>
+                </tr>
+                <tr data-section="managing-your-content">
+                    <td><a href="managing-your-content/inserting-custom-content.html" class="title-link">Add custom content</a></td>
+                    <td><span class="section-badge">Content</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-content/inserting-custom-content" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">144KB</td>
+                </tr>
+                <tr data-section="managing-your-content">
+                    <td><a href="managing-your-content/inserting-google-calendar.html" class="title-link">Insert a Google Calendar</a></td>
+                    <td><span class="section-badge">Content</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-content/inserting-google-calendar" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">148KB</td>
+                </tr>
+                <tr data-section="managing-your-content">
+                    <td><a href="managing-your-content/inserting-mailchimp-pop-up-signup-form.html" class="title-link">Insert a Mailchimp pop-up signup form</a></td>
+                    <td><span class="section-badge">Content</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-content/inserting-mailchimp-pop-up-signup-form" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="managing-your-content">
+                    <td><a href="managing-your-content/inserting-videos-and-maps.html" class="title-link">Insert videos and maps</a></td>
+                    <td><span class="section-badge">Content</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-content/inserting-videos-and-maps" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">144KB</td>
+                </tr>
+                <tr data-section="managing-your-content">
+                    <td><a href="managing-your-content/managing-texts.html" class="title-link">Manage texts</a></td>
+                    <td><span class="section-badge">Content</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-content/managing-texts" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">156KB</td>
+                </tr>
+                <tr data-section="managing-your-content">
+                    <td><a href="managing-your-content/using-the-undo-function.html" class="title-link">Use the undo function</a></td>
+                    <td><span class="section-badge">Content</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-content/using-the-undo-function" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">144KB</td>
+                </tr>
+                <tr data-section="managing-your-website-pages">
+                    <td><a href="managing-your-website-pages/changing-page-addresses.html" class="title-link">Update page addresses</a></td>
+                    <td><span class="section-badge">Pages</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-website-pages/changing-page-addresses" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/lehed/lehe-aadressi-muutmine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">142KB</td>
+                </tr>
+                <tr data-section="managing-your-website-pages">
+                    <td><a href="managing-your-website-pages/changing-page-titles-and-descriptions.html" class="title-link">Edit page titles and descriptions</a></td>
+                    <td><span class="section-badge">Pages</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-website-pages/changing-page-titles-and-descriptions" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/lehed/lehtede-pealkirjade-ja-kirjelduste-muutmine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">145KB</td>
+                </tr>
+                <tr data-section="managing-your-website-pages">
+                    <td><a href="managing-your-website-pages/changing-your-pages-layout.html" class="title-link">Change your page layout</a></td>
+                    <td><span class="section-badge">Pages</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-website-pages/changing-your-pages-layout" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="managing-your-website-pages">
+                    <td><a href="managing-your-website-pages/creating-a-custom-401-and-404-page.html" class="title-link">Set up custom 401 and 404 pages</a></td>
+                    <td><span class="section-badge">Pages</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-website-pages/creating-a-custom-401-and-404-page" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/lehed/isikuparaste-401-ja-404-lehtede-loomine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="managing-your-website-pages">
+                    <td><a href="managing-your-website-pages/creating-a-link-instead-of-subpage.html" class="title-link">Add a link instead of a subpage</a></td>
+                    <td><span class="section-badge">Pages</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-website-pages/creating-a-link-instead-of-subpage" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/lehed/lehe-asemel-lingi-loomine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">143KB</td>
+                </tr>
+                <tr data-section="managing-your-website-pages">
+                    <td><a href="managing-your-website-pages/creating-new-or-removing-old-pages.html" class="title-link">Create or delete pages</a></td>
+                    <td><span class="section-badge">Pages</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-website-pages/creating-new-or-removing-old-pages" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/lehed/uute-lehtede-loomine-ja-vanade-kustutamine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">148KB</td>
+                </tr>
+                <tr data-section="managing-your-website-pages">
+                    <td><a href="managing-your-website-pages/duplicating-content.html" class="title-link">Duplicate page content</a></td>
+                    <td><span class="section-badge">Pages</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-website-pages/duplicating-content" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/lehed/lehe-sisu-kopeerimine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">148KB</td>
+                </tr>
+                <tr data-section="managing-your-website-pages">
+                    <td><a href="managing-your-website-pages/hiding-pages-and-making-them-visible-again.html" class="title-link">Hide pages and make them visible again</a></td>
+                    <td><span class="section-badge">Pages</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-website-pages/hiding-pages-and-making-them-visible-again" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/lehed/lehe-peitmine-ja-avalikustamine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="managing-your-website-pages">
+                    <td><a href="managing-your-website-pages/index.html" class="title-link"><title>Voog Support Guides - Pages Section</title></a></td>
+                    <td><span class="section-badge">Pages</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-website-pages/index" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">9KB</td>
+                </tr>
+                <tr data-section="managing-your-website-pages">
+                    <td><a href="managing-your-website-pages/password-protected-pages.html" class="title-link">Protect pages with a password</a></td>
+                    <td><span class="section-badge">Pages</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-website-pages/password-protected-pages" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/lehed/salasonaga-kaitstud-lehed.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">147KB</td>
+                </tr>
+                <tr data-section="managing-your-website-pages">
+                    <td><a href="managing-your-website-pages/reorganizing-the-structure-of-your-website.html" class="title-link">Reorganize your website structure</a></td>
+                    <td><span class="section-badge">Pages</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-website-pages/reorganizing-the-structure-of-your-website" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/lehed/saidi-struktuuri-korrastamine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">144KB</td>
+                </tr>
+                <tr data-section="managing-your-website-pages">
+                    <td><a href="managing-your-website-pages/using-the-search-engine.html" class="title-link">Use the website search engine</a></td>
+                    <td><span class="section-badge">Pages</span></td>
+                    <td><a href="https://www.voog.com/support/managing-your-website-pages/using-the-search-engine" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/lehed/otsingumootori-kasutamine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="online-store">
+                    <td><a href="online-store/add-online-store.html" class="title-link">Add an online store to your website</a></td>
+                    <td><span class="section-badge">Online Store</span></td>
+                    <td><a href="https://www.voog.com/support/online-store/add-online-store" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">152KB</td>
+                </tr>
+                <tr data-section="online-store">
+                    <td><a href="online-store/add-shipping-methods.html" class="title-link">Add shipping methods to your online store</a></td>
+                    <td><span class="section-badge">Online Store</span></td>
+                    <td><a href="https://www.voog.com/support/online-store/add-shipping-methods" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">161KB</td>
+                </tr>
+                <tr data-section="online-store">
+                    <td><a href="online-store/checkout-fields.html" class="title-link">Customize checkout fields</a></td>
+                    <td><span class="section-badge">Online Store</span></td>
+                    <td><a href="https://www.voog.com/support/online-store/checkout-fields" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">148KB</td>
+                </tr>
+                <tr data-section="online-store">
+                    <td><a href="online-store/discount-codes.html" class="title-link">Create discount codes</a></td>
+                    <td><span class="section-badge">Online Store</span></td>
+                    <td><a href="https://www.voog.com/support/online-store/discount-codes" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/e-pood/sooduskoodid.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">142KB</td>
+                </tr>
+                <tr data-section="online-store">
+                    <td><a href="online-store/e-mail-previews.html" class="title-link">Preview email notifications</a></td>
+                    <td><span class="section-badge">Online Store</span></td>
+                    <td><a href="https://www.voog.com/support/online-store/e-mail-previews" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">142KB</td>
+                </tr>
+                <tr data-section="online-store">
+                    <td><a href="online-store/how-to-add-buy-buttons-and-new-products-to-your-online-store.html" class="title-link">Add new products to your online store</a></td>
+                    <td><span class="section-badge">Online Store</span></td>
+                    <td><a href="https://www.voog.com/support/online-store/how-to-add-buy-buttons-and-new-products-to-your-online-store" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">153KB</td>
+                </tr>
+                <tr data-section="online-store">
+                    <td><a href="online-store/manage-your-orders.html" class="title-link">Manage orders</a></td>
+                    <td><span class="section-badge">Online Store</span></td>
+                    <td><a href="https://www.voog.com/support/online-store/manage-your-orders" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">164KB</td>
+                </tr>
+                <tr data-section="online-store">
+                    <td><a href="online-store/payment-methods.html" class="title-link">Set up payment methods for your online store</a></td>
+                    <td><span class="section-badge">Online Store</span></td>
+                    <td><a href="https://www.voog.com/support/online-store/payment-methods" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/e-pood/makseviisid.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="online-store">
+                    <td><a href="online-store/products-import.html" class="title-link">Import products</a></td>
+                    <td><span class="section-badge">Online Store</span></td>
+                    <td><a href="https://www.voog.com/support/online-store/products-import" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">148KB</td>
+                </tr>
+                <tr data-section="online-store">
+                    <td><a href="online-store/store-structure.html" class="title-link">Organize your store structure</a></td>
+                    <td><span class="section-badge">Online Store</span></td>
+                    <td><a href="https://www.voog.com/support/online-store/store-structure" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">158KB</td>
+                </tr>
+                <tr data-section="seo">
+                    <td><a href="seo/getting-your-website-to-appear-in-google-and-bing.html" class="title-link">Add your website to the Google search engine</a></td>
+                    <td><span class="section-badge">SEO</span></td>
+                    <td><a href="https://www.voog.com/support/seo/getting-your-website-to-appear-in-google-and-bing" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">147KB</td>
+                </tr>
+                <tr data-section="seo">
+                    <td><a href="seo/seo-optimization-in-voog.html" class="title-link">Optimize SEO in Voog</a></td>
+                    <td><span class="section-badge">SEO</span></td>
+                    <td><a href="https://www.voog.com/support/seo/seo-optimization-in-voog" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">150KB</td>
+                </tr>
+                <tr data-section="seo">
+                    <td><a href="seo/titles-and-descriptions.html" class="title-link">Edit titles and descriptions</a></td>
+                    <td><span class="section-badge">SEO</span></td>
+                    <td><a href="https://www.voog.com/support/seo/titles-and-descriptions" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/seo/pealkirjad-ja-kirjeldused.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="setting-up-your-account">
+                    <td><a href="setting-up-your-account/logging-into-your-website.html" class="title-link">Log in to your website</a></td>
+                    <td><span class="section-badge">Account</span></td>
+                    <td><a href="https://www.voog.com/support/setting-up-your-account/logging-into-your-website" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/konto-loomine/saidile-sisselogimine.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">143KB</td>
+                </tr>
+                <tr data-section="setting-up-your-account">
+                    <td><a href="setting-up-your-account/other-people-who-can-edit-your-website.html" class="title-link">Invite others to edit your website</a></td>
+                    <td><span class="section-badge">Account</span></td>
+                    <td><a href="https://www.voog.com/support/setting-up-your-account/other-people-who-can-edit-your-website" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">146KB</td>
+                </tr>
+                <tr data-section="setting-up-your-account">
+                    <td><a href="setting-up-your-account/resetting-your-password.html" class="title-link">Reset your password</a></td>
+                    <td><span class="section-badge">Account</span></td>
+                    <td><a href="https://www.voog.com/support/setting-up-your-account/resetting-your-password" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">144KB</td>
+                </tr>
+                <tr data-section="setting-up-your-account">
+                    <td><a href="setting-up-your-account/signing-up-to-voog.html" class="title-link">Sign up for Voog</a></td>
+                    <td><span class="section-badge">Account</span></td>
+                    <td><a href="https://www.voog.com/support/setting-up-your-account/signing-up-to-voog" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="setting-up-your-account">
+                    <td><a href="setting-up-your-account/what-if-you-have-several-websites-with-voog.html" class="title-link">Manage multiple websites on Voog</a></td>
+                    <td><span class="section-badge">Account</span></td>
+                    <td><a href="https://www.voog.com/support/setting-up-your-account/what-if-you-have-several-websites-with-voog" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">143KB</td>
+                </tr>
+                <tr data-section="stats-and-maintenance">
+                    <td><a href="stats-and-maintenance/about-backups-and-service-uptime.html" class="title-link">Ensure backups and service uptime</a></td>
+                    <td><span class="section-badge">Stats & Maintenance</span></td>
+                    <td><a href="https://www.voog.com/support/stats-and-maintenance/about-backups-and-service-uptime" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">138KB</td>
+                </tr>
+                <tr data-section="stats-and-maintenance">
+                    <td><a href="stats-and-maintenance/adding-facebook-pixel-to-your-website.html" class="title-link">Add Facebook Pixel to your website</a></td>
+                    <td><span class="section-badge">Stats & Maintenance</span></td>
+                    <td><a href="https://www.voog.com/support/stats-and-maintenance/adding-facebook-pixel-to-your-website" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/statistika-ja-saidi-haldamine/facebook-pixeli-lisamine-sinu-veebilehele.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">142KB</td>
+                </tr>
+                <tr data-section="stats-and-maintenance">
+                    <td><a href="stats-and-maintenance/adding-google-analytics-to-your-website.html" class="title-link">Add Google Analytics to your website</a></td>
+                    <td><span class="section-badge">Stats & Maintenance</span></td>
+                    <td><a href="https://www.voog.com/support/stats-and-maintenance/adding-google-analytics-to-your-website" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/statistika-ja-saidi-haldamine/google-analyticsi-lisamine-sinu-veebilehele.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">142KB</td>
+                </tr>
+                <tr data-section="stats-and-maintenance">
+                    <td><a href="stats-and-maintenance/can-voog-be-used-on-a-personal-server.html" class="title-link">Can Voog be used on a personal server?</a></td>
+                    <td><span class="section-badge">Stats & Maintenance</span></td>
+                    <td><a href="https://www.voog.com/support/stats-and-maintenance/can-voog-be-used-on-a-personal-server" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">139KB</td>
+                </tr>
+                <tr data-section="stats-and-maintenance">
+                    <td><a href="stats-and-maintenance/cookies-notification.html" class="title-link">Add a cookie notification to your website</a></td>
+                    <td><span class="section-badge">Stats & Maintenance</span></td>
+                    <td><a href="https://www.voog.com/support/stats-and-maintenance/cookies-notification" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="stats-and-maintenance">
+                    <td><a href="stats-and-maintenance/generating-an-export-of-your-website.html" class="title-link">Export your website content</a></td>
+                    <td><span class="section-badge">Stats & Maintenance</span></td>
+                    <td><a href="https://www.voog.com/support/stats-and-maintenance/generating-an-export-of-your-website" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">142KB</td>
+                </tr>
+                <tr data-section="stats-and-maintenance">
+                    <td><a href="stats-and-maintenance/getting-your-website-to-show-on-google-search-results.html" class="title-link">Get your website to appear in Google search results</a></td>
+                    <td><span class="section-badge">Stats & Maintenance</span></td>
+                    <td><a href="https://www.voog.com/support/stats-and-maintenance/getting-your-website-to-show-on-google-search-results" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="stats-and-maintenance">
+                    <td><a href="stats-and-maintenance/how-to-generate-an-api-token.html" class="title-link">Generate an API token</a></td>
+                    <td><span class="section-badge">Stats & Maintenance</span></td>
+                    <td><a href="https://www.voog.com/support/stats-and-maintenance/how-to-generate-an-api-token" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="stats-and-maintenance">
+                    <td><a href="stats-and-maintenance/overview-of-voog-s-statistics.html" class="title-link">Explore Voog’s statistics</a></td>
+                    <td><span class="section-badge">Stats & Maintenance</span></td>
+                    <td><a href="https://www.voog.com/support/stats-and-maintenance/overview-of-voog-s-statistics" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="stats-and-maintenance">
+                    <td><a href="stats-and-maintenance/which-browsers-are-supported-by-voog.html" class="title-link">Find out which browsers Voog supports</a></td>
+                    <td><span class="section-badge">Stats & Maintenance</span></td>
+                    <td><a href="https://www.voog.com/support/stats-and-maintenance/which-browsers-are-supported-by-voog" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">138KB</td>
+                </tr>
+                <tr data-section="video-tutorials">
+                    <td><a href="video-tutorials/creating-terms-of-service-page-link.html" class="title-link">Create a terms of service page link</a></td>
+                    <td><span class="section-badge">Video Tutorials</span></td>
+                    <td><a href="https://www.voog.com/support/video-tutorials/creating-terms-of-service-page-link" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="video-tutorials">
+                    <td><a href="video-tutorials/descriptions-for-your-website.html" class="title-link">Edit page descriptions</a></td>
+                    <td><span class="section-badge">Video Tutorials</span></td>
+                    <td><a href="https://www.voog.com/support/video-tutorials/descriptions-for-your-website" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">138KB</td>
+                </tr>
+                <tr data-section="video-tutorials">
+                    <td><a href="video-tutorials/design-editor-tool.html" class="title-link">Navigate the design editor tool</a></td>
+                    <td><span class="section-badge">Video Tutorials</span></td>
+                    <td><a href="https://www.voog.com/support/video-tutorials/design-editor-tool" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">138KB</td>
+                </tr>
+                <tr data-section="video-tutorials">
+                    <td><a href="video-tutorials/duplicate-pages.html" class="title-link">Duplicate pages for a new language</a></td>
+                    <td><span class="section-badge">Video Tutorials</span></td>
+                    <td><a href="https://www.voog.com/support/video-tutorials/duplicate-pages" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">138KB</td>
+                </tr>
+                <tr data-section="video-tutorials">
+                    <td><a href="video-tutorials/facebook-page-plugin.html" class="title-link">Add a Facebook page plugin</a></td>
+                    <td><span class="section-badge">Video Tutorials</span></td>
+                    <td><a href="https://www.voog.com/support/video-tutorials/facebook-page-plugin" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">138KB</td>
+                </tr>
+                <tr data-section="video-tutorials">
+                    <td><a href="video-tutorials/ssl-certificate-activation.html" class="title-link">Activate your SSL certificate</a></td>
+                    <td><span class="section-badge">Video Tutorials</span></td>
+                    <td><a href="https://www.voog.com/support/video-tutorials/ssl-certificate-activation" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">143KB</td>
+                </tr>
+                <tr data-section="video-tutorials">
+                    <td><a href="video-tutorials/text-editor-tool.html" class="title-link">Use the text editor tool</a></td>
+                    <td><span class="section-badge">Video Tutorials</span></td>
+                    <td><a href="https://www.voog.com/support/video-tutorials/text-editor-tool" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="webinars">
+                    <td><a href="webinars/voog-webinar-09-01-2019.html" class="title-link">Voog Webinar: Getting started with Voog</a></td>
+                    <td><span class="section-badge">Webinars</span></td>
+                    <td><a href="https://www.voog.com/support/webinars/voog-webinar-09-01-2019" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">138KB</td>
+                </tr>
+                <tr data-section="your-pictures-and-files">
+                    <td><a href="your-pictures-and-files/adding-and-managing-pictures.html" class="title-link">Add and manage pictures</a></td>
+                    <td><span class="section-badge">Pictures & Files</span></td>
+                    <td><a href="https://www.voog.com/support/your-pictures-and-files/adding-and-managing-pictures" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">146KB</td>
+                </tr>
+                <tr data-section="your-pictures-and-files">
+                    <td><a href="your-pictures-and-files/collections.html" class="title-link">Use collections</a></td>
+                    <td><span class="section-badge">Pictures & Files</span></td>
+                    <td><a href="https://www.voog.com/support/your-pictures-and-files/collections" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/pildid-ja-failid/kollektsioonid.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">147KB</td>
+                </tr>
+                <tr data-section="your-pictures-and-files">
+                    <td><a href="your-pictures-and-files/picture-galleries.html" class="title-link">Create picture galleries</a></td>
+                    <td><span class="section-badge">Pictures & Files</span></td>
+                    <td><a href="https://www.voog.com/support/your-pictures-and-files/picture-galleries" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">150KB</td>
+                </tr>
+                <tr data-section="your-pictures-and-files">
+                    <td><a href="your-pictures-and-files/removing-multimedia-from-text-content-areas.html" class="title-link">Remove multimedia from text content areas</a></td>
+                    <td><span class="section-badge">Pictures & Files</span></td>
+                    <td><a href="https://www.voog.com/support/your-pictures-and-files/removing-multimedia-from-text-content-areas" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">142KB</td>
+                </tr>
+                <tr data-section="your-pictures-and-files">
+                    <td><a href="your-pictures-and-files/uploading-pictures-and-files.html" class="title-link">Upload pictures and files</a></td>
+                    <td><span class="section-badge">Pictures & Files</span></td>
+                    <td><a href="https://www.voog.com/support/your-pictures-and-files/uploading-pictures-and-files" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">145KB</td>
+                </tr>
+                <tr data-section="your-subscriptions">
+                    <td><a href="your-subscriptions/cancelling-your-subscriptions.html" class="title-link">Cancel your subscription</a></td>
+                    <td><span class="section-badge">Subscriptions</span></td>
+                    <td><a href="https://www.voog.com/support/your-subscriptions/cancelling-your-subscriptions" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="your-subscriptions">
+                    <td><a href="your-subscriptions/changing-your-subscriptions.html" class="title-link">Change your subscription</a></td>
+                    <td><span class="section-badge">Subscriptions</span></td>
+                    <td><a href="https://www.voog.com/support/your-subscriptions/changing-your-subscriptions" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="your-subscriptions">
+                    <td><a href="your-subscriptions/choosing-an-appropriate-subscription-plan.html" class="title-link">Choose the right subscription plan</a></td>
+                    <td><span class="section-badge">Subscriptions</span></td>
+                    <td><a href="https://www.voog.com/support/your-subscriptions/choosing-an-appropriate-subscription-plan" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">139KB</td>
+                </tr>
+                <tr data-section="your-subscriptions">
+                    <td><a href="your-subscriptions/credit-card-payments.html" class="title-link">Make credit card payments</a></td>
+                    <td><span class="section-badge">Subscriptions</span></td>
+                    <td><a href="https://www.voog.com/support/your-subscriptions/credit-card-payments" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/tellimus/krediitkaardi-maksed.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">144KB</td>
+                </tr>
+                <tr data-section="your-subscriptions">
+                    <td><a href="your-subscriptions/how-and-why-to-become-voog-affiliate-partner.html" class="title-link">How and why to become a Voog affiliate partner</a></td>
+                    <td><span class="section-badge">Subscriptions</span></td>
+                    <td><a href="https://www.voog.com/support/your-subscriptions/how-and-why-to-become-voog-affiliate-partner" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">144KB</td>
+                </tr>
+                <tr data-section="your-subscriptions">
+                    <td><a href="your-subscriptions/how-to-redeem-a-voucher-of-voog.html" class="title-link">Redeem a Voog voucher</a></td>
+                    <td><span class="section-badge">Subscriptions</span></td>
+                    <td><a href="https://www.voog.com/support/your-subscriptions/how-to-redeem-a-voucher-of-voog" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">144KB</td>
+                </tr>
+                <tr data-section="your-subscriptions">
+                    <td><a href="your-subscriptions/refer-and-earn.html" class="title-link">Refer and earn</a></td>
+                    <td><span class="section-badge">Subscriptions</span></td>
+                    <td><a href="https://www.voog.com/support/your-subscriptions/refer-and-earn" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">142KB</td>
+                </tr>
+                <tr data-section="your-subscriptions">
+                    <td><a href="your-subscriptions/store-transaction-fees.html" class="title-link">Calculate transaction fees for your online store</a></td>
+                    <td><span class="section-badge">Subscriptions</span></td>
+                    <td><a href="https://www.voog.com/support/your-subscriptions/store-transaction-fees" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">139KB</td>
+                </tr>
+                <tr data-section="your-subscriptions">
+                    <td><a href="your-subscriptions/where-can-you-find-your-invoices.html" class="title-link">Where can you find your invoices?</a></td>
+                    <td><span class="section-badge">Subscriptions</span></td>
+                    <td><a href="https://www.voog.com/support/your-subscriptions/where-can-you-find-your-invoices" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="your-website-addresses">
+                    <td><a href="your-website-addresses/adding-more-free-addresses.html" class="title-link">Add more free addresses</a></td>
+                    <td><span class="section-badge">Addresses</span></td>
+                    <td><a href="https://www.voog.com/support/your-website-addresses/adding-more-free-addresses" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="your-website-addresses">
+                    <td><a href="your-website-addresses/buying-personal-domain-names.html" class="title-link">Buy a personal domain name</a></td>
+                    <td><span class="section-badge">Addresses</span></td>
+                    <td><a href="https://www.voog.com/support/your-website-addresses/buying-personal-domain-names" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="your-website-addresses">
+                    <td><a href="your-website-addresses/does-voog-offer-an-e-mail-service.html" class="title-link">Does Voog offer an email service?</a></td>
+                    <td><span class="section-badge">Addresses</span></td>
+                    <td><a href="https://www.voog.com/support/your-website-addresses/does-voog-offer-an-e-mail-service" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="your-website-addresses">
+                    <td><a href="your-website-addresses/domain-prices.html" class="title-link">Check domain prices</a></td>
+                    <td><span class="section-badge">Addresses</span></td>
+                    <td><a href="https://www.voog.com/support/your-website-addresses/domain-prices" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/domeenid/domeenide-hinnad.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">152KB</td>
+                </tr>
+                <tr data-section="your-website-addresses">
+                    <td><a href="your-website-addresses/domain-settings.html" class="title-link">Manage your domain settings</a></td>
+                    <td><span class="section-badge">Addresses</span></td>
+                    <td><a href="https://www.voog.com/support/your-website-addresses/domain-settings" target="_blank" class="original-link">Original</a></td>
+                    <td><a href="../et/domeenid/domeeni-seaded.html" target="_blank" class="estonian-link">Eesti</a></td>
+                    <td class="size">145KB</td>
+                </tr>
+                <tr data-section="your-website-addresses">
+                    <td><a href="your-website-addresses/extending-your-domain-subscription.html" class="title-link">Extend your domain subscription</a></td>
+                    <td><span class="section-badge">Addresses</span></td>
+                    <td><a href="https://www.voog.com/support/your-website-addresses/extending-your-domain-subscription" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="your-website-addresses">
+                    <td><a href="your-website-addresses/ssl-certificate.html" class="title-link">Activate your SSL certificate</a></td>
+                    <td><span class="section-badge">Addresses</span></td>
+                    <td><a href="https://www.voog.com/support/your-website-addresses/ssl-certificate" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="your-website-addresses">
+                    <td><a href="your-website-addresses/using-your-already-existing-domain.html" class="title-link">Use your existing domain with Voog</a></td>
+                    <td><span class="section-badge">Addresses</span></td>
+                    <td><a href="https://www.voog.com/support/your-website-addresses/using-your-already-existing-domain" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">145KB</td>
+                </tr>
+                <tr data-section="your-website-addresses">
+                    <td><a href="your-website-addresses/which-addresses-can-you-use-with-voog.html" class="title-link">Which addresses can you use with Voog?</a></td>
+                    <td><span class="section-badge">Addresses</span></td>
+                    <td><a href="https://www.voog.com/support/your-website-addresses/which-addresses-can-you-use-with-voog" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="your-websites-design">
+                    <td><a href="your-websites-design/adding-a-favicon.html" class="title-link">Add a favicon</a></td>
+                    <td><span class="section-badge">Design</span></td>
+                    <td><a href="https://www.voog.com/support/your-websites-design/adding-a-favicon" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">141KB</td>
+                </tr>
+                <tr data-section="your-websites-design">
+                    <td><a href="your-websites-design/choosing-a-design-upon-signup.html" class="title-link">Choose a design upon signup</a></td>
+                    <td><span class="section-badge">Design</span></td>
+                    <td><a href="https://www.voog.com/support/your-websites-design/choosing-a-design-upon-signup" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="your-websites-design">
+                    <td><a href="your-websites-design/getting-a-fully-customized-design.html" class="title-link">Get a fully customized design</a></td>
+                    <td><span class="section-badge">Design</span></td>
+                    <td><a href="https://www.voog.com/support/your-websites-design/getting-a-fully-customized-design" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">145KB</td>
+                </tr>
+                <tr data-section="your-websites-design">
+                    <td><a href="your-websites-design/how-can-i-hide-the-voog-logo-in-the-footer-of-my-website.html" class="title-link">How can I hide the Voog logo from my website footer?</a></td>
+                    <td><span class="section-badge">Design</span></td>
+                    <td><a href="https://www.voog.com/support/your-websites-design/how-can-i-hide-the-voog-logo-in-the-footer-of-my-website" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">140KB</td>
+                </tr>
+                <tr data-section="your-websites-design">
+                    <td><a href="your-websites-design/switching-between-designs.html" class="title-link">Switch between designs</a></td>
+                    <td><span class="section-badge">Design</span></td>
+                    <td><a href="https://www.voog.com/support/your-websites-design/switching-between-designs" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">143KB</td>
+                </tr>
+                <tr data-section="your-websites-design">
+                    <td><a href="your-websites-design/using-the-background-picker.html" class="title-link">Use the background picker</a></td>
+                    <td><span class="section-badge">Design</span></td>
+                    <td><a href="https://www.voog.com/support/your-websites-design/using-the-background-picker" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">147KB</td>
+                </tr>
+                <tr data-section="your-websites-design">
+                    <td><a href="your-websites-design/voog-design-editor.html" class="title-link">Edit your design with the Voog design editor</a></td>
+                    <td><span class="section-badge">Design</span></td>
+                    <td><a href="https://www.voog.com/support/your-websites-design/voog-design-editor" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">148KB</td>
+                </tr>
+                <tr data-section="your-websites-design">
+                    <td><a href="your-websites-design/voog-designs-on-tablets-and-mobile-screens.html" class="title-link">View Voog designs on tablets and mobile screens</a></td>
+                    <td><span class="section-badge">Design</span></td>
+                    <td><a href="https://www.voog.com/support/your-websites-design/voog-designs-on-tablets-and-mobile-screens" target="_blank" class="original-link">Original</a></td>
+                    <td><span style="color: #ccc;">—</span></td>
+                    <td class="size">142KB</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="footer">
+            <p>📚 Complete Voog support documentation with cross-language navigation</p>
+            <p>🔗 <a href="https://www.voog.com/support" target="_blank">Original Support</a> | 
+               <a href="../et/index.html">Estonian Version</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Update statistics
+        function updateStats() {
+            const totalArticles = document.querySelectorAll('#articlesTable tbody tr').length;
+            const totalSections = new Set(Array.from(document.querySelectorAll('#articlesTable tbody tr')).map(row => row.dataset.section)).size;
+            
+            document.getElementById('totalArticles').textContent = totalArticles;
+            document.getElementById('totalSections').textContent = totalSections;
+            document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString();
+        }
+
+        // Search functionality
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const rows = document.querySelectorAll('#articlesTable tbody tr');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                rows.forEach(row => {
+                    const title = row.querySelector('.title-link').textContent.toLowerCase();
+                    const section = row.querySelector('.section-badge').textContent.toLowerCase();
+                    const isVisible = title.includes(searchTerm) || section.includes(searchTerm);
+                    
+                    row.style.display = isVisible ? '' : 'none';
+                });
+            });
+        }
+
+        // Filter functionality
+        function setupFilters() {
+            const filterButtons = document.querySelectorAll('.controls .btn');
+            const rows = document.querySelectorAll('#articlesTable tbody tr');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter rows
+                    rows.forEach(row => {
+                        const section = row.dataset.section;
+                        const isVisible = filter === 'all' || section === filter;
+                        row.style.display = isVisible ? '' : 'none';
+                    });
+                });
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStats();
+            setupSearch();
+            setupFilters();
+        });
+    </script>
+</body>
+</html>

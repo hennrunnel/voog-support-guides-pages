@@ -1,0 +1,698 @@
+Voog Tugiartiklid - Eesti Keeles
+================================
+
+Kokku artikleid: 115
+Sektsioone: 17
+
+Blogi (7 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: managing-your-blog
+
+  • Muuda blogi autorit ja avaldamiskuupäeva
+    Kohalik: blogi/blogi-autori-ja-avaldamise-kuupaeva-haldamine.html
+    Originaal: https://www.voog.com/tugi/blogi/blogi-autori-ja-avaldamise-kuupaeva-haldamine
+    Inglise: —
+
+  • Kuidas hallata blogi kommentaare
+    Kohalik: blogi/blogi-kommentaaride-haldamine.html
+    Originaal: https://www.voog.com/tugi/blogi/blogi-kommentaaride-haldamine
+    Inglise: ../en/managing-your-blog/managing-blog-comments.html
+
+  • Kuidas blogipostitusi avalikustada
+    Kohalik: blogi/blogipostituse-avaldamine.html
+    Originaal: https://www.voog.com/tugi/blogi/blogipostituse-avaldamine
+    Inglise: ../en/managing-your-blog/going-live-with-your-blog-post.html
+
+  • Kuidas kohandada blogipostitusi sotsiaalmeedias jagamiseks?
+    Kohalik: blogi/kuidas-kohandada-blogipostitusi-sotsiaalmeedias-jagamiseks.html
+    Originaal: https://www.voog.com/tugi/blogi/kuidas-kohandada-blogipostitusi-sotsiaalmeedias-jagamiseks
+    Inglise: ../en/managing-your-blog/how-to-modify-your-post-for-social-media.html
+
+  • Halda ja muuda blogi silte
+    Kohalik: blogi/siltide-haldamine.html
+    Originaal: https://www.voog.com/tugi/blogi/siltide-haldamine
+    Inglise: ../en/managing-your-blog/using-tags-with-your-blog.html
+
+  • Kuidas alustada blogimisega
+    Kohalik: blogi/sinu-esimese-blogi-loomine-voos.html
+    Originaal: https://www.voog.com/tugi/blogi/sinu-esimese-blogi-loomine-voos
+    Inglise: ../en/managing-your-blog/starting-your-first-blog-with-voog.html
+
+  • Kuidas luua blogi alamleht ja lisada uusi ning kustuta vanu postitusi
+    Kohalik: blogi/uute-postituste-lisamine-ja-vanade-kustutamine.html
+    Originaal: https://www.voog.com/tugi/blogi/uute-postituste-lisamine-ja-vanade-kustutamine
+    Inglise: ../en/managing-your-blog/adding-new-or-removing-old-posts.html
+
+
+Domeenid (9 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: your-website-addresses
+
+  • Muuda domeeni seadeid
+    Kohalik: domeenid/domeeni-seaded.html
+    Originaal: https://www.voog.com/tugi/domeenid/domeeni-seaded
+    Inglise: ../en/your-website-addresses/domain-settings.html
+
+  • Vaata domeenide hinnakirja
+    Kohalik: domeenid/domeenide-hinnad.html
+    Originaal: https://www.voog.com/tugi/domeenid/domeenide-hinnad
+    Inglise: ../en/your-website-addresses/domain-prices.html
+
+  • Kuidas pikendada oma domeeni
+    Kohalik: domeenid/domeeninime-pikendamine.html
+    Originaal: https://www.voog.com/tugi/domeenid/domeeninime-pikendamine
+    Inglise: —
+
+  • Kas Voog pakub e-maili teenust?
+    Kohalik: domeenid/kas-voog-pakub-e-maili-teenust.html
+    Originaal: https://www.voog.com/tugi/domeenid/kas-voog-pakub-e-maili-teenust
+    Inglise: ../en/your-website-addresses/does-voog-offer-an-e-mail-service.html
+
+  • Kasutad juba eelnevalt eksisteerivat domeeni
+    Kohalik: domeenid/kasuta-juba-eelnevalt-eksisteerivat-domeeni.html
+    Originaal: https://www.voog.com/tugi/domeenid/kasuta-juba-eelnevalt-eksisteerivat-domeeni
+    Inglise: —
+
+  • Lisa saidile tasuta .voog.com domeene
+    Kohalik: domeenid/lisa-saidile-rohkem-tasuta-aadresse.html
+    Originaal: https://www.voog.com/tugi/domeenid/lisa-saidile-rohkem-tasuta-aadresse
+    Inglise: ../en/your-website-addresses/adding-more-free-addresses.html
+
+  • Lisa oma Voo saidile tehniline ja personaalne domeen
+    Kohalik: domeenid/milliseid-aadresseid-saad-enda-voo-saidiga-kasutada.html
+    Originaal: https://www.voog.com/tugi/domeenid/milliseid-aadresseid-saad-enda-voo-saidiga-kasutada
+    Inglise: —
+
+  • Kuidas osta personaalne domeen Voos
+    Kohalik: domeenid/personaalse-domeeni-ostmine.html
+    Originaal: https://www.voog.com/tugi/domeenid/personaalse-domeeni-ostmine
+    Inglise: ../en/your-website-addresses/buying-personal-domain-names.html
+
+  • Lisa tasuta SSL-sertifikaat oma domeenile
+    Kohalik: domeenid/ssl-sertifikaadi-lisamine-domeenile.html
+    Originaal: https://www.voog.com/tugi/domeenid/ssl-sertifikaadi-lisamine-domeenile
+    Inglise: —
+
+
+E-pood (11 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: online-store
+
+  • Vaata e-poe tellimusteavituste eelvaadet
+    Kohalik: e-pood/e-mailide-eelvaade.html
+    Originaal: https://www.voog.com/tugi/e-pood/e-mailide-eelvaade
+    Inglise: —
+
+  • Kuidas e-poodi tarneviise lisada
+    Kohalik: e-pood/kuidas-e-poodi-kohaletoimetamisviise-lisada.html
+    Originaal: https://www.voog.com/tugi/e-pood/kuidas-e-poodi-kohaletoimetamisviise-lisada
+    Inglise: ../en/online-store/add-shipping-methods.html
+
+  • Kuidas e-poodi tooteid lisada
+    Kohalik: e-pood/kuidas-e-poodi-tooteid-lisada.html
+    Originaal: https://www.voog.com/tugi/e-pood/kuidas-e-poodi-tooteid-lisada
+    Inglise: —
+
+  • Kuidas lisada Voo saidile e-poodi
+    Kohalik: e-pood/lisa-saidile-pood.html
+    Originaal: https://www.voog.com/tugi/e-pood/lisa-saidile-pood
+    Inglise: ../en/online-store/add-online-store.html
+
+  • Kuidas e-poodi makseviise lisada
+    Kohalik: e-pood/makseviisid.html
+    Originaal: https://www.voog.com/tugi/e-pood/makseviisid
+    Inglise: ../en/online-store/payment-methods.html
+
+  • Kuidas kohandada e-poe ostukorvi välju 
+    Kohalik: e-pood/ostukorvi-valjad.html
+    Originaal: https://www.voog.com/tugi/e-pood/ostukorvi-valjad
+    Inglise: ../en/online-store/checkout-fields.html
+
+  • Kuidas luua e-poe kampaania sooduskoodi
+    Kohalik: e-pood/sooduskoodid.html
+    Originaal: https://www.voog.com/tugi/e-pood/sooduskoodid
+    Inglise: ../en/online-store/discount-codes.html
+
+  • Halda e-poe tellimusi
+    Kohalik: e-pood/tellimuste-haldamine.html
+    Originaal: https://www.voog.com/tugi/e-pood/tellimuste-haldamine
+    Inglise: —
+
+  • Kuidas e-poodi tooteid importida
+    Kohalik: e-pood/toodete-import.html
+    Originaal: https://www.voog.com/tugi/e-pood/toodete-import
+    Inglise: —
+
+  • Kuidas tooteid tootekategooriatesse paigutada
+    Kohalik: e-pood/veebipoe-struktuur.html
+    Originaal: https://www.voog.com/tugi/e-pood/veebipoe-struktuur
+    Inglise: —
+
+  • Videojuhend: makse- ja tarneviisi lisamine
+    Kohalik: e-pood/videojuhend-makse-ja-tarneviisi-lisamine.html
+    Originaal: https://www.voog.com/tugi/e-pood/videojuhend-makse-ja-tarneviisi-lisamine
+    Inglise: —
+
+
+Keeled (6 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: all-about-languages
+
+  • Muuda kasutajaliidese keelt
+    Kohalik: keeled/kasutajaliidese-keele-muutmine.html
+    Originaal: https://www.voog.com/tugi/keeled/kasutajaliidese-keele-muutmine
+    Inglise: ../en/all-about-languages/changing-the-interface-language.html
+
+  • Seadista saidi keelemenüü kuvamine 
+    Kohalik: keeled/keelemenuu-kuvamine.html
+    Originaal: https://www.voog.com/tugi/keeled/keelemenuu-kuvamine
+    Inglise: —
+
+  • Kuidas ehitada mitmekeelset saiti
+    Kohalik: keeled/sinu-saidi-ehitamine-mitmes-keeles.html
+    Originaal: https://www.voog.com/tugi/keeled/sinu-saidi-ehitamine-mitmes-keeles
+    Inglise: ../en/all-about-languages/building-your-website-in-multiple-languages.html
+
+  • Seadista oma saidi keelemenüü
+    Kohalik: keeled/sinu-saidi-keelemenuu-seadistamine.html
+    Originaal: https://www.voog.com/tugi/keeled/sinu-saidi-keelemenuu-seadistamine
+    Inglise: —
+
+  • Kuidas määrata oma saidi vaikekeel asukohapõhise tuvastuse asemel
+    Kohalik: keeled/vaikekeele-valimine-sinu-saidi-kulastajatele.html
+    Originaal: https://www.voog.com/tugi/keeled/vaikekeele-valimine-sinu-saidi-kulastajatele
+    Inglise: —
+
+  • Videojuhend: kuidas veebileht ja e-pood mitmekeelseks muuta
+    Kohalik: keeled/videojuhend-veebilehe-mitmekeelseks-muutmine.html
+    Originaal: https://www.voog.com/tugi/keeled/videojuhend-veebilehe-mitmekeelseks-muutmine
+    Inglise: —
+
+
+Kontakt (0 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: contact
+
+
+Konto Loomine (5 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: setting-up-your-account
+
+  • Kuidas hallata mitut saiti sama e-posti aadressiga
+    Kohalik: konto-loomine/mida-teha-kui-oled-loonud-mitu-voo-saiti-uhe-meiliaadressiga.html
+    Originaal: https://www.voog.com/tugi/konto-loomine/mida-teha-kui-oled-loonud-mitu-voo-saiti-uhe-meiliaadressiga
+    Inglise: —
+
+  • Kuidas vahetada oma Voo saidi salasõna
+    Kohalik: konto-loomine/parooli-vahetamine.html
+    Originaal: https://www.voog.com/tugi/konto-loomine/parooli-vahetamine
+    Inglise: ../en/setting-up-your-account/resetting-your-password.html
+
+  • Kuidas logida sisse oma Voo saidile ja muuta sisu
+    Kohalik: konto-loomine/saidile-sisselogimine.html
+    Originaal: https://www.voog.com/tugi/konto-loomine/saidile-sisselogimine
+    Inglise: ../en/setting-up-your-account/logging-into-your-website.html
+
+  • Lisa uusi kasutajaid ja halda nende õigusi saidil
+    Kohalik: konto-loomine/teiste-kasutajate-lisamine-sinu-voo-saidile.html
+    Originaal: https://www.voog.com/tugi/konto-loomine/teiste-kasutajate-lisamine-sinu-voo-saidile
+    Inglise: ../en/setting-up-your-account/other-people-who-can-edit-your-website.html
+
+  • Kuidas registreeruda ja alustada oma saidi loomist
+    Kohalik: konto-loomine/vooga-liitumine.html
+    Originaal: https://www.voog.com/tugi/konto-loomine/vooga-liitumine
+    Inglise: —
+
+
+Kujundus (8 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: your-websites-design
+
+  • Lisa favicon oma saidile
+    Kohalik: kujundus/kuidas-lisada-enda-saidile-ikoon.html
+    Originaal: https://www.voog.com/tugi/kujundus/kuidas-lisada-enda-saidile-ikoon
+    Inglise: ../en/your-websites-design/adding-a-favicon.html
+
+  • Kuidas peita Voo logo saidi jaluses
+    Kohalik: kujundus/kuidas-saan-lehe-jaluses-voo-logo-ara-peita.html
+    Originaal: https://www.voog.com/tugi/kujundus/kuidas-saan-lehe-jaluses-voo-logo-ara-peita
+    Inglise: —
+
+  • Muuda oma saidi kujundust täielikult
+    Kohalik: kujundus/kujunduse-taielik-kohandamine.html
+    Originaal: https://www.voog.com/tugi/kujundus/kujunduse-taielik-kohandamine
+    Inglise: ../en/your-websites-design/getting-a-fully-customized-design.html
+
+  • Kuidas vahetada olemasolevat saidi kujundust
+    Kohalik: kujundus/kujunduse-vahetamine.html
+    Originaal: https://www.voog.com/tugi/kujundus/kujunduse-vahetamine
+    Inglise: —
+
+  • Kuidas valida kujundus Vooga liitumisel
+    Kohalik: kujundus/kujunduse-valimine-vooga-liitumisel.html
+    Originaal: https://www.voog.com/tugi/kujundus/kujunduse-valimine-vooga-liitumisel
+    Inglise: ../en/your-websites-design/choosing-a-design-upon-signup.html
+
+  • Kuidas muuta kujunduse taustavärvi ja -pilti
+    Kohalik: kujundus/standard-kujunduste-piltide-ja-tausta-muutmine.html
+    Originaal: https://www.voog.com/tugi/kujundus/standard-kujunduste-piltide-ja-tausta-muutmine
+    Inglise: —
+
+  • Kuidas saidi kujundus mobiilseadmetel töötab
+    Kohalik: kujundus/voo-disainid-mobiilsetel-seadmetel.html
+    Originaal: https://www.voog.com/tugi/kujundus/voo-disainid-mobiilsetel-seadmetel
+    Inglise: —
+
+  • Kujunda oma sait Voo disainitööriistaga
+    Kohalik: kujundus/voo-disainitooriist.html
+    Originaal: https://www.voog.com/tugi/kujundus/voo-disainitooriist
+    Inglise: —
+
+
+Lehed (11 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: managing-your-website-pages
+
+  • Kohanda saidi 401 ja 404 veateate lehed
+    Kohalik: lehed/isikuparaste-401-ja-404-lehtede-loomine.html
+    Originaal: https://www.voog.com/tugi/lehed/isikuparaste-401-ja-404-lehtede-loomine
+    Inglise: ../en/managing-your-website-pages/creating-a-custom-401-and-404-page.html
+
+  • Muuda lehe aadressi (URL-i)
+    Kohalik: lehed/lehe-aadressi-muutmine.html
+    Originaal: https://www.voog.com/tugi/lehed/lehe-aadressi-muutmine
+    Inglise: ../en/managing-your-website-pages/changing-page-addresses.html
+
+  • Muuda leht lingiks
+    Kohalik: lehed/lehe-asemel-lingi-loomine.html
+    Originaal: https://www.voog.com/tugi/lehed/lehe-asemel-lingi-loomine
+    Inglise: ../en/managing-your-website-pages/creating-a-link-instead-of-subpage.html
+
+  • Kuidas vahetada lehe malli
+    Kohalik: lehed/lehe-malli-vahetamine.html
+    Originaal: https://www.voog.com/tugi/lehed/lehe-malli-vahetamine
+    Inglise: ../en/managing-your-website-pages/changing-your-pages-layout.html
+
+  • Kuidas lehti peita ja avalikuks teha
+    Kohalik: lehed/lehe-peitmine-ja-avalikustamine.html
+    Originaal: https://www.voog.com/tugi/lehed/lehe-peitmine-ja-avalikustamine
+    Inglise: ../en/managing-your-website-pages/hiding-pages-and-making-them-visible-again.html
+
+  • Kuidas kopeerida lehe sisu teisele lehele või keelde
+    Kohalik: lehed/lehe-sisu-kopeerimine.html
+    Originaal: https://www.voog.com/tugi/lehed/lehe-sisu-kopeerimine
+    Inglise: ../en/managing-your-website-pages/duplicating-content.html
+
+  • Muuda lehtede pealkirju ja kirjeldusi
+    Kohalik: lehed/lehtede-pealkirjade-ja-kirjelduste-muutmine.html
+    Originaal: https://www.voog.com/tugi/lehed/lehtede-pealkirjade-ja-kirjelduste-muutmine
+    Inglise: ../en/managing-your-website-pages/changing-page-titles-and-descriptions.html
+
+  • Kuidas kasutada oma saidi sisseehitatud otsingut
+    Kohalik: lehed/otsingumootori-kasutamine.html
+    Originaal: https://www.voog.com/tugi/lehed/otsingumootori-kasutamine
+    Inglise: ../en/managing-your-website-pages/using-the-search-engine.html
+
+  • Korrasta oma saidi struktuuri
+    Kohalik: lehed/saidi-struktuuri-korrastamine.html
+    Originaal: https://www.voog.com/tugi/lehed/saidi-struktuuri-korrastamine
+    Inglise: ../en/managing-your-website-pages/reorganizing-the-structure-of-your-website.html
+
+  • Kaitse saidi lehed salasõnaga
+    Kohalik: lehed/salasonaga-kaitstud-lehed.html
+    Originaal: https://www.voog.com/tugi/lehed/salasonaga-kaitstud-lehed
+    Inglise: ../en/managing-your-website-pages/password-protected-pages.html
+
+  • Lisa uusi lehti ja kustuta vanu
+    Kohalik: lehed/uute-lehtede-loomine-ja-vanade-kustutamine.html
+    Originaal: https://www.voog.com/tugi/lehed/uute-lehtede-loomine-ja-vanade-kustutamine
+    Inglise: ../en/managing-your-website-pages/creating-new-or-removing-old-pages.html
+
+
+Pildid ja Failid (5 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: your-pictures-and-files
+
+  • Kuidas luua galeriid
+    Kohalik: pildid-ja-failid/galeriide-loomine.html
+    Originaal: https://www.voog.com/tugi/pildid-ja-failid/galeriide-loomine
+    Inglise: ../en/your-pictures-and-files/picture-galleries.html
+
+  • Lisa failid kollektsioonidesse
+    Kohalik: pildid-ja-failid/kollektsioonid.html
+    Originaal: https://www.voog.com/tugi/pildid-ja-failid/kollektsioonid
+    Inglise: ../en/your-pictures-and-files/collections.html
+
+  • Eemalda pildid ja failid teksti sisualast
+    Kohalik: pildid-ja-failid/multimeedia-kustutamine-teksti-sisualas.html
+    Originaal: https://www.voog.com/tugi/pildid-ja-failid/multimeedia-kustutamine-teksti-sisualas
+    Inglise: —
+
+  • Kuidas saidile pilte ja faile üles laadida
+    Kohalik: pildid-ja-failid/piltide-ja-failide-uleslaadimine.html
+    Originaal: https://www.voog.com/tugi/pildid-ja-failid/piltide-ja-failide-uleslaadimine
+    Inglise: —
+
+  • Lisa ja halda pilte
+    Kohalik: pildid-ja-failid/piltide-lisamine-ja-haldamine.html
+    Originaal: https://www.voog.com/tugi/pildid-ja-failid/piltide-lisamine-ja-haldamine
+    Inglise: ../en/your-pictures-and-files/adding-and-managing-pictures.html
+
+
+SEO (5 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: seo
+
+  • Tõsta oma saidi nähtavust otsingumootorites
+    Kohalik: seo/kuidas-ma-saan-oma-kodulehe-otsingumootorite-jaoks-nahtavaks-muuta.html
+    Originaal: https://www.voog.com/tugi/seo/kuidas-ma-saan-oma-kodulehe-otsingumootorite-jaoks-nahtavaks-muuta
+    Inglise: ../en/seo/getting-your-website-to-appear-in-google-and-bing.html
+
+  • Optimeeri oma saidi pealkirju ja kirjeldusi
+    Kohalik: seo/pealkirjad-ja-kirjeldused.html
+    Originaal: https://www.voog.com/tugi/seo/pealkirjad-ja-kirjeldused
+    Inglise: ../en/seo/titles-and-descriptions.html
+
+  • Mis on SEO
+    Kohalik: seo/seo-optimeerimine-voos.html
+    Originaal: https://www.voog.com/tugi/seo/seo-optimeerimine-voos
+    Inglise: ../en/seo/seo-optimization-in-voog.html
+
+  • Veebiseminarid SEO teemadel
+    Kohalik: seo/seo-teemalised-veebiseminarid.html
+    Originaal: https://www.voog.com/tugi/seo/seo-teemalised-veebiseminarid
+    Inglise: —
+
+  • Videojuhend: kuidas optimeerida SEO’d otsingumootoritele
+    Kohalik: seo/videojuhend-seo-optimeerimine-otsingumootorile.html
+    Originaal: https://www.voog.com/tugi/seo/videojuhend-seo-optimeerimine-otsingumootorile
+    Inglise: —
+
+
+Sisu Haldamine (12 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: managing-your-content
+
+  • Lisa BookLux broneeringuvorm
+    Kohalik: sisu-haldamine/booklux-broneeringuvormi-lisamine.html
+    Originaal: https://www.voog.com/tugi/sisu-haldamine/booklux-broneeringuvormi-lisamine
+    Inglise: ../en/managing-your-content/add-booklux-booking-widget-to-your-website.html
+
+  • Lisa Google kalender oma saidile
+    Kohalik: sisu-haldamine/google-kalendri-lisamine-saidile.html
+    Originaal: https://www.voog.com/tugi/sisu-haldamine/google-kalendri-lisamine-saidile
+    Inglise: —
+
+  • Kuidas muuta tekst, pilt või dokument lingiks
+    Kohalik: sisu-haldamine/linkide-loomine.html
+    Originaal: https://www.voog.com/tugi/sisu-haldamine/linkide-loomine
+    Inglise: ../en/managing-your-content/creating-links.html
+
+  • Lisa Mailchimp pop-up registreeringu vorm
+    Kohalik: sisu-haldamine/mailchimp-pop-up-registreeringu-vormi-lisamine-saidile.html
+    Originaal: https://www.voog.com/tugi/sisu-haldamine/mailchimp-pop-up-registreeringu-vormi-lisamine-saidile
+    Inglise: ../en/managing-your-content/adding-smaily-newsletter-subscription-form-to-voog-website.html
+
+  • Kuidas nuppu luua
+    Kohalik: sisu-haldamine/nuppude-loomine.html
+    Originaal: https://www.voog.com/tugi/sisu-haldamine/nuppude-loomine
+    Inglise: ../en/managing-your-content/creating-buttons.html
+
+  • Kuidas taasta funktsiooni kasutada
+    Kohalik: sisu-haldamine/taasta-funktsiooni-kasutamine.html
+    Originaal: https://www.voog.com/tugi/sisu-haldamine/taasta-funktsiooni-kasutamine
+    Inglise: —
+
+  • Loo ja halda tabeleid 
+    Kohalik: sisu-haldamine/tabelite-ehitamine.html
+    Originaal: https://www.voog.com/tugi/sisu-haldamine/tabelite-ehitamine
+    Inglise: ../en/managing-your-content/building-tables.html
+
+  • Kuidas Voo tekstitööriistaga teksti muuta
+    Kohalik: sisu-haldamine/teksti-haldamine.html
+    Originaal: https://www.voog.com/tugi/sisu-haldamine/teksti-haldamine
+    Inglise: —
+
+  • Kuidas välist rakendust lisada
+    Kohalik: sisu-haldamine/valise-rakenduse-lisamine.html
+    Originaal: https://www.voog.com/tugi/sisu-haldamine/valise-rakenduse-lisamine
+    Inglise: —
+
+  • Lisa vestlusaken oma saidile
+    Kohalik: sisu-haldamine/vestlusakna-lisamine-saidile.html
+    Originaal: https://www.voog.com/tugi/sisu-haldamine/vestlusakna-lisamine-saidile
+    Inglise: ../en/managing-your-content/adding-a-live-chat-to-your-site.html
+
+  • Lisa video või Google kaart sisuala
+    Kohalik: sisu-haldamine/video-ja-google-kaardi-lisamine.html
+    Originaal: https://www.voog.com/tugi/sisu-haldamine/video-ja-google-kaardi-lisamine
+    Inglise: —
+
+  • Lisa Smaily liitumisvorm 
+    Kohalik: sisu-haldamine/voo-kodulehele-smaily-liitumisvormi-lisamine.html
+    Originaal: https://www.voog.com/tugi/sisu-haldamine/voo-kodulehele-smaily-liitumisvormi-lisamine
+    Inglise: ../en/managing-your-content/adding-smaily-newsletter-subscription-form-to-voog-website.html
+
+
+Sisualad (3 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: content-areas
+
+  • Mis on sisuala
+    Kohalik: sisualad/mis-on-sisuala.html
+    Originaal: https://www.voog.com/tugi/sisualad/mis-on-sisuala
+    Inglise: ../en/content-areas/what-is-a-content-area.html
+
+  • Lisa ja eemalda sisualasid
+    Kohalik: sisualad/sisualade-lisamine-ja-eemaldamine.html
+    Originaal: https://www.voog.com/tugi/sisualad/sisualade-lisamine-ja-eemaldamine
+    Inglise: ../en/content-areas/adding-and-removing-content-areas.html
+
+  • Kuidas sisualasid ümber tõsta
+    Kohalik: sisualad/sisualade-umber-tostmine.html
+    Originaal: https://www.voog.com/tugi/sisualad/sisualade-umber-tostmine
+    Inglise: ../en/content-areas/rearranging-content-areas.html
+
+
+Statistika ja Saidi Haldamine (9 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: stats-and-maintenance
+
+  • Lisa Facebook Pixel oma saidile
+    Kohalik: statistika-ja-saidi-haldamine/facebook-pixeli-lisamine-sinu-veebilehele.html
+    Originaal: https://www.voog.com/tugi/statistika-ja-saidi-haldamine/facebook-pixeli-lisamine-sinu-veebilehele
+    Inglise: ../en/stats-and-maintenance/adding-facebook-pixel-to-your-website.html
+
+  • Lisa Google Analytics oma saidile
+    Kohalik: statistika-ja-saidi-haldamine/google-analyticsi-lisamine-sinu-veebilehele.html
+    Originaal: https://www.voog.com/tugi/statistika-ja-saidi-haldamine/google-analyticsi-lisamine-sinu-veebilehele
+    Inglise: ../en/stats-and-maintenance/adding-google-analytics-to-your-website.html
+
+  • Kas Voo saiti saab kasutada isiklikus serveris
+    Kohalik: statistika-ja-saidi-haldamine/kas-voo-veebilehte-saab-kasutada-isiklikus-serveris.html
+    Originaal: https://www.voog.com/tugi/statistika-ja-saidi-haldamine/kas-voo-veebilehte-saab-kasutada-isiklikus-serveris
+    Inglise: —
+
+  • Kuidas genereerida API võtit
+    Kohalik: statistika-ja-saidi-haldamine/kuidas-genereerida-api-votit.html
+    Originaal: https://www.voog.com/tugi/statistika-ja-saidi-haldamine/kuidas-genereerida-api-votit
+    Inglise: —
+
+  • Kuidas lisada saidile küpsiste kasutamise kohta teavitust
+    Kohalik: statistika-ja-saidi-haldamine/kupsiste-kasutamise-teavitus.html
+    Originaal: https://www.voog.com/tugi/statistika-ja-saidi-haldamine/kupsiste-kasutamise-teavitus
+    Inglise: —
+
+  • Milliseid veebilehitsejaid Voog toetab
+    Kohalik: statistika-ja-saidi-haldamine/milliseid-veebilehitsejaid-voog-toetab.html
+    Originaal: https://www.voog.com/tugi/statistika-ja-saidi-haldamine/milliseid-veebilehitsejaid-voog-toetab
+    Inglise: —
+
+  • Telli tagavarakoopia saidist ja lae see alla
+    Kohalik: statistika-ja-saidi-haldamine/tagavara-koopia-saidist-ja-selle-allalaadimine.html
+    Originaal: https://www.voog.com/tugi/statistika-ja-saidi-haldamine/tagavara-koopia-saidist-ja-selle-allalaadimine
+    Inglise: —
+
+  • Tutvu Voo statistika tööriistadega
+    Kohalik: statistika-ja-saidi-haldamine/ulevaade-voo-statistika-menuust.html
+    Originaal: https://www.voog.com/tugi/statistika-ja-saidi-haldamine/ulevaade-voo-statistika-menuust
+    Inglise: —
+
+  • Tutvu saidi varukoopia põhimõtetega
+    Kohalik: statistika-ja-saidi-haldamine/varundamine-ja-teenuse-kattesaadavus.html
+    Originaal: https://www.voog.com/tugi/statistika-ja-saidi-haldamine/varundamine-ja-teenuse-kattesaadavus
+    Inglise: ../en/stats-and-maintenance/about-backups-and-service-uptime.html
+
+
+Tellimus (9 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: your-subscriptions
+
+  • Vaata e-poe vahendustasu arvestust
+    Kohalik: tellimus/e-poe-vahendustasu-arvestus.html
+    Originaal: https://www.voog.com/tugi/tellimus/e-poe-vahendustasu-arvestus
+    Inglise: —
+
+  • Aktiveeri krediitkaardimaksed oma saidil
+    Kohalik: tellimus/krediitkaardi-maksed.html
+    Originaal: https://www.voog.com/tugi/tellimus/krediitkaardi-maksed
+    Inglise: ../en/your-subscriptions/credit-card-payments.html
+
+  • Kuidas ja miks saada Voo partnerarendajaks?
+    Kohalik: tellimus/kuidas-ja-miks-saada-voo-partnerarendajaks.html
+    Originaal: https://www.voog.com/tugi/tellimus/kuidas-ja-miks-saada-voo-partnerarendajaks
+    Inglise: —
+
+  • Kuidas kasutada Voo sooduskoodi tellimuse jaoks
+    Kohalik: tellimus/kuidas-kasutada-voo-sooduskoodi.html
+    Originaal: https://www.voog.com/tugi/tellimus/kuidas-kasutada-voo-sooduskoodi
+    Inglise: —
+
+  • Vaata oma tasutud arveid 
+    Kohalik: tellimus/kus-void-leida-tasutud-arved.html
+    Originaal: https://www.voog.com/tugi/tellimus/kus-void-leida-tasutud-arved
+    Inglise: —
+
+  • Leia endale sobiv Voo tellimus
+    Kohalik: tellimus/sobiva-tellimuse-valimine.html
+    Originaal: https://www.voog.com/tugi/tellimus/sobiva-tellimuse-valimine
+    Inglise: ../en/your-subscriptions/choosing-an-appropriate-subscription-plan.html
+
+  • Kuidas soovitada Voogu ja teenida tasu
+    Kohalik: tellimus/soovita-ja-teeni.html
+    Originaal: https://www.voog.com/tugi/tellimus/soovita-ja-teeni
+    Inglise: —
+
+  • Kuidas saidi tellimust lõpetada
+    Kohalik: tellimus/tellimuse-lopetamine.html
+    Originaal: https://www.voog.com/tugi/tellimus/tellimuse-lopetamine
+    Inglise: ../en/your-subscriptions/cancelling-your-subscriptions.html
+
+  • Kuidas olemasolevat tellimust vahetada
+    Kohalik: tellimus/tellimuse-vahetamine.html
+    Originaal: https://www.voog.com/tugi/tellimus/tellimuse-vahetamine
+    Inglise: ../en/your-subscriptions/changing-your-subscriptions.html
+
+
+Veebiseminar (5 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: webinars
+
+  • Veebiseminar: seadistame koos sinu e-poe ostukorvi
+    Kohalik: veebiseminar/veebiseminar-sinu-e-poe-ostukorv.html
+    Originaal: https://www.voog.com/tugi/veebiseminar/veebiseminar-sinu-e-poe-ostukorv
+    Inglise: —
+
+  • Veebiseminar: vaata, millise veebilehe ja e-poe saad luua Voo võimsaima kujundusmalliga Nuuk
+    Kohalik: veebiseminar/veebiseminar-veebipood-nuuk.html
+    Originaal: https://www.voog.com/tugi/veebiseminar/veebiseminar-veebipood-nuuk
+    Inglise: —
+
+  • Veebiseminar: alustame koos sinu e-poe loomisega
+    Kohalik: veebiseminar/voo-seminar-alustame-koos-sinu-veebipoe-loomisega.html
+    Originaal: https://www.voog.com/tugi/veebiseminar/voo-seminar-alustame-koos-sinu-veebipoe-loomisega
+    Inglise: —
+
+  • Veebiseminar: SEO ehk kuidas otsingumootoris esile tõusta 
+    Kohalik: veebiseminar/voo-seminar-seo.html
+    Originaal: https://www.voog.com/tugi/veebiseminar/voo-seminar-seo
+    Inglise: —
+
+  • SEO erisaade turundusspetsialisti Priit Kallasega
+    Kohalik: veebiseminar/voo-seo-seminari-erisaade.html
+    Originaal: https://www.voog.com/tugi/veebiseminar/voo-seo-seminari-erisaade
+    Inglise: —
+
+
+Videojuhendid (6 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: video-tutorials
+
+  • Tutvu Voo disainitööriistaga
+    Kohalik: videojuhendid/disainitooriist.html
+    Originaal: https://www.voog.com/tugi/videojuhendid/disainitooriist
+    Inglise: ../en/video-tutorials/design-editor-tool.html
+
+  • Lisa Facebooki uudisevoog
+    Kohalik: videojuhendid/facebooki-uudisvoo-lisamine.html
+    Originaal: https://www.voog.com/tugi/videojuhendid/facebooki-uudisvoo-lisamine
+    Inglise: —
+
+  • Tuvu Voo tekstitööriista võimalustega
+    Kohalik: videojuhendid/tekstitooriist.html
+    Originaal: https://www.voog.com/tugi/videojuhendid/tekstitooriist
+    Inglise: —
+
+  • Uue keele lisamine
+    Kohalik: videojuhendid/uue-keele-lisamine.html
+    Originaal: https://www.voog.com/tugi/videojuhendid/uue-keele-lisamine
+    Inglise: —
+
+  • Veebilehe kirjeldus otsingumootoris
+    Kohalik: videojuhendid/veebilehe-kirjeldus-otsingumootoris.html
+    Originaal: https://www.voog.com/tugi/videojuhendid/veebilehe-kirjeldus-otsingumootoris
+    Inglise: —
+
+  • Kuidas luua e-poe tingimuste leht
+    Kohalik: videojuhendid/veebipoe-tingimuste-lehe-loomine.html
+    Originaal: https://www.voog.com/tugi/videojuhendid/veebipoe-tingimuste-lehe-loomine
+    Inglise: —
+
+
+Vormid (4 artiklit)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Vastab inglise keele sektsioonile: creating-and-managing-forms
+
+  • Muuda vormi välju
+    Kohalik: vormid/muuda-vormi-valju.html
+    Originaal: https://www.voog.com/tugi/vormid/muuda-vormi-valju
+    Inglise: ../en/creating-and-managing-forms/editing-your-form-fields.html
+
+  • Tutvu vormide kasutamisega Voos
+    Kohalik: vormid/utle-tere-vormidele.html
+    Originaal: https://www.voog.com/tugi/vormid/utle-tere-vormidele
+    Inglise: ../en/creating-and-managing-forms/say-hello-to-forms.html
+
+  • Loo uus vorm
+    Kohalik: vormid/uue-vormi-loomine.html
+    Originaal: https://www.voog.com/tugi/vormid/uue-vormi-loomine
+    Inglise: ../en/creating-and-managing-forms/creating-a-new-form.html
+
+  • Kuidas hallata vormide kaudu sisestatud infot
+    Kohalik: vormid/vormide-kaudu-sisestatud-info-haldamine.html
+    Originaal: https://www.voog.com/tugi/vormid/vormide-kaudu-sisestatud-info-haldamine
+    Inglise: ../en/creating-and-managing-forms/managing-submitted-form-entries.html
+
+
+
+Kiire viide:
+-----------
+• HTML indeks: index.html
+• Inglise keeles: ../en/index.html
+• Inglise tekst: ../en/index.txt
+
+Sektsioonide vastavused inglise keelele:
+----------------------------------------
+Blogi → managing-your-blog
+Domeenid → your-website-addresses
+E-pood → online-store
+Keeled → all-about-languages
+Kontakt → contact
+Konto Loomine → setting-up-your-account
+Kujundus → your-websites-design
+Lehed → managing-your-website-pages
+Pildid ja Failid → your-pictures-and-files
+SEO → seo
+Sisu Haldamine → managing-your-content
+Sisualad → content-areas
+Statistika ja Saidi Haldamine → stats-and-maintenance
+Tellimus → your-subscriptions
+Veebiseminar → webinars
+Videojuhendid → video-tutorials
+Vormid → creating-and-managing-forms
+
+Märkused:
+---------
+• Inglise keele lingid on saadaval ainult artiklitele, millel on otsene vastavus
+• Mõned artiklid võivad olla ainult eesti keeles või ainult inglise keeles
+• Kõik lingid avanevad uues aknas/tab-is

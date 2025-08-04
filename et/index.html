@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voog Tugiartiklid - Eesti</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        .stats {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .stats span {
+            display: inline-block;
+            margin: 0 20px;
+            font-size: 1.1em;
+        }
+        .controls {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .search-box {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 16px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .search-box:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: #e9ecef;
+            color: #495057;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        .btn.active {
+            background: #667eea;
+            color: white;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+        }
+        th {
+            background: #f8f9fa;
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #495057;
+            border-bottom: 2px solid #dee2e6;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: top;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        .title-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .title-link:hover {
+            text-decoration: underline;
+        }
+        .section-badge {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .original-link {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .original-link:hover {
+            text-decoration: underline;
+        }
+        .english-link {
+            color: #ff6b35;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .english-link:hover {
+            text-decoration: underline;
+        }
+        .size {
+            color: #6c757d;
+            font-size: 14px;
+        }
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+            font-style: italic;
+        }
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .language-switch a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .language-switch a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="language-switch">
+                <a href="../en/index.html">English</a>
+            </div>
+            <h1>Voog Tugiartiklid</h1>
+            <p>Kõik Voog tugiartiklid eesti keeles</p>
+        </div>
+        
+        <div class="stats">
+            <span><strong id="total-articles">0</strong> artiklit</span>
+            <span><strong id="visible-articles">0</strong> nähtaval</span>
+            <span><strong id="total-sections">0</strong> sektsiooni</span>
+        </div>
+        
+        <div class="controls">
+            <input type="text" id="search" class="search-box" placeholder="Otsi artikleid...">
+            <div class="filter-buttons" id="filter-buttons">
+                <button class="btn active" data-filter="all">Kõik</button>
+                <button class="btn" data-filter="blogi">Blogi</button>
+                <button class="btn" data-filter="domeenid">Domeenid</button>
+                <button class="btn" data-filter="e-pood">E-pood</button>
+                <button class="btn" data-filter="keeled">Keeled</button>
+                <button class="btn" data-filter="kontakt">Kontakt</button>
+                <button class="btn" data-filter="konto-loomine">Konto Loomine</button>
+                <button class="btn" data-filter="kujundus">Kujundus</button>
+                <button class="btn" data-filter="lehed">Lehed</button>
+                <button class="btn" data-filter="pildid-ja-failid">Pildid ja Failid</button>
+                <button class="btn" data-filter="seo">SEO</button>
+                <button class="btn" data-filter="sisu-haldamine">Sisu Haldamine</button>
+                <button class="btn" data-filter="sisualad">Sisualad</button>
+                <button class="btn" data-filter="statistika-ja-saidi-haldamine">Statistika ja Saidi Haldamine</button>
+                <button class="btn" data-filter="tellimus">Tellimus</button>
+                <button class="btn" data-filter="veebiseminar">Veebiseminar</button>
+                <button class="btn" data-filter="videojuhendid">Videojuhendid</button>
+                <button class="btn" data-filter="vormid">Vormid</button>
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pealkiri</th>
+                        <th>Sektsioon</th>
+                        <th>Originaal</th>
+                        <th>English</th>
+                        <th>Suurus</th>
+                    </tr>
+                </thead>
+                <tbody id="articles-table">
+                    <tr data-section="blogi" data-title="Muuda blogi autorit ja avaldamiskuupäeva">
+                        <td><a href="blogi/blogi-autori-ja-avaldamise-kuupaeva-haldamine.html" class="title-link">Muuda blogi autorit ja avaldamiskuupäeva</a></td>
+                        <td><span class="section-badge">Blogi</span></td>
+                        <td><a href="https://www.voog.com/tugi/blogi/blogi-autori-ja-avaldamise-kuupaeva-haldamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="blogi" data-title="Kuidas hallata blogi kommentaare">
+                        <td><a href="blogi/blogi-kommentaaride-haldamine.html" class="title-link">Kuidas hallata blogi kommentaare</a></td>
+                        <td><span class="section-badge">Blogi</span></td>
+                        <td><a href="https://www.voog.com/tugi/blogi/blogi-kommentaaride-haldamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-blog/managing-blog-comments.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="blogi" data-title="Kuidas blogipostitusi avalikustada">
+                        <td><a href="blogi/blogipostituse-avaldamine.html" class="title-link">Kuidas blogipostitusi avalikustada</a></td>
+                        <td><span class="section-badge">Blogi</span></td>
+                        <td><a href="https://www.voog.com/tugi/blogi/blogipostituse-avaldamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-blog/going-live-with-your-blog-post.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="blogi" data-title="Kuidas kohandada blogipostitusi sotsiaalmeedias jagamiseks?">
+                        <td><a href="blogi/kuidas-kohandada-blogipostitusi-sotsiaalmeedias-jagamiseks.html" class="title-link">Kuidas kohandada blogipostitusi sotsiaalmeedias jagamiseks?</a></td>
+                        <td><span class="section-badge">Blogi</span></td>
+                        <td><a href="https://www.voog.com/tugi/blogi/kuidas-kohandada-blogipostitusi-sotsiaalmeedias-jagamiseks" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-blog/how-to-modify-your-post-for-social-media.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">134KB</td>
+                    </tr>
+                    <tr data-section="blogi" data-title="Halda ja muuda blogi silte">
+                        <td><a href="blogi/siltide-haldamine.html" class="title-link">Halda ja muuda blogi silte</a></td>
+                        <td><span class="section-badge">Blogi</span></td>
+                        <td><a href="https://www.voog.com/tugi/blogi/siltide-haldamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-blog/using-tags-with-your-blog.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">134KB</td>
+                    </tr>
+                    <tr data-section="blogi" data-title="Kuidas alustada blogimisega">
+                        <td><a href="blogi/sinu-esimese-blogi-loomine-voos.html" class="title-link">Kuidas alustada blogimisega</a></td>
+                        <td><span class="section-badge">Blogi</span></td>
+                        <td><a href="https://www.voog.com/tugi/blogi/sinu-esimese-blogi-loomine-voos" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-blog/starting-your-first-blog-with-voog.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="blogi" data-title="Kuidas luua blogi alamleht ja lisada uusi ning kustuta vanu postitusi">
+                        <td><a href="blogi/uute-postituste-lisamine-ja-vanade-kustutamine.html" class="title-link">Kuidas luua blogi alamleht ja lisada uusi ning kustuta vanu postitusi</a></td>
+                        <td><span class="section-badge">Blogi</span></td>
+                        <td><a href="https://www.voog.com/tugi/blogi/uute-postituste-lisamine-ja-vanade-kustutamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-blog/adding-new-or-removing-old-posts.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">140KB</td>
+                    </tr>
+                    <tr data-section="domeenid" data-title="Muuda domeeni seadeid">
+                        <td><a href="domeenid/domeeni-seaded.html" class="title-link">Muuda domeeni seadeid</a></td>
+                        <td><span class="section-badge">Domeenid</span></td>
+                        <td><a href="https://www.voog.com/tugi/domeenid/domeeni-seaded" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-website-addresses/domain-settings.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">135KB</td>
+                    </tr>
+                    <tr data-section="domeenid" data-title="Vaata domeenide hinnakirja">
+                        <td><a href="domeenid/domeenide-hinnad.html" class="title-link">Vaata domeenide hinnakirja</a></td>
+                        <td><span class="section-badge">Domeenid</span></td>
+                        <td><a href="https://www.voog.com/tugi/domeenid/domeenide-hinnad" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-website-addresses/domain-prices.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">143KB</td>
+                    </tr>
+                    <tr data-section="domeenid" data-title="Kuidas pikendada oma domeeni">
+                        <td><a href="domeenid/domeeninime-pikendamine.html" class="title-link">Kuidas pikendada oma domeeni</a></td>
+                        <td><span class="section-badge">Domeenid</span></td>
+                        <td><a href="https://www.voog.com/tugi/domeenid/domeeninime-pikendamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="domeenid" data-title="Kas Voog pakub e-maili teenust?">
+                        <td><a href="domeenid/kas-voog-pakub-e-maili-teenust.html" class="title-link">Kas Voog pakub e-maili teenust?</a></td>
+                        <td><span class="section-badge">Domeenid</span></td>
+                        <td><a href="https://www.voog.com/tugi/domeenid/kas-voog-pakub-e-maili-teenust" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-website-addresses/does-voog-offer-an-e-mail-service.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="domeenid" data-title="Kasutad juba eelnevalt eksisteerivat domeeni">
+                        <td><a href="domeenid/kasuta-juba-eelnevalt-eksisteerivat-domeeni.html" class="title-link">Kasutad juba eelnevalt eksisteerivat domeeni</a></td>
+                        <td><span class="section-badge">Domeenid</span></td>
+                        <td><a href="https://www.voog.com/tugi/domeenid/kasuta-juba-eelnevalt-eksisteerivat-domeeni" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">135KB</td>
+                    </tr>
+                    <tr data-section="domeenid" data-title="Lisa saidile tasuta .voog.com domeene">
+                        <td><a href="domeenid/lisa-saidile-rohkem-tasuta-aadresse.html" class="title-link">Lisa saidile tasuta .voog.com domeene</a></td>
+                        <td><span class="section-badge">Domeenid</span></td>
+                        <td><a href="https://www.voog.com/tugi/domeenid/lisa-saidile-rohkem-tasuta-aadresse" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-website-addresses/adding-more-free-addresses.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="domeenid" data-title="Lisa oma Voo saidile tehniline ja personaalne domeen">
+                        <td><a href="domeenid/milliseid-aadresseid-saad-enda-voo-saidiga-kasutada.html" class="title-link">Lisa oma Voo saidile tehniline ja personaalne domeen</a></td>
+                        <td><span class="section-badge">Domeenid</span></td>
+                        <td><a href="https://www.voog.com/tugi/domeenid/milliseid-aadresseid-saad-enda-voo-saidiga-kasutada" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="domeenid" data-title="Kuidas osta personaalne domeen Voos">
+                        <td><a href="domeenid/personaalse-domeeni-ostmine.html" class="title-link">Kuidas osta personaalne domeen Voos</a></td>
+                        <td><span class="section-badge">Domeenid</span></td>
+                        <td><a href="https://www.voog.com/tugi/domeenid/personaalse-domeeni-ostmine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-website-addresses/buying-personal-domain-names.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="domeenid" data-title="Lisa tasuta SSL-sertifikaat oma domeenile">
+                        <td><a href="domeenid/ssl-sertifikaadi-lisamine-domeenile.html" class="title-link">Lisa tasuta SSL-sertifikaat oma domeenile</a></td>
+                        <td><span class="section-badge">Domeenid</span></td>
+                        <td><a href="https://www.voog.com/tugi/domeenid/ssl-sertifikaadi-lisamine-domeenile" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="e-pood" data-title="Vaata e-poe tellimusteavituste eelvaadet">
+                        <td><a href="e-pood/e-mailide-eelvaade.html" class="title-link">Vaata e-poe tellimusteavituste eelvaadet</a></td>
+                        <td><span class="section-badge">E-pood</span></td>
+                        <td><a href="https://www.voog.com/tugi/e-pood/e-mailide-eelvaade" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">134KB</td>
+                    </tr>
+                    <tr data-section="e-pood" data-title="Kuidas e-poodi tarneviise lisada">
+                        <td><a href="e-pood/kuidas-e-poodi-kohaletoimetamisviise-lisada.html" class="title-link">Kuidas e-poodi tarneviise lisada</a></td>
+                        <td><span class="section-badge">E-pood</span></td>
+                        <td><a href="https://www.voog.com/tugi/e-pood/kuidas-e-poodi-kohaletoimetamisviise-lisada" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/online-store/add-shipping-methods.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">152KB</td>
+                    </tr>
+                    <tr data-section="e-pood" data-title="Kuidas e-poodi tooteid lisada">
+                        <td><a href="e-pood/kuidas-e-poodi-tooteid-lisada.html" class="title-link">Kuidas e-poodi tooteid lisada</a></td>
+                        <td><span class="section-badge">E-pood</span></td>
+                        <td><a href="https://www.voog.com/tugi/e-pood/kuidas-e-poodi-tooteid-lisada" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">143KB</td>
+                    </tr>
+                    <tr data-section="e-pood" data-title="Kuidas lisada Voo saidile e-poodi">
+                        <td><a href="e-pood/lisa-saidile-pood.html" class="title-link">Kuidas lisada Voo saidile e-poodi</a></td>
+                        <td><span class="section-badge">E-pood</span></td>
+                        <td><a href="https://www.voog.com/tugi/e-pood/lisa-saidile-pood" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/online-store/add-online-store.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">146KB</td>
+                    </tr>
+                    <tr data-section="e-pood" data-title="Kuidas e-poodi makseviise lisada">
+                        <td><a href="e-pood/makseviisid.html" class="title-link">Kuidas e-poodi makseviise lisada</a></td>
+                        <td><span class="section-badge">E-pood</span></td>
+                        <td><a href="https://www.voog.com/tugi/e-pood/makseviisid" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/online-store/payment-methods.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="e-pood" data-title="Kuidas kohandada e-poe ostukorvi välju ">
+                        <td><a href="e-pood/ostukorvi-valjad.html" class="title-link">Kuidas kohandada e-poe ostukorvi välju </a></td>
+                        <td><span class="section-badge">E-pood</span></td>
+                        <td><a href="https://www.voog.com/tugi/e-pood/ostukorvi-valjad" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/online-store/checkout-fields.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">139KB</td>
+                    </tr>
+                    <tr data-section="e-pood" data-title="Kuidas luua e-poe kampaania sooduskoodi">
+                        <td><a href="e-pood/sooduskoodid.html" class="title-link">Kuidas luua e-poe kampaania sooduskoodi</a></td>
+                        <td><span class="section-badge">E-pood</span></td>
+                        <td><a href="https://www.voog.com/tugi/e-pood/sooduskoodid" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/online-store/discount-codes.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">137KB</td>
+                    </tr>
+                    <tr data-section="e-pood" data-title="Halda e-poe tellimusi">
+                        <td><a href="e-pood/tellimuste-haldamine.html" class="title-link">Halda e-poe tellimusi</a></td>
+                        <td><span class="section-badge">E-pood</span></td>
+                        <td><a href="https://www.voog.com/tugi/e-pood/tellimuste-haldamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">156KB</td>
+                    </tr>
+                    <tr data-section="e-pood" data-title="Kuidas e-poodi tooteid importida">
+                        <td><a href="e-pood/toodete-import.html" class="title-link">Kuidas e-poodi tooteid importida</a></td>
+                        <td><span class="section-badge">E-pood</span></td>
+                        <td><a href="https://www.voog.com/tugi/e-pood/toodete-import" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">142KB</td>
+                    </tr>
+                    <tr data-section="e-pood" data-title="Kuidas tooteid tootekategooriatesse paigutada">
+                        <td><a href="e-pood/veebipoe-struktuur.html" class="title-link">Kuidas tooteid tootekategooriatesse paigutada</a></td>
+                        <td><span class="section-badge">E-pood</span></td>
+                        <td><a href="https://www.voog.com/tugi/e-pood/veebipoe-struktuur" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">150KB</td>
+                    </tr>
+                    <tr data-section="e-pood" data-title="Videojuhend: makse- ja tarneviisi lisamine">
+                        <td><a href="e-pood/videojuhend-makse-ja-tarneviisi-lisamine.html" class="title-link">Videojuhend: makse- ja tarneviisi lisamine</a></td>
+                        <td><span class="section-badge">E-pood</span></td>
+                        <td><a href="https://www.voog.com/tugi/e-pood/videojuhend-makse-ja-tarneviisi-lisamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="keeled" data-title="Muuda kasutajaliidese keelt">
+                        <td><a href="keeled/kasutajaliidese-keele-muutmine.html" class="title-link">Muuda kasutajaliidese keelt</a></td>
+                        <td><span class="section-badge">Keeled</span></td>
+                        <td><a href="https://www.voog.com/tugi/keeled/kasutajaliidese-keele-muutmine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/all-about-languages/changing-the-interface-language.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="keeled" data-title="Seadista saidi keelemenüü kuvamine ">
+                        <td><a href="keeled/keelemenuu-kuvamine.html" class="title-link">Seadista saidi keelemenüü kuvamine </a></td>
+                        <td><span class="section-badge">Keeled</span></td>
+                        <td><a href="https://www.voog.com/tugi/keeled/keelemenuu-kuvamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="keeled" data-title="Kuidas ehitada mitmekeelset saiti">
+                        <td><a href="keeled/sinu-saidi-ehitamine-mitmes-keeles.html" class="title-link">Kuidas ehitada mitmekeelset saiti</a></td>
+                        <td><span class="section-badge">Keeled</span></td>
+                        <td><a href="https://www.voog.com/tugi/keeled/sinu-saidi-ehitamine-mitmes-keeles" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/all-about-languages/building-your-website-in-multiple-languages.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">138KB</td>
+                    </tr>
+                    <tr data-section="keeled" data-title="Seadista oma saidi keelemenüü">
+                        <td><a href="keeled/sinu-saidi-keelemenuu-seadistamine.html" class="title-link">Seadista oma saidi keelemenüü</a></td>
+                        <td><span class="section-badge">Keeled</span></td>
+                        <td><a href="https://www.voog.com/tugi/keeled/sinu-saidi-keelemenuu-seadistamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="keeled" data-title="Kuidas määrata oma saidi vaikekeel asukohapõhise tuvastuse asemel">
+                        <td><a href="keeled/vaikekeele-valimine-sinu-saidi-kulastajatele.html" class="title-link">Kuidas määrata oma saidi vaikekeel asukohapõhise tuvastuse asemel</a></td>
+                        <td><span class="section-badge">Keeled</span></td>
+                        <td><a href="https://www.voog.com/tugi/keeled/vaikekeele-valimine-sinu-saidi-kulastajatele" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="keeled" data-title="Videojuhend: kuidas veebileht ja e-pood mitmekeelseks muuta">
+                        <td><a href="keeled/videojuhend-veebilehe-mitmekeelseks-muutmine.html" class="title-link">Videojuhend: kuidas veebileht ja e-pood mitmekeelseks muuta</a></td>
+                        <td><span class="section-badge">Keeled</span></td>
+                        <td><a href="https://www.voog.com/tugi/keeled/videojuhend-veebilehe-mitmekeelseks-muutmine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="konto-loomine" data-title="Kuidas hallata mitut saiti sama e-posti aadressiga">
+                        <td><a href="konto-loomine/mida-teha-kui-oled-loonud-mitu-voo-saiti-uhe-meiliaadressiga.html" class="title-link">Kuidas hallata mitut saiti sama e-posti aadressiga</a></td>
+                        <td><span class="section-badge">Konto Loomine</span></td>
+                        <td><a href="https://www.voog.com/tugi/konto-loomine/mida-teha-kui-oled-loonud-mitu-voo-saiti-uhe-meiliaadressiga" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">134KB</td>
+                    </tr>
+                    <tr data-section="konto-loomine" data-title="Kuidas vahetada oma Voo saidi salasõna">
+                        <td><a href="konto-loomine/parooli-vahetamine.html" class="title-link">Kuidas vahetada oma Voo saidi salasõna</a></td>
+                        <td><span class="section-badge">Konto Loomine</span></td>
+                        <td><a href="https://www.voog.com/tugi/konto-loomine/parooli-vahetamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/setting-up-your-account/resetting-your-password.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">136KB</td>
+                    </tr>
+                    <tr data-section="konto-loomine" data-title="Kuidas logida sisse oma Voo saidile ja muuta sisu">
+                        <td><a href="konto-loomine/saidile-sisselogimine.html" class="title-link">Kuidas logida sisse oma Voo saidile ja muuta sisu</a></td>
+                        <td><span class="section-badge">Konto Loomine</span></td>
+                        <td><a href="https://www.voog.com/tugi/konto-loomine/saidile-sisselogimine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/setting-up-your-account/logging-into-your-website.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">134KB</td>
+                    </tr>
+                    <tr data-section="konto-loomine" data-title="Lisa uusi kasutajaid ja halda nende õigusi saidil">
+                        <td><a href="konto-loomine/teiste-kasutajate-lisamine-sinu-voo-saidile.html" class="title-link">Lisa uusi kasutajaid ja halda nende õigusi saidil</a></td>
+                        <td><span class="section-badge">Konto Loomine</span></td>
+                        <td><a href="https://www.voog.com/tugi/konto-loomine/teiste-kasutajate-lisamine-sinu-voo-saidile" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/setting-up-your-account/other-people-who-can-edit-your-website.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">139KB</td>
+                    </tr>
+                    <tr data-section="konto-loomine" data-title="Kuidas registreeruda ja alustada oma saidi loomist">
+                        <td><a href="konto-loomine/vooga-liitumine.html" class="title-link">Kuidas registreeruda ja alustada oma saidi loomist</a></td>
+                        <td><span class="section-badge">Konto Loomine</span></td>
+                        <td><a href="https://www.voog.com/tugi/konto-loomine/vooga-liitumine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">136KB</td>
+                    </tr>
+                    <tr data-section="kujundus" data-title="Lisa favicon oma saidile">
+                        <td><a href="kujundus/kuidas-lisada-enda-saidile-ikoon.html" class="title-link">Lisa favicon oma saidile</a></td>
+                        <td><span class="section-badge">Kujundus</span></td>
+                        <td><a href="https://www.voog.com/tugi/kujundus/kuidas-lisada-enda-saidile-ikoon" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-websites-design/adding-a-favicon.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">129KB</td>
+                    </tr>
+                    <tr data-section="kujundus" data-title="Kuidas peita Voo logo saidi jaluses">
+                        <td><a href="kujundus/kuidas-saan-lehe-jaluses-voo-logo-ara-peita.html" class="title-link">Kuidas peita Voo logo saidi jaluses</a></td>
+                        <td><span class="section-badge">Kujundus</span></td>
+                        <td><a href="https://www.voog.com/tugi/kujundus/kuidas-saan-lehe-jaluses-voo-logo-ara-peita" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="kujundus" data-title="Muuda oma saidi kujundust täielikult">
+                        <td><a href="kujundus/kujunduse-taielik-kohandamine.html" class="title-link">Muuda oma saidi kujundust täielikult</a></td>
+                        <td><span class="section-badge">Kujundus</span></td>
+                        <td><a href="https://www.voog.com/tugi/kujundus/kujunduse-taielik-kohandamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-websites-design/getting-a-fully-customized-design.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">135KB</td>
+                    </tr>
+                    <tr data-section="kujundus" data-title="Kuidas vahetada olemasolevat saidi kujundust">
+                        <td><a href="kujundus/kujunduse-vahetamine.html" class="title-link">Kuidas vahetada olemasolevat saidi kujundust</a></td>
+                        <td><span class="section-badge">Kujundus</span></td>
+                        <td><a href="https://www.voog.com/tugi/kujundus/kujunduse-vahetamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">136KB</td>
+                    </tr>
+                    <tr data-section="kujundus" data-title="Kuidas valida kujundus Vooga liitumisel">
+                        <td><a href="kujundus/kujunduse-valimine-vooga-liitumisel.html" class="title-link">Kuidas valida kujundus Vooga liitumisel</a></td>
+                        <td><span class="section-badge">Kujundus</span></td>
+                        <td><a href="https://www.voog.com/tugi/kujundus/kujunduse-valimine-vooga-liitumisel" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-websites-design/choosing-a-design-upon-signup.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="kujundus" data-title="Kuidas muuta kujunduse taustavärvi ja -pilti">
+                        <td><a href="kujundus/standard-kujunduste-piltide-ja-tausta-muutmine.html" class="title-link">Kuidas muuta kujunduse taustavärvi ja -pilti</a></td>
+                        <td><span class="section-badge">Kujundus</span></td>
+                        <td><a href="https://www.voog.com/tugi/kujundus/standard-kujunduste-piltide-ja-tausta-muutmine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">140KB</td>
+                    </tr>
+                    <tr data-section="kujundus" data-title="Kuidas saidi kujundus mobiilseadmetel töötab">
+                        <td><a href="kujundus/voo-disainid-mobiilsetel-seadmetel.html" class="title-link">Kuidas saidi kujundus mobiilseadmetel töötab</a></td>
+                        <td><span class="section-badge">Kujundus</span></td>
+                        <td><a href="https://www.voog.com/tugi/kujundus/voo-disainid-mobiilsetel-seadmetel" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="kujundus" data-title="Kujunda oma sait Voo disainitööriistaga">
+                        <td><a href="kujundus/voo-disainitooriist.html" class="title-link">Kujunda oma sait Voo disainitööriistaga</a></td>
+                        <td><span class="section-badge">Kujundus</span></td>
+                        <td><a href="https://www.voog.com/tugi/kujundus/voo-disainitooriist" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">136KB</td>
+                    </tr>
+                    <tr data-section="lehed" data-title="Kohanda saidi 401 ja 404 veateate lehed">
+                        <td><a href="lehed/isikuparaste-401-ja-404-lehtede-loomine.html" class="title-link">Kohanda saidi 401 ja 404 veateate lehed</a></td>
+                        <td><span class="section-badge">Lehed</span></td>
+                        <td><a href="https://www.voog.com/tugi/lehed/isikuparaste-401-ja-404-lehtede-loomine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-website-pages/creating-a-custom-401-and-404-page.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="lehed" data-title="Muuda lehe aadressi (URL-i)">
+                        <td><a href="lehed/lehe-aadressi-muutmine.html" class="title-link">Muuda lehe aadressi (URL-i)</a></td>
+                        <td><span class="section-badge">Lehed</span></td>
+                        <td><a href="https://www.voog.com/tugi/lehed/lehe-aadressi-muutmine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-website-pages/changing-page-addresses.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">135KB</td>
+                    </tr>
+                    <tr data-section="lehed" data-title="Muuda leht lingiks">
+                        <td><a href="lehed/lehe-asemel-lingi-loomine.html" class="title-link">Muuda leht lingiks</a></td>
+                        <td><span class="section-badge">Lehed</span></td>
+                        <td><a href="https://www.voog.com/tugi/lehed/lehe-asemel-lingi-loomine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-website-pages/creating-a-link-instead-of-subpage.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">134KB</td>
+                    </tr>
+                    <tr data-section="lehed" data-title="Kuidas vahetada lehe malli">
+                        <td><a href="lehed/lehe-malli-vahetamine.html" class="title-link">Kuidas vahetada lehe malli</a></td>
+                        <td><span class="section-badge">Lehed</span></td>
+                        <td><a href="https://www.voog.com/tugi/lehed/lehe-malli-vahetamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-website-pages/changing-your-pages-layout.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="lehed" data-title="Kuidas lehti peita ja avalikuks teha">
+                        <td><a href="lehed/lehe-peitmine-ja-avalikustamine.html" class="title-link">Kuidas lehti peita ja avalikuks teha</a></td>
+                        <td><span class="section-badge">Lehed</span></td>
+                        <td><a href="https://www.voog.com/tugi/lehed/lehe-peitmine-ja-avalikustamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-website-pages/hiding-pages-and-making-them-visible-again.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">134KB</td>
+                    </tr>
+                    <tr data-section="lehed" data-title="Kuidas kopeerida lehe sisu teisele lehele või keelde">
+                        <td><a href="lehed/lehe-sisu-kopeerimine.html" class="title-link">Kuidas kopeerida lehe sisu teisele lehele või keelde</a></td>
+                        <td><span class="section-badge">Lehed</span></td>
+                        <td><a href="https://www.voog.com/tugi/lehed/lehe-sisu-kopeerimine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-website-pages/duplicating-content.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">137KB</td>
+                    </tr>
+                    <tr data-section="lehed" data-title="Muuda lehtede pealkirju ja kirjeldusi">
+                        <td><a href="lehed/lehtede-pealkirjade-ja-kirjelduste-muutmine.html" class="title-link">Muuda lehtede pealkirju ja kirjeldusi</a></td>
+                        <td><span class="section-badge">Lehed</span></td>
+                        <td><a href="https://www.voog.com/tugi/lehed/lehtede-pealkirjade-ja-kirjelduste-muutmine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-website-pages/changing-page-titles-and-descriptions.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">137KB</td>
+                    </tr>
+                    <tr data-section="lehed" data-title="Kuidas kasutada oma saidi sisseehitatud otsingut">
+                        <td><a href="lehed/otsingumootori-kasutamine.html" class="title-link">Kuidas kasutada oma saidi sisseehitatud otsingut</a></td>
+                        <td><span class="section-badge">Lehed</span></td>
+                        <td><a href="https://www.voog.com/tugi/lehed/otsingumootori-kasutamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-website-pages/using-the-search-engine.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="lehed" data-title="Korrasta oma saidi struktuuri">
+                        <td><a href="lehed/saidi-struktuuri-korrastamine.html" class="title-link">Korrasta oma saidi struktuuri</a></td>
+                        <td><span class="section-badge">Lehed</span></td>
+                        <td><a href="https://www.voog.com/tugi/lehed/saidi-struktuuri-korrastamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-website-pages/reorganizing-the-structure-of-your-website.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">134KB</td>
+                    </tr>
+                    <tr data-section="lehed" data-title="Kaitse saidi lehed salasõnaga">
+                        <td><a href="lehed/salasonaga-kaitstud-lehed.html" class="title-link">Kaitse saidi lehed salasõnaga</a></td>
+                        <td><span class="section-badge">Lehed</span></td>
+                        <td><a href="https://www.voog.com/tugi/lehed/salasonaga-kaitstud-lehed" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-website-pages/password-protected-pages.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">138KB</td>
+                    </tr>
+                    <tr data-section="lehed" data-title="Lisa uusi lehti ja kustuta vanu">
+                        <td><a href="lehed/uute-lehtede-loomine-ja-vanade-kustutamine.html" class="title-link">Lisa uusi lehti ja kustuta vanu</a></td>
+                        <td><span class="section-badge">Lehed</span></td>
+                        <td><a href="https://www.voog.com/tugi/lehed/uute-lehtede-loomine-ja-vanade-kustutamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-website-pages/creating-new-or-removing-old-pages.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">139KB</td>
+                    </tr>
+                    <tr data-section="pildid-ja-failid" data-title="Kuidas luua galeriid">
+                        <td><a href="pildid-ja-failid/galeriide-loomine.html" class="title-link">Kuidas luua galeriid</a></td>
+                        <td><span class="section-badge">Pildid ja Failid</span></td>
+                        <td><a href="https://www.voog.com/tugi/pildid-ja-failid/galeriide-loomine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-pictures-and-files/picture-galleries.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">138KB</td>
+                    </tr>
+                    <tr data-section="pildid-ja-failid" data-title="Lisa failid kollektsioonidesse">
+                        <td><a href="pildid-ja-failid/kollektsioonid.html" class="title-link">Lisa failid kollektsioonidesse</a></td>
+                        <td><span class="section-badge">Pildid ja Failid</span></td>
+                        <td><a href="https://www.voog.com/tugi/pildid-ja-failid/kollektsioonid" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-pictures-and-files/collections.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">138KB</td>
+                    </tr>
+                    <tr data-section="pildid-ja-failid" data-title="Eemalda pildid ja failid teksti sisualast">
+                        <td><a href="pildid-ja-failid/multimeedia-kustutamine-teksti-sisualas.html" class="title-link">Eemalda pildid ja failid teksti sisualast</a></td>
+                        <td><span class="section-badge">Pildid ja Failid</span></td>
+                        <td><a href="https://www.voog.com/tugi/pildid-ja-failid/multimeedia-kustutamine-teksti-sisualas" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="pildid-ja-failid" data-title="Kuidas saidile pilte ja faile üles laadida">
+                        <td><a href="pildid-ja-failid/piltide-ja-failide-uleslaadimine.html" class="title-link">Kuidas saidile pilte ja faile üles laadida</a></td>
+                        <td><span class="section-badge">Pildid ja Failid</span></td>
+                        <td><a href="https://www.voog.com/tugi/pildid-ja-failid/piltide-ja-failide-uleslaadimine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">137KB</td>
+                    </tr>
+                    <tr data-section="pildid-ja-failid" data-title="Lisa ja halda pilte">
+                        <td><a href="pildid-ja-failid/piltide-lisamine-ja-haldamine.html" class="title-link">Lisa ja halda pilte</a></td>
+                        <td><span class="section-badge">Pildid ja Failid</span></td>
+                        <td><a href="https://www.voog.com/tugi/pildid-ja-failid/piltide-lisamine-ja-haldamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-pictures-and-files/adding-and-managing-pictures.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">139KB</td>
+                    </tr>
+                    <tr data-section="seo" data-title="Tõsta oma saidi nähtavust otsingumootorites">
+                        <td><a href="seo/kuidas-ma-saan-oma-kodulehe-otsingumootorite-jaoks-nahtavaks-muuta.html" class="title-link">Tõsta oma saidi nähtavust otsingumootorites</a></td>
+                        <td><span class="section-badge">SEO</span></td>
+                        <td><a href="https://www.voog.com/tugi/seo/kuidas-ma-saan-oma-kodulehe-otsingumootorite-jaoks-nahtavaks-muuta" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/seo/getting-your-website-to-appear-in-google-and-bing.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">139KB</td>
+                    </tr>
+                    <tr data-section="seo" data-title="Optimeeri oma saidi pealkirju ja kirjeldusi">
+                        <td><a href="seo/pealkirjad-ja-kirjeldused.html" class="title-link">Optimeeri oma saidi pealkirju ja kirjeldusi</a></td>
+                        <td><span class="section-badge">SEO</span></td>
+                        <td><a href="https://www.voog.com/tugi/seo/pealkirjad-ja-kirjeldused" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/seo/titles-and-descriptions.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="seo" data-title="Mis on SEO">
+                        <td><a href="seo/seo-optimeerimine-voos.html" class="title-link">Mis on SEO</a></td>
+                        <td><span class="section-badge">SEO</span></td>
+                        <td><a href="https://www.voog.com/tugi/seo/seo-optimeerimine-voos" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/seo/seo-optimization-in-voog.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">146KB</td>
+                    </tr>
+                    <tr data-section="seo" data-title="Veebiseminarid SEO teemadel">
+                        <td><a href="seo/seo-teemalised-veebiseminarid.html" class="title-link">Veebiseminarid SEO teemadel</a></td>
+                        <td><span class="section-badge">SEO</span></td>
+                        <td><a href="https://www.voog.com/tugi/seo/seo-teemalised-veebiseminarid" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="seo" data-title="Videojuhend: kuidas optimeerida SEO’d otsingumootoritele">
+                        <td><a href="seo/videojuhend-seo-optimeerimine-otsingumootorile.html" class="title-link">Videojuhend: kuidas optimeerida SEO’d otsingumootoritele</a></td>
+                        <td><span class="section-badge">SEO</span></td>
+                        <td><a href="https://www.voog.com/tugi/seo/videojuhend-seo-optimeerimine-otsingumootorile" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="sisu-haldamine" data-title="Lisa BookLux broneeringuvorm">
+                        <td><a href="sisu-haldamine/booklux-broneeringuvormi-lisamine.html" class="title-link">Lisa BookLux broneeringuvorm</a></td>
+                        <td><span class="section-badge">Sisu Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisu-haldamine/booklux-broneeringuvormi-lisamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-content/add-booklux-booking-widget-to-your-website.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">137KB</td>
+                    </tr>
+                    <tr data-section="sisu-haldamine" data-title="Lisa Google kalender oma saidile">
+                        <td><a href="sisu-haldamine/google-kalendri-lisamine-saidile.html" class="title-link">Lisa Google kalender oma saidile</a></td>
+                        <td><span class="section-badge">Sisu Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisu-haldamine/google-kalendri-lisamine-saidile" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">134KB</td>
+                    </tr>
+                    <tr data-section="sisu-haldamine" data-title="Kuidas muuta tekst, pilt või dokument lingiks">
+                        <td><a href="sisu-haldamine/linkide-loomine.html" class="title-link">Kuidas muuta tekst, pilt või dokument lingiks</a></td>
+                        <td><span class="section-badge">Sisu Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisu-haldamine/linkide-loomine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-content/creating-links.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">143KB</td>
+                    </tr>
+                    <tr data-section="sisu-haldamine" data-title="Lisa Mailchimp pop-up registreeringu vorm">
+                        <td><a href="sisu-haldamine/mailchimp-pop-up-registreeringu-vormi-lisamine-saidile.html" class="title-link">Lisa Mailchimp pop-up registreeringu vorm</a></td>
+                        <td><span class="section-badge">Sisu Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisu-haldamine/mailchimp-pop-up-registreeringu-vormi-lisamine-saidile" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-content/adding-smaily-newsletter-subscription-form-to-voog-website.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="sisu-haldamine" data-title="Kuidas nuppu luua">
+                        <td><a href="sisu-haldamine/nuppude-loomine.html" class="title-link">Kuidas nuppu luua</a></td>
+                        <td><span class="section-badge">Sisu Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisu-haldamine/nuppude-loomine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-content/creating-buttons.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">135KB</td>
+                    </tr>
+                    <tr data-section="sisu-haldamine" data-title="Kuidas taasta funktsiooni kasutada">
+                        <td><a href="sisu-haldamine/taasta-funktsiooni-kasutamine.html" class="title-link">Kuidas taasta funktsiooni kasutada</a></td>
+                        <td><span class="section-badge">Sisu Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisu-haldamine/taasta-funktsiooni-kasutamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="sisu-haldamine" data-title="Loo ja halda tabeleid ">
+                        <td><a href="sisu-haldamine/tabelite-ehitamine.html" class="title-link">Loo ja halda tabeleid </a></td>
+                        <td><span class="section-badge">Sisu Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisu-haldamine/tabelite-ehitamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-content/building-tables.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">142KB</td>
+                    </tr>
+                    <tr data-section="sisu-haldamine" data-title="Kuidas Voo tekstitööriistaga teksti muuta">
+                        <td><a href="sisu-haldamine/teksti-haldamine.html" class="title-link">Kuidas Voo tekstitööriistaga teksti muuta</a></td>
+                        <td><span class="section-badge">Sisu Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisu-haldamine/teksti-haldamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">141KB</td>
+                    </tr>
+                    <tr data-section="sisu-haldamine" data-title="Kuidas välist rakendust lisada">
+                        <td><a href="sisu-haldamine/valise-rakenduse-lisamine.html" class="title-link">Kuidas välist rakendust lisada</a></td>
+                        <td><span class="section-badge">Sisu Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisu-haldamine/valise-rakenduse-lisamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">134KB</td>
+                    </tr>
+                    <tr data-section="sisu-haldamine" data-title="Lisa vestlusaken oma saidile">
+                        <td><a href="sisu-haldamine/vestlusakna-lisamine-saidile.html" class="title-link">Lisa vestlusaken oma saidile</a></td>
+                        <td><span class="section-badge">Sisu Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisu-haldamine/vestlusakna-lisamine-saidile" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-content/adding-a-live-chat-to-your-site.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="sisu-haldamine" data-title="Lisa video või Google kaart sisuala">
+                        <td><a href="sisu-haldamine/video-ja-google-kaardi-lisamine.html" class="title-link">Lisa video või Google kaart sisuala</a></td>
+                        <td><span class="section-badge">Sisu Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisu-haldamine/video-ja-google-kaardi-lisamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">136KB</td>
+                    </tr>
+                    <tr data-section="sisu-haldamine" data-title="Lisa Smaily liitumisvorm ">
+                        <td><a href="sisu-haldamine/voo-kodulehele-smaily-liitumisvormi-lisamine.html" class="title-link">Lisa Smaily liitumisvorm </a></td>
+                        <td><span class="section-badge">Sisu Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisu-haldamine/voo-kodulehele-smaily-liitumisvormi-lisamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/managing-your-content/adding-smaily-newsletter-subscription-form-to-voog-website.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">138KB</td>
+                    </tr>
+                    <tr data-section="sisualad" data-title="Mis on sisuala">
+                        <td><a href="sisualad/mis-on-sisuala.html" class="title-link">Mis on sisuala</a></td>
+                        <td><span class="section-badge">Sisualad</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisualad/mis-on-sisuala" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/content-areas/what-is-a-content-area.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">148KB</td>
+                    </tr>
+                    <tr data-section="sisualad" data-title="Lisa ja eemalda sisualasid">
+                        <td><a href="sisualad/sisualade-lisamine-ja-eemaldamine.html" class="title-link">Lisa ja eemalda sisualasid</a></td>
+                        <td><span class="section-badge">Sisualad</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisualad/sisualade-lisamine-ja-eemaldamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/content-areas/adding-and-removing-content-areas.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">135KB</td>
+                    </tr>
+                    <tr data-section="sisualad" data-title="Kuidas sisualasid ümber tõsta">
+                        <td><a href="sisualad/sisualade-umber-tostmine.html" class="title-link">Kuidas sisualasid ümber tõsta</a></td>
+                        <td><span class="section-badge">Sisualad</span></td>
+                        <td><a href="https://www.voog.com/tugi/sisualad/sisualade-umber-tostmine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/content-areas/rearranging-content-areas.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="statistika-ja-saidi-haldamine" data-title="Lisa Facebook Pixel oma saidile">
+                        <td><a href="statistika-ja-saidi-haldamine/facebook-pixeli-lisamine-sinu-veebilehele.html" class="title-link">Lisa Facebook Pixel oma saidile</a></td>
+                        <td><span class="section-badge">Statistika ja Saidi Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/statistika-ja-saidi-haldamine/facebook-pixeli-lisamine-sinu-veebilehele" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/stats-and-maintenance/adding-facebook-pixel-to-your-website.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="statistika-ja-saidi-haldamine" data-title="Lisa Google Analytics oma saidile">
+                        <td><a href="statistika-ja-saidi-haldamine/google-analyticsi-lisamine-sinu-veebilehele.html" class="title-link">Lisa Google Analytics oma saidile</a></td>
+                        <td><span class="section-badge">Statistika ja Saidi Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/statistika-ja-saidi-haldamine/google-analyticsi-lisamine-sinu-veebilehele" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/stats-and-maintenance/adding-google-analytics-to-your-website.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">134KB</td>
+                    </tr>
+                    <tr data-section="statistika-ja-saidi-haldamine" data-title="Kas Voo saiti saab kasutada isiklikus serveris">
+                        <td><a href="statistika-ja-saidi-haldamine/kas-voo-veebilehte-saab-kasutada-isiklikus-serveris.html" class="title-link">Kas Voo saiti saab kasutada isiklikus serveris</a></td>
+                        <td><span class="section-badge">Statistika ja Saidi Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/statistika-ja-saidi-haldamine/kas-voo-veebilehte-saab-kasutada-isiklikus-serveris" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="statistika-ja-saidi-haldamine" data-title="Kuidas genereerida API võtit">
+                        <td><a href="statistika-ja-saidi-haldamine/kuidas-genereerida-api-votit.html" class="title-link">Kuidas genereerida API võtit</a></td>
+                        <td><span class="section-badge">Statistika ja Saidi Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/statistika-ja-saidi-haldamine/kuidas-genereerida-api-votit" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="statistika-ja-saidi-haldamine" data-title="Kuidas lisada saidile küpsiste kasutamise kohta teavitust">
+                        <td><a href="statistika-ja-saidi-haldamine/kupsiste-kasutamise-teavitus.html" class="title-link">Kuidas lisada saidile küpsiste kasutamise kohta teavitust</a></td>
+                        <td><span class="section-badge">Statistika ja Saidi Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/statistika-ja-saidi-haldamine/kupsiste-kasutamise-teavitus" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">134KB</td>
+                    </tr>
+                    <tr data-section="statistika-ja-saidi-haldamine" data-title="Milliseid veebilehitsejaid Voog toetab">
+                        <td><a href="statistika-ja-saidi-haldamine/milliseid-veebilehitsejaid-voog-toetab.html" class="title-link">Milliseid veebilehitsejaid Voog toetab</a></td>
+                        <td><span class="section-badge">Statistika ja Saidi Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/statistika-ja-saidi-haldamine/milliseid-veebilehitsejaid-voog-toetab" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="statistika-ja-saidi-haldamine" data-title="Telli tagavarakoopia saidist ja lae see alla">
+                        <td><a href="statistika-ja-saidi-haldamine/tagavara-koopia-saidist-ja-selle-allalaadimine.html" class="title-link">Telli tagavarakoopia saidist ja lae see alla</a></td>
+                        <td><span class="section-badge">Statistika ja Saidi Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/statistika-ja-saidi-haldamine/tagavara-koopia-saidist-ja-selle-allalaadimine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="statistika-ja-saidi-haldamine" data-title="Tutvu Voo statistika tööriistadega">
+                        <td><a href="statistika-ja-saidi-haldamine/ulevaade-voo-statistika-menuust.html" class="title-link">Tutvu Voo statistika tööriistadega</a></td>
+                        <td><span class="section-badge">Statistika ja Saidi Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/statistika-ja-saidi-haldamine/ulevaade-voo-statistika-menuust" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="statistika-ja-saidi-haldamine" data-title="Tutvu saidi varukoopia põhimõtetega">
+                        <td><a href="statistika-ja-saidi-haldamine/varundamine-ja-teenuse-kattesaadavus.html" class="title-link">Tutvu saidi varukoopia põhimõtetega</a></td>
+                        <td><span class="section-badge">Statistika ja Saidi Haldamine</span></td>
+                        <td><a href="https://www.voog.com/tugi/statistika-ja-saidi-haldamine/varundamine-ja-teenuse-kattesaadavus" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/stats-and-maintenance/about-backups-and-service-uptime.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="tellimus" data-title="Vaata e-poe vahendustasu arvestust">
+                        <td><a href="tellimus/e-poe-vahendustasu-arvestus.html" class="title-link">Vaata e-poe vahendustasu arvestust</a></td>
+                        <td><span class="section-badge">Tellimus</span></td>
+                        <td><a href="https://www.voog.com/tugi/tellimus/e-poe-vahendustasu-arvestus" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="tellimus" data-title="Aktiveeri krediitkaardimaksed oma saidil">
+                        <td><a href="tellimus/krediitkaardi-maksed.html" class="title-link">Aktiveeri krediitkaardimaksed oma saidil</a></td>
+                        <td><span class="section-badge">Tellimus</span></td>
+                        <td><a href="https://www.voog.com/tugi/tellimus/krediitkaardi-maksed" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-subscriptions/credit-card-payments.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">136KB</td>
+                    </tr>
+                    <tr data-section="tellimus" data-title="Kuidas ja miks saada Voo partnerarendajaks?">
+                        <td><a href="tellimus/kuidas-ja-miks-saada-voo-partnerarendajaks.html" class="title-link">Kuidas ja miks saada Voo partnerarendajaks?</a></td>
+                        <td><span class="section-badge">Tellimus</span></td>
+                        <td><a href="https://www.voog.com/tugi/tellimus/kuidas-ja-miks-saada-voo-partnerarendajaks" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="tellimus" data-title="Kuidas kasutada Voo sooduskoodi tellimuse jaoks">
+                        <td><a href="tellimus/kuidas-kasutada-voo-sooduskoodi.html" class="title-link">Kuidas kasutada Voo sooduskoodi tellimuse jaoks</a></td>
+                        <td><span class="section-badge">Tellimus</span></td>
+                        <td><a href="https://www.voog.com/tugi/tellimus/kuidas-kasutada-voo-sooduskoodi" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">135KB</td>
+                    </tr>
+                    <tr data-section="tellimus" data-title="Vaata oma tasutud arveid ">
+                        <td><a href="tellimus/kus-void-leida-tasutud-arved.html" class="title-link">Vaata oma tasutud arveid </a></td>
+                        <td><span class="section-badge">Tellimus</span></td>
+                        <td><a href="https://www.voog.com/tugi/tellimus/kus-void-leida-tasutud-arved" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="tellimus" data-title="Leia endale sobiv Voo tellimus">
+                        <td><a href="tellimus/sobiva-tellimuse-valimine.html" class="title-link">Leia endale sobiv Voo tellimus</a></td>
+                        <td><span class="section-badge">Tellimus</span></td>
+                        <td><a href="https://www.voog.com/tugi/tellimus/sobiva-tellimuse-valimine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-subscriptions/choosing-an-appropriate-subscription-plan.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="tellimus" data-title="Kuidas soovitada Voogu ja teenida tasu">
+                        <td><a href="tellimus/soovita-ja-teeni.html" class="title-link">Kuidas soovitada Voogu ja teenida tasu</a></td>
+                        <td><span class="section-badge">Tellimus</span></td>
+                        <td><a href="https://www.voog.com/tugi/tellimus/soovita-ja-teeni" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="tellimus" data-title="Kuidas saidi tellimust lõpetada">
+                        <td><a href="tellimus/tellimuse-lopetamine.html" class="title-link">Kuidas saidi tellimust lõpetada</a></td>
+                        <td><span class="section-badge">Tellimus</span></td>
+                        <td><a href="https://www.voog.com/tugi/tellimus/tellimuse-lopetamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-subscriptions/cancelling-your-subscriptions.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="tellimus" data-title="Kuidas olemasolevat tellimust vahetada">
+                        <td><a href="tellimus/tellimuse-vahetamine.html" class="title-link">Kuidas olemasolevat tellimust vahetada</a></td>
+                        <td><span class="section-badge">Tellimus</span></td>
+                        <td><a href="https://www.voog.com/tugi/tellimus/tellimuse-vahetamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/your-subscriptions/changing-your-subscriptions.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="veebiseminar" data-title="Veebiseminar: seadistame koos sinu e-poe ostukorvi">
+                        <td><a href="veebiseminar/veebiseminar-sinu-e-poe-ostukorv.html" class="title-link">Veebiseminar: seadistame koos sinu e-poe ostukorvi</a></td>
+                        <td><span class="section-badge">Veebiseminar</span></td>
+                        <td><a href="https://www.voog.com/tugi/veebiseminar/veebiseminar-sinu-e-poe-ostukorv" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="veebiseminar" data-title="Veebiseminar: vaata, millise veebilehe ja e-poe saad luua Voo võimsaima kujundusmalliga Nuuk">
+                        <td><a href="veebiseminar/veebiseminar-veebipood-nuuk.html" class="title-link">Veebiseminar: vaata, millise veebilehe ja e-poe saad luua Voo võimsaima kujundusmalliga Nuuk</a></td>
+                        <td><span class="section-badge">Veebiseminar</span></td>
+                        <td><a href="https://www.voog.com/tugi/veebiseminar/veebiseminar-veebipood-nuuk" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="veebiseminar" data-title="Veebiseminar: alustame koos sinu e-poe loomisega">
+                        <td><a href="veebiseminar/voo-seminar-alustame-koos-sinu-veebipoe-loomisega.html" class="title-link">Veebiseminar: alustame koos sinu e-poe loomisega</a></td>
+                        <td><span class="section-badge">Veebiseminar</span></td>
+                        <td><a href="https://www.voog.com/tugi/veebiseminar/voo-seminar-alustame-koos-sinu-veebipoe-loomisega" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="veebiseminar" data-title="Veebiseminar: SEO ehk kuidas otsingumootoris esile tõusta ">
+                        <td><a href="veebiseminar/voo-seminar-seo.html" class="title-link">Veebiseminar: SEO ehk kuidas otsingumootoris esile tõusta </a></td>
+                        <td><span class="section-badge">Veebiseminar</span></td>
+                        <td><a href="https://www.voog.com/tugi/veebiseminar/voo-seminar-seo" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="veebiseminar" data-title="SEO erisaade turundusspetsialisti Priit Kallasega">
+                        <td><a href="veebiseminar/voo-seo-seminari-erisaade.html" class="title-link">SEO erisaade turundusspetsialisti Priit Kallasega</a></td>
+                        <td><span class="section-badge">Veebiseminar</span></td>
+                        <td><a href="https://www.voog.com/tugi/veebiseminar/voo-seo-seminari-erisaade" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">131KB</td>
+                    </tr>
+                    <tr data-section="videojuhendid" data-title="Tutvu Voo disainitööriistaga">
+                        <td><a href="videojuhendid/disainitooriist.html" class="title-link">Tutvu Voo disainitööriistaga</a></td>
+                        <td><span class="section-badge">Videojuhendid</span></td>
+                        <td><a href="https://www.voog.com/tugi/videojuhendid/disainitooriist" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/video-tutorials/design-editor-tool.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="videojuhendid" data-title="Lisa Facebooki uudisevoog">
+                        <td><a href="videojuhendid/facebooki-uudisvoo-lisamine.html" class="title-link">Lisa Facebooki uudisevoog</a></td>
+                        <td><span class="section-badge">Videojuhendid</span></td>
+                        <td><a href="https://www.voog.com/tugi/videojuhendid/facebooki-uudisvoo-lisamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="videojuhendid" data-title="Tuvu Voo tekstitööriista võimalustega">
+                        <td><a href="videojuhendid/tekstitooriist.html" class="title-link">Tuvu Voo tekstitööriista võimalustega</a></td>
+                        <td><span class="section-badge">Videojuhendid</span></td>
+                        <td><a href="https://www.voog.com/tugi/videojuhendid/tekstitooriist" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="videojuhendid" data-title="Uue keele lisamine">
+                        <td><a href="videojuhendid/uue-keele-lisamine.html" class="title-link">Uue keele lisamine</a></td>
+                        <td><span class="section-badge">Videojuhendid</span></td>
+                        <td><a href="https://www.voog.com/tugi/videojuhendid/uue-keele-lisamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="videojuhendid" data-title="Veebilehe kirjeldus otsingumootoris">
+                        <td><a href="videojuhendid/veebilehe-kirjeldus-otsingumootoris.html" class="title-link">Veebilehe kirjeldus otsingumootoris</a></td>
+                        <td><span class="section-badge">Videojuhendid</span></td>
+                        <td><a href="https://www.voog.com/tugi/videojuhendid/veebilehe-kirjeldus-otsingumootoris" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">130KB</td>
+                    </tr>
+                    <tr data-section="videojuhendid" data-title="Kuidas luua e-poe tingimuste leht">
+                        <td><a href="videojuhendid/veebipoe-tingimuste-lehe-loomine.html" class="title-link">Kuidas luua e-poe tingimuste leht</a></td>
+                        <td><span class="section-badge">Videojuhendid</span></td>
+                        <td><a href="https://www.voog.com/tugi/videojuhendid/veebipoe-tingimuste-lehe-loomine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><span style="color: #ccc;">—</span></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="vormid" data-title="Muuda vormi välju">
+                        <td><a href="vormid/muuda-vormi-valju.html" class="title-link">Muuda vormi välju</a></td>
+                        <td><span class="section-badge">Vormid</span></td>
+                        <td><a href="https://www.voog.com/tugi/vormid/muuda-vormi-valju" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/creating-and-managing-forms/editing-your-form-fields.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">137KB</td>
+                    </tr>
+                    <tr data-section="vormid" data-title="Tutvu vormide kasutamisega Voos">
+                        <td><a href="vormid/utle-tere-vormidele.html" class="title-link">Tutvu vormide kasutamisega Voos</a></td>
+                        <td><span class="section-badge">Vormid</span></td>
+                        <td><a href="https://www.voog.com/tugi/vormid/utle-tere-vormidele" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/creating-and-managing-forms/say-hello-to-forms.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">132KB</td>
+                    </tr>
+                    <tr data-section="vormid" data-title="Loo uus vorm">
+                        <td><a href="vormid/uue-vormi-loomine.html" class="title-link">Loo uus vorm</a></td>
+                        <td><span class="section-badge">Vormid</span></td>
+                        <td><a href="https://www.voog.com/tugi/vormid/uue-vormi-loomine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/creating-and-managing-forms/creating-a-new-form.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">133KB</td>
+                    </tr>
+                    <tr data-section="vormid" data-title="Kuidas hallata vormide kaudu sisestatud infot">
+                        <td><a href="vormid/vormide-kaudu-sisestatud-info-haldamine.html" class="title-link">Kuidas hallata vormide kaudu sisestatud infot</a></td>
+                        <td><span class="section-badge">Vormid</span></td>
+                        <td><a href="https://www.voog.com/tugi/vormid/vormide-kaudu-sisestatud-info-haldamine" target="_blank" class="original-link">Originaal</a></td>
+                        <td><a href="../en/creating-and-managing-forms/managing-submitted-form-entries.html" target="_blank" class="english-link">English</a></td>
+                        <td class="size">136KB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function updateStats() {
+            const totalArticles = document.querySelectorAll('#articles-table tr').length;
+            const visibleArticles = document.querySelectorAll('#articles-table tr:not([style*="display: none"])').length;
+            const totalSections = new Set(Array.from(document.querySelectorAll('#articles-table tr')).map(row => row.dataset.section)).size;
+            
+            document.getElementById('total-articles').textContent = totalArticles;
+            document.getElementById('visible-articles').textContent = visibleArticles;
+            document.getElementById('total-sections').textContent = totalSections;
+        }
+
+        function setupSearch() {
+            const searchInput = document.getElementById('search');
+            const rows = document.querySelectorAll('#articles-table tr');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                rows.forEach(row => {
+                    const title = row.dataset.title.toLowerCase();
+                    const section = row.querySelector('.section-badge').textContent.toLowerCase();
+                    const isVisible = title.includes(searchTerm) || section.includes(searchTerm);
+                    
+                    row.style.display = isVisible ? '' : 'none';
+                });
+                
+                updateStats();
+            });
+        }
+
+        function setupFilters() {
+            const filterButtons = document.querySelectorAll('.filter-buttons .btn');
+            const rows = document.querySelectorAll('#articles-table tr');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter rows
+                    rows.forEach(row => {
+                        const section = row.dataset.section;
+                        const isVisible = filter === 'all' || section === filter;
+                        row.style.display = isVisible ? '' : 'none';
+                    });
+                    
+                    updateStats();
+                });
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStats();
+            setupSearch();
+            setupFilters();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,673 @@
+Voog Support Guides - English
+============================
+
+Total articles: 109
+Sections: 17
+
+Languages (5 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: keeled
+
+  • Build your website in multiple languages
+    Local: all-about-languages/building-your-website-in-multiple-languages.html
+    Original: https://www.voog.com/support/all-about-languages/building-your-website-in-multiple-languages
+    Estonian: ../et/keeled/sinu-saidi-ehitamine-mitmes-keeles.html
+
+  • Change the interface language
+    Local: all-about-languages/changing-the-interface-language.html
+    Original: https://www.voog.com/support/all-about-languages/changing-the-interface-language
+    Estonian: ../et/keeled/kasutajaliidese-keele-muutmine.html
+
+  • Change the language code in your site menu
+    Local: all-about-languages/changing-the-language-code-in-your-site-menu.html
+    Original: https://www.voog.com/support/all-about-languages/changing-the-language-code-in-your-site-menu
+    Estonian: —
+
+  • Choose the default language for your visitors
+    Local: all-about-languages/choosing-the-default-language-for-your-visitors.html
+    Original: https://www.voog.com/support/all-about-languages/choosing-the-default-language-for-your-visitors
+    Estonian: —
+
+  • Configure the flags menu
+    Local: all-about-languages/configuring-the-flags-menu.html
+    Original: https://www.voog.com/support/all-about-languages/configuring-the-flags-menu
+    Estonian: —
+
+
+Content Areas (3 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: sisualad
+
+  • Add and remove content areas
+    Local: content-areas/adding-and-removing-content-areas.html
+    Original: https://www.voog.com/support/content-areas/adding-and-removing-content-areas
+    Estonian: ../et/sisualad/sisualade-lisamine-ja-eemaldamine.html
+
+  • Rearrange content areas
+    Local: content-areas/rearranging-content-areas.html
+    Original: https://www.voog.com/support/content-areas/rearranging-content-areas
+    Estonian: —
+
+  • What is a content area?
+    Local: content-areas/what-is-a-content-area.html
+    Original: https://www.voog.com/support/content-areas/what-is-a-content-area
+    Estonian: ../et/sisualad/mis-on-sisuala.html
+
+
+Forms (4 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: vormid
+
+  • Create a new form
+    Local: creating-and-managing-forms/creating-a-new-form.html
+    Original: https://www.voog.com/support/creating-and-managing-forms/creating-a-new-form
+    Estonian: —
+
+  • Edit your form fields
+    Local: creating-and-managing-forms/editing-your-form-fields.html
+    Original: https://www.voog.com/support/creating-and-managing-forms/editing-your-form-fields
+    Estonian: —
+
+  • Manage submitted form entries
+    Local: creating-and-managing-forms/managing-submitted-form-entries.html
+    Original: https://www.voog.com/support/creating-and-managing-forms/managing-submitted-form-entries
+    Estonian: —
+
+  • Say “hello” to forms
+    Local: creating-and-managing-forms/say-hello-to-forms.html
+    Original: https://www.voog.com/support/creating-and-managing-forms/say-hello-to-forms
+    Estonian: ../et/vormid/utle-tere-vormidele.html
+
+
+Blog (7 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: blogi
+
+  • Add or delete blog posts
+    Local: managing-your-blog/adding-new-or-removing-old-posts.html
+    Original: https://www.voog.com/support/managing-your-blog/adding-new-or-removing-old-posts
+    Estonian: —
+
+  • How do I publish my blog post?
+    Local: managing-your-blog/going-live-with-your-blog-post.html
+    Original: https://www.voog.com/support/managing-your-blog/going-live-with-your-blog-post
+    Estonian: —
+
+  • How do I modify my article for social media?
+    Local: managing-your-blog/how-to-modify-your-post-for-social-media.html
+    Original: https://www.voog.com/support/managing-your-blog/how-to-modify-your-post-for-social-media
+    Estonian: —
+
+  • How can I manage comments on my blog?
+    Local: managing-your-blog/managing-blog-comments.html
+    Original: https://www.voog.com/support/managing-your-blog/managing-blog-comments
+    Estonian: ../et/blogi/blogi-kommentaaride-haldamine.html
+
+  • Review blog author and date
+    Local: managing-your-blog/reviewing-blog-author-and-date.html
+    Original: https://www.voog.com/support/managing-your-blog/reviewing-blog-author-and-date
+    Estonian: —
+
+  • Start your first blog with Voog
+    Local: managing-your-blog/starting-your-first-blog-with-voog.html
+    Original: https://www.voog.com/support/managing-your-blog/starting-your-first-blog-with-voog
+    Estonian: —
+
+  • Use tags for your blog
+    Local: managing-your-blog/using-tags-with-your-blog.html
+    Original: https://www.voog.com/support/managing-your-blog/using-tags-with-your-blog
+    Estonian: —
+
+
+Content (12 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: sisu-haldamine
+
+  •  Add a BookLux booking widget to your website
+    Local: managing-your-content/add-booklux-booking-widget-to-your-website.html
+    Original: https://www.voog.com/support/managing-your-content/add-booklux-booking-widget-to-your-website
+    Estonian: —
+
+  • Add live chat to your site
+    Local: managing-your-content/adding-a-live-chat-to-your-site.html
+    Original: https://www.voog.com/support/managing-your-content/adding-a-live-chat-to-your-site
+    Estonian: —
+
+  • Add a Smaily newsletter subscription form to your website
+    Local: managing-your-content/adding-smaily-newsletter-subscription-form-to-voog-website.html
+    Original: https://www.voog.com/support/managing-your-content/adding-smaily-newsletter-subscription-form-to-voog-website
+    Estonian: —
+
+  • Build tables
+    Local: managing-your-content/building-tables.html
+    Original: https://www.voog.com/support/managing-your-content/building-tables
+    Estonian: ../et/sisu-haldamine/tabelite-ehitamine.html
+
+  • Create buttons
+    Local: managing-your-content/creating-buttons.html
+    Original: https://www.voog.com/support/managing-your-content/creating-buttons
+    Estonian: ../et/sisu-haldamine/nuppude-loomine.html
+
+  • Create links
+    Local: managing-your-content/creating-links.html
+    Original: https://www.voog.com/support/managing-your-content/creating-links
+    Estonian: ../et/sisu-haldamine/linkide-loomine.html
+
+  • Add custom content
+    Local: managing-your-content/inserting-custom-content.html
+    Original: https://www.voog.com/support/managing-your-content/inserting-custom-content
+    Estonian: —
+
+  • Insert a Google Calendar
+    Local: managing-your-content/inserting-google-calendar.html
+    Original: https://www.voog.com/support/managing-your-content/inserting-google-calendar
+    Estonian: —
+
+  • Insert a Mailchimp pop-up signup form
+    Local: managing-your-content/inserting-mailchimp-pop-up-signup-form.html
+    Original: https://www.voog.com/support/managing-your-content/inserting-mailchimp-pop-up-signup-form
+    Estonian: —
+
+  • Insert videos and maps
+    Local: managing-your-content/inserting-videos-and-maps.html
+    Original: https://www.voog.com/support/managing-your-content/inserting-videos-and-maps
+    Estonian: —
+
+  • Manage texts
+    Local: managing-your-content/managing-texts.html
+    Original: https://www.voog.com/support/managing-your-content/managing-texts
+    Estonian: —
+
+  • Use the undo function
+    Local: managing-your-content/using-the-undo-function.html
+    Original: https://www.voog.com/support/managing-your-content/using-the-undo-function
+    Estonian: —
+
+
+Pages (12 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: lehed
+
+  • Update page addresses
+    Local: managing-your-website-pages/changing-page-addresses.html
+    Original: https://www.voog.com/support/managing-your-website-pages/changing-page-addresses
+    Estonian: ../et/lehed/lehe-aadressi-muutmine.html
+
+  • Edit page titles and descriptions
+    Local: managing-your-website-pages/changing-page-titles-and-descriptions.html
+    Original: https://www.voog.com/support/managing-your-website-pages/changing-page-titles-and-descriptions
+    Estonian: ../et/lehed/lehtede-pealkirjade-ja-kirjelduste-muutmine.html
+
+  • Change your page layout
+    Local: managing-your-website-pages/changing-your-pages-layout.html
+    Original: https://www.voog.com/support/managing-your-website-pages/changing-your-pages-layout
+    Estonian: —
+
+  • Set up custom 401 and 404 pages
+    Local: managing-your-website-pages/creating-a-custom-401-and-404-page.html
+    Original: https://www.voog.com/support/managing-your-website-pages/creating-a-custom-401-and-404-page
+    Estonian: ../et/lehed/isikuparaste-401-ja-404-lehtede-loomine.html
+
+  • Add a link instead of a subpage
+    Local: managing-your-website-pages/creating-a-link-instead-of-subpage.html
+    Original: https://www.voog.com/support/managing-your-website-pages/creating-a-link-instead-of-subpage
+    Estonian: ../et/lehed/lehe-asemel-lingi-loomine.html
+
+  • Create or delete pages
+    Local: managing-your-website-pages/creating-new-or-removing-old-pages.html
+    Original: https://www.voog.com/support/managing-your-website-pages/creating-new-or-removing-old-pages
+    Estonian: ../et/lehed/uute-lehtede-loomine-ja-vanade-kustutamine.html
+
+  • Duplicate page content
+    Local: managing-your-website-pages/duplicating-content.html
+    Original: https://www.voog.com/support/managing-your-website-pages/duplicating-content
+    Estonian: ../et/lehed/lehe-sisu-kopeerimine.html
+
+  • Hide pages and make them visible again
+    Local: managing-your-website-pages/hiding-pages-and-making-them-visible-again.html
+    Original: https://www.voog.com/support/managing-your-website-pages/hiding-pages-and-making-them-visible-again
+    Estonian: ../et/lehed/lehe-peitmine-ja-avalikustamine.html
+
+  • <title>Voog Support Guides - Pages Section</title>
+    Local: managing-your-website-pages/index.html
+    Original: https://www.voog.com/support/managing-your-website-pages/index
+    Estonian: —
+
+  • Protect pages with a password
+    Local: managing-your-website-pages/password-protected-pages.html
+    Original: https://www.voog.com/support/managing-your-website-pages/password-protected-pages
+    Estonian: ../et/lehed/salasonaga-kaitstud-lehed.html
+
+  • Reorganize your website structure
+    Local: managing-your-website-pages/reorganizing-the-structure-of-your-website.html
+    Original: https://www.voog.com/support/managing-your-website-pages/reorganizing-the-structure-of-your-website
+    Estonian: ../et/lehed/saidi-struktuuri-korrastamine.html
+
+  • Use the website search engine
+    Local: managing-your-website-pages/using-the-search-engine.html
+    Original: https://www.voog.com/support/managing-your-website-pages/using-the-search-engine
+    Estonian: ../et/lehed/otsingumootori-kasutamine.html
+
+
+Online Store (10 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: e-pood
+
+  • Add an online store to your website
+    Local: online-store/add-online-store.html
+    Original: https://www.voog.com/support/online-store/add-online-store
+    Estonian: —
+
+  • Add shipping methods to your online store
+    Local: online-store/add-shipping-methods.html
+    Original: https://www.voog.com/support/online-store/add-shipping-methods
+    Estonian: —
+
+  • Customize checkout fields
+    Local: online-store/checkout-fields.html
+    Original: https://www.voog.com/support/online-store/checkout-fields
+    Estonian: —
+
+  • Create discount codes
+    Local: online-store/discount-codes.html
+    Original: https://www.voog.com/support/online-store/discount-codes
+    Estonian: —
+
+  • Preview email notifications
+    Local: online-store/e-mail-previews.html
+    Original: https://www.voog.com/support/online-store/e-mail-previews
+    Estonian: —
+
+  • Add new products to your online store
+    Local: online-store/how-to-add-buy-buttons-and-new-products-to-your-online-store.html
+    Original: https://www.voog.com/support/online-store/how-to-add-buy-buttons-and-new-products-to-your-online-store
+    Estonian: —
+
+  • Manage orders
+    Local: online-store/manage-your-orders.html
+    Original: https://www.voog.com/support/online-store/manage-your-orders
+    Estonian: —
+
+  • Set up payment methods for your online store
+    Local: online-store/payment-methods.html
+    Original: https://www.voog.com/support/online-store/payment-methods
+    Estonian: —
+
+  • Import products
+    Local: online-store/products-import.html
+    Original: https://www.voog.com/support/online-store/products-import
+    Estonian: —
+
+  • Organize your store structure
+    Local: online-store/store-structure.html
+    Original: https://www.voog.com/support/online-store/store-structure
+    Estonian: —
+
+
+SEO (3 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: seo
+
+  • Add your website to the Google search engine
+    Local: seo/getting-your-website-to-appear-in-google-and-bing.html
+    Original: https://www.voog.com/support/seo/getting-your-website-to-appear-in-google-and-bing
+    Estonian: —
+
+  • Optimize SEO in Voog
+    Local: seo/seo-optimization-in-voog.html
+    Original: https://www.voog.com/support/seo/seo-optimization-in-voog
+    Estonian: —
+
+  • Edit titles and descriptions
+    Local: seo/titles-and-descriptions.html
+    Original: https://www.voog.com/support/seo/titles-and-descriptions
+    Estonian: ../et/seo/pealkirjad-ja-kirjeldused.html
+
+
+Account (5 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: konto-loomine
+
+  • Log in to your website
+    Local: setting-up-your-account/logging-into-your-website.html
+    Original: https://www.voog.com/support/setting-up-your-account/logging-into-your-website
+    Estonian: ../et/konto-loomine/saidile-sisselogimine.html
+
+  • Invite others to edit your website
+    Local: setting-up-your-account/other-people-who-can-edit-your-website.html
+    Original: https://www.voog.com/support/setting-up-your-account/other-people-who-can-edit-your-website
+    Estonian: —
+
+  • Reset your password
+    Local: setting-up-your-account/resetting-your-password.html
+    Original: https://www.voog.com/support/setting-up-your-account/resetting-your-password
+    Estonian: —
+
+  • Sign up for Voog
+    Local: setting-up-your-account/signing-up-to-voog.html
+    Original: https://www.voog.com/support/setting-up-your-account/signing-up-to-voog
+    Estonian: —
+
+  • Manage multiple websites on Voog
+    Local: setting-up-your-account/what-if-you-have-several-websites-with-voog.html
+    Original: https://www.voog.com/support/setting-up-your-account/what-if-you-have-several-websites-with-voog
+    Estonian: —
+
+
+Stats & Maintenance (10 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: statistika-ja-saidi-haldamine
+
+  • Ensure backups and service uptime
+    Local: stats-and-maintenance/about-backups-and-service-uptime.html
+    Original: https://www.voog.com/support/stats-and-maintenance/about-backups-and-service-uptime
+    Estonian: —
+
+  • Add Facebook Pixel to your website
+    Local: stats-and-maintenance/adding-facebook-pixel-to-your-website.html
+    Original: https://www.voog.com/support/stats-and-maintenance/adding-facebook-pixel-to-your-website
+    Estonian: ../et/statistika-ja-saidi-haldamine/facebook-pixeli-lisamine-sinu-veebilehele.html
+
+  • Add Google Analytics to your website
+    Local: stats-and-maintenance/adding-google-analytics-to-your-website.html
+    Original: https://www.voog.com/support/stats-and-maintenance/adding-google-analytics-to-your-website
+    Estonian: ../et/statistika-ja-saidi-haldamine/google-analyticsi-lisamine-sinu-veebilehele.html
+
+  • Can Voog be used on a personal server?
+    Local: stats-and-maintenance/can-voog-be-used-on-a-personal-server.html
+    Original: https://www.voog.com/support/stats-and-maintenance/can-voog-be-used-on-a-personal-server
+    Estonian: —
+
+  • Add a cookie notification to your website
+    Local: stats-and-maintenance/cookies-notification.html
+    Original: https://www.voog.com/support/stats-and-maintenance/cookies-notification
+    Estonian: —
+
+  • Export your website content
+    Local: stats-and-maintenance/generating-an-export-of-your-website.html
+    Original: https://www.voog.com/support/stats-and-maintenance/generating-an-export-of-your-website
+    Estonian: —
+
+  • Get your website to appear in Google search results
+    Local: stats-and-maintenance/getting-your-website-to-show-on-google-search-results.html
+    Original: https://www.voog.com/support/stats-and-maintenance/getting-your-website-to-show-on-google-search-results
+    Estonian: —
+
+  • Generate an API token
+    Local: stats-and-maintenance/how-to-generate-an-api-token.html
+    Original: https://www.voog.com/support/stats-and-maintenance/how-to-generate-an-api-token
+    Estonian: —
+
+  • Explore Voog’s statistics
+    Local: stats-and-maintenance/overview-of-voog-s-statistics.html
+    Original: https://www.voog.com/support/stats-and-maintenance/overview-of-voog-s-statistics
+    Estonian: —
+
+  • Find out which browsers Voog supports
+    Local: stats-and-maintenance/which-browsers-are-supported-by-voog.html
+    Original: https://www.voog.com/support/stats-and-maintenance/which-browsers-are-supported-by-voog
+    Estonian: —
+
+
+Video Tutorials (7 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: videojuhendid
+
+  • Create a terms of service page link
+    Local: video-tutorials/creating-terms-of-service-page-link.html
+    Original: https://www.voog.com/support/video-tutorials/creating-terms-of-service-page-link
+    Estonian: —
+
+  • Edit page descriptions
+    Local: video-tutorials/descriptions-for-your-website.html
+    Original: https://www.voog.com/support/video-tutorials/descriptions-for-your-website
+    Estonian: —
+
+  • Navigate the design editor tool
+    Local: video-tutorials/design-editor-tool.html
+    Original: https://www.voog.com/support/video-tutorials/design-editor-tool
+    Estonian: —
+
+  • Duplicate pages for a new language
+    Local: video-tutorials/duplicate-pages.html
+    Original: https://www.voog.com/support/video-tutorials/duplicate-pages
+    Estonian: —
+
+  • Add a Facebook page plugin
+    Local: video-tutorials/facebook-page-plugin.html
+    Original: https://www.voog.com/support/video-tutorials/facebook-page-plugin
+    Estonian: —
+
+  • Activate your SSL certificate
+    Local: video-tutorials/ssl-certificate-activation.html
+    Original: https://www.voog.com/support/video-tutorials/ssl-certificate-activation
+    Estonian: —
+
+  • Use the text editor tool
+    Local: video-tutorials/text-editor-tool.html
+    Original: https://www.voog.com/support/video-tutorials/text-editor-tool
+    Estonian: —
+
+
+Webinars (1 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: veebiseminar
+
+  • Voog Webinar: Getting started with Voog
+    Local: webinars/voog-webinar-09-01-2019.html
+    Original: https://www.voog.com/support/webinars/voog-webinar-09-01-2019
+    Estonian: —
+
+
+Pictures & Files (5 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: pildid-ja-failid
+
+  • Add and manage pictures
+    Local: your-pictures-and-files/adding-and-managing-pictures.html
+    Original: https://www.voog.com/support/your-pictures-and-files/adding-and-managing-pictures
+    Estonian: —
+
+  • Use collections
+    Local: your-pictures-and-files/collections.html
+    Original: https://www.voog.com/support/your-pictures-and-files/collections
+    Estonian: —
+
+  • Create picture galleries
+    Local: your-pictures-and-files/picture-galleries.html
+    Original: https://www.voog.com/support/your-pictures-and-files/picture-galleries
+    Estonian: —
+
+  • Remove multimedia from text content areas
+    Local: your-pictures-and-files/removing-multimedia-from-text-content-areas.html
+    Original: https://www.voog.com/support/your-pictures-and-files/removing-multimedia-from-text-content-areas
+    Estonian: —
+
+  • Upload pictures and files
+    Local: your-pictures-and-files/uploading-pictures-and-files.html
+    Original: https://www.voog.com/support/your-pictures-and-files/uploading-pictures-and-files
+    Estonian: —
+
+
+Subscriptions (9 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: tellimus
+
+  • Cancel your subscription
+    Local: your-subscriptions/cancelling-your-subscriptions.html
+    Original: https://www.voog.com/support/your-subscriptions/cancelling-your-subscriptions
+    Estonian: —
+
+  • Change your subscription
+    Local: your-subscriptions/changing-your-subscriptions.html
+    Original: https://www.voog.com/support/your-subscriptions/changing-your-subscriptions
+    Estonian: —
+
+  • Choose the right subscription plan
+    Local: your-subscriptions/choosing-an-appropriate-subscription-plan.html
+    Original: https://www.voog.com/support/your-subscriptions/choosing-an-appropriate-subscription-plan
+    Estonian: —
+
+  • Make credit card payments
+    Local: your-subscriptions/credit-card-payments.html
+    Original: https://www.voog.com/support/your-subscriptions/credit-card-payments
+    Estonian: ../et/tellimus/krediitkaardi-maksed.html
+
+  • How and why to become a Voog affiliate partner
+    Local: your-subscriptions/how-and-why-to-become-voog-affiliate-partner.html
+    Original: https://www.voog.com/support/your-subscriptions/how-and-why-to-become-voog-affiliate-partner
+    Estonian: —
+
+  • Redeem a Voog voucher
+    Local: your-subscriptions/how-to-redeem-a-voucher-of-voog.html
+    Original: https://www.voog.com/support/your-subscriptions/how-to-redeem-a-voucher-of-voog
+    Estonian: —
+
+  • Refer and earn
+    Local: your-subscriptions/refer-and-earn.html
+    Original: https://www.voog.com/support/your-subscriptions/refer-and-earn
+    Estonian: —
+
+  • Calculate transaction fees for your online store
+    Local: your-subscriptions/store-transaction-fees.html
+    Original: https://www.voog.com/support/your-subscriptions/store-transaction-fees
+    Estonian: —
+
+  • Where can you find your invoices?
+    Local: your-subscriptions/where-can-you-find-your-invoices.html
+    Original: https://www.voog.com/support/your-subscriptions/where-can-you-find-your-invoices
+    Estonian: —
+
+
+Addresses (9 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: domeenid
+
+  • Add more free addresses
+    Local: your-website-addresses/adding-more-free-addresses.html
+    Original: https://www.voog.com/support/your-website-addresses/adding-more-free-addresses
+    Estonian: —
+
+  • Buy a personal domain name
+    Local: your-website-addresses/buying-personal-domain-names.html
+    Original: https://www.voog.com/support/your-website-addresses/buying-personal-domain-names
+    Estonian: —
+
+  • Does Voog offer an email service?
+    Local: your-website-addresses/does-voog-offer-an-e-mail-service.html
+    Original: https://www.voog.com/support/your-website-addresses/does-voog-offer-an-e-mail-service
+    Estonian: —
+
+  • Check domain prices
+    Local: your-website-addresses/domain-prices.html
+    Original: https://www.voog.com/support/your-website-addresses/domain-prices
+    Estonian: —
+
+  • Manage your domain settings
+    Local: your-website-addresses/domain-settings.html
+    Original: https://www.voog.com/support/your-website-addresses/domain-settings
+    Estonian: —
+
+  • Extend your domain subscription
+    Local: your-website-addresses/extending-your-domain-subscription.html
+    Original: https://www.voog.com/support/your-website-addresses/extending-your-domain-subscription
+    Estonian: —
+
+  • Activate your SSL certificate
+    Local: your-website-addresses/ssl-certificate.html
+    Original: https://www.voog.com/support/your-website-addresses/ssl-certificate
+    Estonian: —
+
+  • Use your existing domain with Voog
+    Local: your-website-addresses/using-your-already-existing-domain.html
+    Original: https://www.voog.com/support/your-website-addresses/using-your-already-existing-domain
+    Estonian: —
+
+  • Which addresses can you use with Voog?
+    Local: your-website-addresses/which-addresses-can-you-use-with-voog.html
+    Original: https://www.voog.com/support/your-website-addresses/which-addresses-can-you-use-with-voog
+    Estonian: —
+
+
+Design (8 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: kujundus
+
+  • Add a favicon
+    Local: your-websites-design/adding-a-favicon.html
+    Original: https://www.voog.com/support/your-websites-design/adding-a-favicon
+    Estonian: —
+
+  • Choose a design upon signup
+    Local: your-websites-design/choosing-a-design-upon-signup.html
+    Original: https://www.voog.com/support/your-websites-design/choosing-a-design-upon-signup
+    Estonian: —
+
+  • Get a fully customized design
+    Local: your-websites-design/getting-a-fully-customized-design.html
+    Original: https://www.voog.com/support/your-websites-design/getting-a-fully-customized-design
+    Estonian: —
+
+  • How can I hide the Voog logo from my website footer?
+    Local: your-websites-design/how-can-i-hide-the-voog-logo-in-the-footer-of-my-website.html
+    Original: https://www.voog.com/support/your-websites-design/how-can-i-hide-the-voog-logo-in-the-footer-of-my-website
+    Estonian: —
+
+  • Switch between designs
+    Local: your-websites-design/switching-between-designs.html
+    Original: https://www.voog.com/support/your-websites-design/switching-between-designs
+    Estonian: —
+
+  • Use the background picker
+    Local: your-websites-design/using-the-background-picker.html
+    Original: https://www.voog.com/support/your-websites-design/using-the-background-picker
+    Estonian: —
+
+  • Edit your design with the Voog design editor
+    Local: your-websites-design/voog-design-editor.html
+    Original: https://www.voog.com/support/your-websites-design/voog-design-editor
+    Estonian: —
+
+  • View Voog designs on tablets and mobile screens
+    Local: your-websites-design/voog-designs-on-tablets-and-mobile-screens.html
+    Original: https://www.voog.com/support/your-websites-design/voog-designs-on-tablets-and-mobile-screens
+    Estonian: —
+
+
+Contact (0 articles)
+==PROGRESS.md=README.md=all_support_urls.txt=assets=en=et=index.html=scripts=50
+Maps to Estonian section: kontakt
+
+
+
+Quick Reference:
+---------------
+• HTML Index: index.html
+• Estonian Version: ../et/index.html
+• Estonian Text: ../et/index.txt
+
+Section Mapping to Estonian:
+---------------------------
+Languages → keeled
+Content Areas → sisualad
+Forms → vormid
+Blog → blogi
+Content → sisu-haldamine
+Pages → lehed
+Online Store → e-pood
+SEO → seo
+Account → konto-loomine
+Stats & Maintenance → statistika-ja-saidi-haldamine
+Video Tutorials → videojuhendid
+Webinars → veebiseminar
+Pictures & Files → pildid-ja-failid
+Subscriptions → tellimus
+Addresses → domeenid
+Design → kujundus
+Contact → kontakt
+
+Notes:
+------
+• Estonian links are available only for articles with direct equivalents
+• Some articles may be available only in English or only in Estonian
+• All links open in new window/tab
