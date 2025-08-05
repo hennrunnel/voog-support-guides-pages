@@ -165,7 +165,7 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 
 ### Quick Start for Contributors
 ```bash
-git clone <repository-url>
+git clone https://github.com/hennrunnel/voog-support-guides-pages.git
 cd voog-support-guides-pages
 chmod +x scripts/*.sh *.sh
 ./test.sh
@@ -186,6 +186,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Repository Status
 
-![Tests](https://github.com/[username]/voog-support-guides-pages/workflows/Test%20Repository%20Integrity/badge.svg)
-![Last Updated](https://img.shields.io/github/last-commit/[username]/voog-support-guides-pages)
-![Repository Size](https://img.shields.io/github/repo-size/[username]/voog-support-guides-pages)
+![Tests](https://github.com/hennrunnel/voog-support-guides-pages/workflows/Test%20Repository%20Integrity/badge.svg)
+![Last Updated](https://img.shields.io/github/last-commit/hennrunnel/voog-support-guides-pages)
+![Repository Size](https://img.shields.io/github/repo-size/hennrunnel/voog-support-guides-pages)
