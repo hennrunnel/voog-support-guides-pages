@@ -1,0 +1,1458 @@
+{
+  "metadata": {
+    "generated": "2025-08-05 07:49:09 UTC",
+    "total_articles": {
+      "en":      109,
+      "et":      115
+    },
+    "sections": {
+      "en":       17,
+      "et":       17
+    }
+  },
+  "articles": {
+    "en": {
+      "all-about-languages": {
+        "building-your-website-in-multiple-languages": {
+          "title": "Build your website in multiple languages",
+          "content": "",
+          "file": "markdown-content/en/all-about-languages//building-your-website-in-multiple-languages.md"
+        }
+,
+        "changing-the-interface-language": {
+          "title": "Change the interface language",
+          "content": "",
+          "file": "markdown-content/en/all-about-languages//changing-the-interface-language.md"
+        }
+,
+        "changing-the-language-code-in-your-site-menu": {
+          "title": "Change the language code in your site menu",
+          "content": "",
+          "file": "markdown-content/en/all-about-languages//changing-the-language-code-in-your-site-menu.md"
+        }
+,
+        "choosing-the-default-language-for-your-visitors": {
+          "title": "Choose the default language for your visitors",
+          "content": "",
+          "file": "markdown-content/en/all-about-languages//choosing-the-default-language-for-your-visitors.md"
+        }
+,
+        "configuring-the-flags-menu": {
+          "title": "Configure the flags menu",
+          "content": "",
+          "file": "markdown-content/en/all-about-languages//configuring-the-flags-menu.md"
+        }
+,
+      }
+,
+      "content-areas": {
+        "adding-and-removing-content-areas": {
+          "title": "Add and remove content areas",
+          "content": "",
+          "file": "markdown-content/en/content-areas//adding-and-removing-content-areas.md"
+        }
+,
+        "rearranging-content-areas": {
+          "title": "Rearrange content areas",
+          "content": "",
+          "file": "markdown-content/en/content-areas//rearranging-content-areas.md"
+        }
+,
+        "what-is-a-content-area": {
+          "title": "What is a content area?",
+          "content": "",
+          "file": "markdown-content/en/content-areas//what-is-a-content-area.md"
+        }
+,
+      }
+,
+      "creating-and-managing-forms": {
+        "creating-a-new-form": {
+          "title": "Create a new form",
+          "content": "",
+          "file": "markdown-content/en/creating-and-managing-forms//creating-a-new-form.md"
+        }
+,
+        "editing-your-form-fields": {
+          "title": "Edit your form fields",
+          "content": "",
+          "file": "markdown-content/en/creating-and-managing-forms//editing-your-form-fields.md"
+        }
+,
+        "managing-submitted-form-entries": {
+          "title": "Manage submitted form entries",
+          "content": "",
+          "file": "markdown-content/en/creating-and-managing-forms//managing-submitted-form-entries.md"
+        }
+,
+        "say-hello-to-forms": {
+          "title": "Say “hello” to forms",
+          "content": "",
+          "file": "markdown-content/en/creating-and-managing-forms//say-hello-to-forms.md"
+        }
+,
+      }
+,
+      "managing-your-blog": {
+        "adding-new-or-removing-old-posts": {
+          "title": "Add or delete blog posts",
+          "content": "",
+          "file": "markdown-content/en/managing-your-blog//adding-new-or-removing-old-posts.md"
+        }
+,
+        "going-live-with-your-blog-post": {
+          "title": "How do I publish my blog post?",
+          "content": "",
+          "file": "markdown-content/en/managing-your-blog//going-live-with-your-blog-post.md"
+        }
+,
+        "how-to-modify-your-post-for-social-media": {
+          "title": "How do I modify my article for social media?",
+          "content": "",
+          "file": "markdown-content/en/managing-your-blog//how-to-modify-your-post-for-social-media.md"
+        }
+,
+        "managing-blog-comments": {
+          "title": "How can I manage comments on my blog?",
+          "content": "",
+          "file": "markdown-content/en/managing-your-blog//managing-blog-comments.md"
+        }
+,
+        "reviewing-blog-author-and-date": {
+          "title": "Review blog author and date",
+          "content": "",
+          "file": "markdown-content/en/managing-your-blog//reviewing-blog-author-and-date.md"
+        }
+,
+        "starting-your-first-blog-with-voog": {
+          "title": "Start your first blog with Voog",
+          "content": "",
+          "file": "markdown-content/en/managing-your-blog//starting-your-first-blog-with-voog.md"
+        }
+,
+        "using-tags-with-your-blog": {
+          "title": "Use tags for your blog",
+          "content": "",
+          "file": "markdown-content/en/managing-your-blog//using-tags-with-your-blog.md"
+        }
+,
+      }
+,
+      "managing-your-content": {
+        "add-booklux-booking-widget-to-your-website": {
+          "title": " Add a BookLux booking widget to your website",
+          "content": "",
+          "file": "markdown-content/en/managing-your-content//add-booklux-booking-widget-to-your-website.md"
+        }
+,
+        "adding-a-live-chat-to-your-site": {
+          "title": "Add live chat to your site",
+          "content": "",
+          "file": "markdown-content/en/managing-your-content//adding-a-live-chat-to-your-site.md"
+        }
+,
+        "adding-smaily-newsletter-subscription-form-to-voog-website": {
+          "title": "Add a Smaily newsletter subscription form to your website",
+          "content": "",
+          "file": "markdown-content/en/managing-your-content//adding-smaily-newsletter-subscription-form-to-voog-website.md"
+        }
+,
+        "building-tables": {
+          "title": "Build tables",
+          "content": "",
+          "file": "markdown-content/en/managing-your-content//building-tables.md"
+        }
+,
+        "creating-buttons": {
+          "title": "Create buttons",
+          "content": "",
+          "file": "markdown-content/en/managing-your-content//creating-buttons.md"
+        }
+,
+        "creating-links": {
+          "title": "Create links",
+          "content": "",
+          "file": "markdown-content/en/managing-your-content//creating-links.md"
+        }
+,
+        "inserting-custom-content": {
+          "title": "Add custom content",
+          "content": "",
+          "file": "markdown-content/en/managing-your-content//inserting-custom-content.md"
+        }
+,
+        "inserting-google-calendar": {
+          "title": "Insert a Google Calendar",
+          "content": "",
+          "file": "markdown-content/en/managing-your-content//inserting-google-calendar.md"
+        }
+,
+        "inserting-mailchimp-pop-up-signup-form": {
+          "title": "Insert a Mailchimp pop-up signup form",
+          "content": "",
+          "file": "markdown-content/en/managing-your-content//inserting-mailchimp-pop-up-signup-form.md"
+        }
+,
+        "inserting-videos-and-maps": {
+          "title": "Insert videos and maps",
+          "content": "",
+          "file": "markdown-content/en/managing-your-content//inserting-videos-and-maps.md"
+        }
+,
+        "managing-texts": {
+          "title": "Manage texts",
+          "content": "",
+          "file": "markdown-content/en/managing-your-content//managing-texts.md"
+        }
+,
+        "using-the-undo-function": {
+          "title": "Use the undo function",
+          "content": "",
+          "file": "markdown-content/en/managing-your-content//using-the-undo-function.md"
+        }
+,
+      }
+,
+      "managing-your-website-pages": {
+        "changing-page-addresses": {
+          "title": "Update page addresses",
+          "content": "",
+          "file": "markdown-content/en/managing-your-website-pages//changing-page-addresses.md"
+        }
+,
+        "changing-page-titles-and-descriptions": {
+          "title": "Edit page titles and descriptions",
+          "content": "",
+          "file": "markdown-content/en/managing-your-website-pages//changing-page-titles-and-descriptions.md"
+        }
+,
+        "changing-your-pages-layout": {
+          "title": "Change your page layout",
+          "content": "",
+          "file": "markdown-content/en/managing-your-website-pages//changing-your-pages-layout.md"
+        }
+,
+        "creating-a-custom-401-and-404-page": {
+          "title": "Set up custom 401 and 404 pages",
+          "content": "",
+          "file": "markdown-content/en/managing-your-website-pages//creating-a-custom-401-and-404-page.md"
+        }
+,
+        "creating-a-link-instead-of-subpage": {
+          "title": "Add a link instead of a subpage",
+          "content": "",
+          "file": "markdown-content/en/managing-your-website-pages//creating-a-link-instead-of-subpage.md"
+        }
+,
+        "creating-new-or-removing-old-pages": {
+          "title": "Create or delete pages",
+          "content": "",
+          "file": "markdown-content/en/managing-your-website-pages//creating-new-or-removing-old-pages.md"
+        }
+,
+        "duplicating-content": {
+          "title": "Duplicate page content",
+          "content": "",
+          "file": "markdown-content/en/managing-your-website-pages//duplicating-content.md"
+        }
+,
+        "hiding-pages-and-making-them-visible-again": {
+          "title": "Hide pages and make them visible again",
+          "content": "",
+          "file": "markdown-content/en/managing-your-website-pages//hiding-pages-and-making-them-visible-again.md"
+        }
+,
+        "password-protected-pages": {
+          "title": "Protect pages with a password",
+          "content": "",
+          "file": "markdown-content/en/managing-your-website-pages//password-protected-pages.md"
+        }
+,
+        "reorganizing-the-structure-of-your-website": {
+          "title": "Reorganize your website structure",
+          "content": "",
+          "file": "markdown-content/en/managing-your-website-pages//reorganizing-the-structure-of-your-website.md"
+        }
+,
+        "using-the-search-engine": {
+          "title": "Use the website search engine",
+          "content": "",
+          "file": "markdown-content/en/managing-your-website-pages//using-the-search-engine.md"
+        }
+,
+      }
+,
+      "online-store": {
+        "add-online-store": {
+          "title": "Add an online store to your website",
+          "content": "",
+          "file": "markdown-content/en/online-store//add-online-store.md"
+        }
+,
+        "add-shipping-methods": {
+          "title": "Add shipping methods to your online store",
+          "content": "",
+          "file": "markdown-content/en/online-store//add-shipping-methods.md"
+        }
+,
+        "checkout-fields": {
+          "title": "Customize checkout fields",
+          "content": "",
+          "file": "markdown-content/en/online-store//checkout-fields.md"
+        }
+,
+        "discount-codes": {
+          "title": "Create discount codes",
+          "content": "",
+          "file": "markdown-content/en/online-store//discount-codes.md"
+        }
+,
+        "e-mail-previews": {
+          "title": "Preview email notifications",
+          "content": "",
+          "file": "markdown-content/en/online-store//e-mail-previews.md"
+        }
+,
+        "how-to-add-buy-buttons-and-new-products-to-your-online-store": {
+          "title": "Add new products to your online store",
+          "content": "",
+          "file": "markdown-content/en/online-store//how-to-add-buy-buttons-and-new-products-to-your-online-store.md"
+        }
+,
+        "manage-your-orders": {
+          "title": "Manage orders",
+          "content": "",
+          "file": "markdown-content/en/online-store//manage-your-orders.md"
+        }
+,
+        "payment-methods": {
+          "title": "Set up payment methods for your online store",
+          "content": "",
+          "file": "markdown-content/en/online-store//payment-methods.md"
+        }
+,
+        "products-import": {
+          "title": "Import products",
+          "content": "",
+          "file": "markdown-content/en/online-store//products-import.md"
+        }
+,
+        "store-structure": {
+          "title": "Organize your store structure",
+          "content": "",
+          "file": "markdown-content/en/online-store//store-structure.md"
+        }
+,
+      }
+,
+      "seo": {
+        "getting-your-website-to-appear-in-google-and-bing": {
+          "title": "Add your website to the Google search engine",
+          "content": "",
+          "file": "markdown-content/en/seo//getting-your-website-to-appear-in-google-and-bing.md"
+        }
+,
+        "seo-optimization-in-voog": {
+          "title": "Optimize SEO in Voog",
+          "content": "",
+          "file": "markdown-content/en/seo//seo-optimization-in-voog.md"
+        }
+,
+        "titles-and-descriptions": {
+          "title": "Edit titles and descriptions",
+          "content": "",
+          "file": "markdown-content/en/seo//titles-and-descriptions.md"
+        }
+,
+      }
+,
+      "setting-up-your-account": {
+        "logging-into-your-website": {
+          "title": "Log in to your website",
+          "content": "",
+          "file": "markdown-content/en/setting-up-your-account//logging-into-your-website.md"
+        }
+,
+        "other-people-who-can-edit-your-website": {
+          "title": "Invite others to edit your website",
+          "content": "",
+          "file": "markdown-content/en/setting-up-your-account//other-people-who-can-edit-your-website.md"
+        }
+,
+        "resetting-your-password": {
+          "title": "Reset your password",
+          "content": "",
+          "file": "markdown-content/en/setting-up-your-account//resetting-your-password.md"
+        }
+,
+        "signing-up-to-voog": {
+          "title": "Sign up for Voog",
+          "content": "",
+          "file": "markdown-content/en/setting-up-your-account//signing-up-to-voog.md"
+        }
+,
+        "what-if-you-have-several-websites-with-voog": {
+          "title": "Manage multiple websites on Voog",
+          "content": "",
+          "file": "markdown-content/en/setting-up-your-account//what-if-you-have-several-websites-with-voog.md"
+        }
+,
+      }
+,
+      "stats-and-maintenance": {
+        "about-backups-and-service-uptime": {
+          "title": "Ensure backups and service uptime",
+          "content": "",
+          "file": "markdown-content/en/stats-and-maintenance//about-backups-and-service-uptime.md"
+        }
+,
+        "adding-facebook-pixel-to-your-website": {
+          "title": "Add Facebook Pixel to your website",
+          "content": "",
+          "file": "markdown-content/en/stats-and-maintenance//adding-facebook-pixel-to-your-website.md"
+        }
+,
+        "adding-google-analytics-to-your-website": {
+          "title": "Add Google Analytics to your website",
+          "content": "",
+          "file": "markdown-content/en/stats-and-maintenance//adding-google-analytics-to-your-website.md"
+        }
+,
+        "can-voog-be-used-on-a-personal-server": {
+          "title": "Can Voog be used on a personal server?",
+          "content": "",
+          "file": "markdown-content/en/stats-and-maintenance//can-voog-be-used-on-a-personal-server.md"
+        }
+,
+        "cookies-notification": {
+          "title": "Add a cookie notification to your website",
+          "content": "",
+          "file": "markdown-content/en/stats-and-maintenance//cookies-notification.md"
+        }
+,
+        "generating-an-export-of-your-website": {
+          "title": "Export your website content",
+          "content": "",
+          "file": "markdown-content/en/stats-and-maintenance//generating-an-export-of-your-website.md"
+        }
+,
+        "getting-your-website-to-show-on-google-search-results": {
+          "title": "Get your website to appear in Google search results",
+          "content": "",
+          "file": "markdown-content/en/stats-and-maintenance//getting-your-website-to-show-on-google-search-results.md"
+        }
+,
+        "how-to-generate-an-api-token": {
+          "title": "Generate an API token",
+          "content": "",
+          "file": "markdown-content/en/stats-and-maintenance//how-to-generate-an-api-token.md"
+        }
+,
+        "overview-of-voog-s-statistics": {
+          "title": "Explore Voog’s statistics",
+          "content": "",
+          "file": "markdown-content/en/stats-and-maintenance//overview-of-voog-s-statistics.md"
+        }
+,
+        "which-browsers-are-supported-by-voog": {
+          "title": "Find out which browsers Voog supports",
+          "content": "",
+          "file": "markdown-content/en/stats-and-maintenance//which-browsers-are-supported-by-voog.md"
+        }
+,
+      }
+,
+      "video-tutorials": {
+        "creating-terms-of-service-page-link": {
+          "title": "Create a terms of service page link",
+          "content": "",
+          "file": "markdown-content/en/video-tutorials//creating-terms-of-service-page-link.md"
+        }
+,
+        "descriptions-for-your-website": {
+          "title": "Edit page descriptions",
+          "content": "",
+          "file": "markdown-content/en/video-tutorials//descriptions-for-your-website.md"
+        }
+,
+        "design-editor-tool": {
+          "title": "Navigate the design editor tool",
+          "content": "",
+          "file": "markdown-content/en/video-tutorials//design-editor-tool.md"
+        }
+,
+        "duplicate-pages": {
+          "title": "Duplicate pages for a new language",
+          "content": "",
+          "file": "markdown-content/en/video-tutorials//duplicate-pages.md"
+        }
+,
+        "facebook-page-plugin": {
+          "title": "Add a Facebook page plugin",
+          "content": "",
+          "file": "markdown-content/en/video-tutorials//facebook-page-plugin.md"
+        }
+,
+        "ssl-certificate-activation": {
+          "title": "Activate your SSL certificate",
+          "content": "",
+          "file": "markdown-content/en/video-tutorials//ssl-certificate-activation.md"
+        }
+,
+        "text-editor-tool": {
+          "title": "Use the text editor tool",
+          "content": "",
+          "file": "markdown-content/en/video-tutorials//text-editor-tool.md"
+        }
+,
+      }
+,
+      "webinars": {
+        "voog-webinar-09-01-2019": {
+          "title": "Voog Webinar: Getting started with Voog",
+          "content": "",
+          "file": "markdown-content/en/webinars//voog-webinar-09-01-2019.md"
+        }
+      }
+,
+      "your-pictures-and-files": {
+        "adding-and-managing-pictures": {
+          "title": "Add and manage pictures",
+          "content": "",
+          "file": "markdown-content/en/your-pictures-and-files//adding-and-managing-pictures.md"
+        }
+,
+        "collections": {
+          "title": "Use collections",
+          "content": "",
+          "file": "markdown-content/en/your-pictures-and-files//collections.md"
+        }
+,
+        "picture-galleries": {
+          "title": "Create picture galleries",
+          "content": "",
+          "file": "markdown-content/en/your-pictures-and-files//picture-galleries.md"
+        }
+,
+        "removing-multimedia-from-text-content-areas": {
+          "title": "Remove multimedia from text content areas",
+          "content": "",
+          "file": "markdown-content/en/your-pictures-and-files//removing-multimedia-from-text-content-areas.md"
+        }
+,
+        "uploading-pictures-and-files": {
+          "title": "Upload pictures and files",
+          "content": "",
+          "file": "markdown-content/en/your-pictures-and-files//uploading-pictures-and-files.md"
+        }
+,
+      }
+,
+      "your-subscriptions": {
+        "cancelling-your-subscriptions": {
+          "title": "Cancel your subscription",
+          "content": "",
+          "file": "markdown-content/en/your-subscriptions//cancelling-your-subscriptions.md"
+        }
+,
+        "changing-your-subscriptions": {
+          "title": "Change your subscription",
+          "content": "",
+          "file": "markdown-content/en/your-subscriptions//changing-your-subscriptions.md"
+        }
+,
+        "choosing-an-appropriate-subscription-plan": {
+          "title": "Choose the right subscription plan",
+          "content": "",
+          "file": "markdown-content/en/your-subscriptions//choosing-an-appropriate-subscription-plan.md"
+        }
+,
+        "credit-card-payments": {
+          "title": "Make credit card payments",
+          "content": "",
+          "file": "markdown-content/en/your-subscriptions//credit-card-payments.md"
+        }
+,
+        "how-and-why-to-become-voog-affiliate-partner": {
+          "title": "How and why to become a Voog affiliate partner",
+          "content": "",
+          "file": "markdown-content/en/your-subscriptions//how-and-why-to-become-voog-affiliate-partner.md"
+        }
+,
+        "how-to-redeem-a-voucher-of-voog": {
+          "title": "Redeem a Voog voucher",
+          "content": "",
+          "file": "markdown-content/en/your-subscriptions//how-to-redeem-a-voucher-of-voog.md"
+        }
+,
+        "refer-and-earn": {
+          "title": "Refer and earn",
+          "content": "",
+          "file": "markdown-content/en/your-subscriptions//refer-and-earn.md"
+        }
+,
+        "store-transaction-fees": {
+          "title": "Calculate transaction fees for your online store",
+          "content": "",
+          "file": "markdown-content/en/your-subscriptions//store-transaction-fees.md"
+        }
+,
+        "where-can-you-find-your-invoices": {
+          "title": "Where can you find your invoices?",
+          "content": "",
+          "file": "markdown-content/en/your-subscriptions//where-can-you-find-your-invoices.md"
+        }
+,
+      }
+,
+      "your-website-addresses": {
+        "adding-more-free-addresses": {
+          "title": "Add more free addresses",
+          "content": "",
+          "file": "markdown-content/en/your-website-addresses//adding-more-free-addresses.md"
+        }
+,
+        "buying-personal-domain-names": {
+          "title": "Buy a personal domain name",
+          "content": "",
+          "file": "markdown-content/en/your-website-addresses//buying-personal-domain-names.md"
+        }
+,
+        "does-voog-offer-an-e-mail-service": {
+          "title": "Does Voog offer an email service?",
+          "content": "",
+          "file": "markdown-content/en/your-website-addresses//does-voog-offer-an-e-mail-service.md"
+        }
+,
+        "domain-prices": {
+          "title": "Check domain prices",
+          "content": "",
+          "file": "markdown-content/en/your-website-addresses//domain-prices.md"
+        }
+,
+        "domain-settings": {
+          "title": "Manage your domain settings",
+          "content": "",
+          "file": "markdown-content/en/your-website-addresses//domain-settings.md"
+        }
+,
+        "extending-your-domain-subscription": {
+          "title": "Extend your domain subscription",
+          "content": "",
+          "file": "markdown-content/en/your-website-addresses//extending-your-domain-subscription.md"
+        }
+,
+        "ssl-certificate": {
+          "title": "Activate your SSL certificate",
+          "content": "",
+          "file": "markdown-content/en/your-website-addresses//ssl-certificate.md"
+        }
+,
+        "using-your-already-existing-domain": {
+          "title": "Use your existing domain with Voog",
+          "content": "",
+          "file": "markdown-content/en/your-website-addresses//using-your-already-existing-domain.md"
+        }
+,
+        "which-addresses-can-you-use-with-voog": {
+          "title": "Which addresses can you use with Voog?",
+          "content": "",
+          "file": "markdown-content/en/your-website-addresses//which-addresses-can-you-use-with-voog.md"
+        }
+,
+      }
+,
+      "your-websites-design": {
+        "adding-a-favicon": {
+          "title": "Add a favicon",
+          "content": "",
+          "file": "markdown-content/en/your-websites-design//adding-a-favicon.md"
+        }
+,
+        "choosing-a-design-upon-signup": {
+          "title": "Choose a design upon signup",
+          "content": "",
+          "file": "markdown-content/en/your-websites-design//choosing-a-design-upon-signup.md"
+        }
+,
+        "getting-a-fully-customized-design": {
+          "title": "Get a fully customized design",
+          "content": "",
+          "file": "markdown-content/en/your-websites-design//getting-a-fully-customized-design.md"
+        }
+,
+        "how-can-i-hide-the-voog-logo-in-the-footer-of-my-website": {
+          "title": "How can I hide the Voog logo from my website footer?",
+          "content": "",
+          "file": "markdown-content/en/your-websites-design//how-can-i-hide-the-voog-logo-in-the-footer-of-my-website.md"
+        }
+,
+        "switching-between-designs": {
+          "title": "Switch between designs",
+          "content": "",
+          "file": "markdown-content/en/your-websites-design//switching-between-designs.md"
+        }
+,
+        "using-the-background-picker": {
+          "title": "Use the background picker",
+          "content": "",
+          "file": "markdown-content/en/your-websites-design//using-the-background-picker.md"
+        }
+,
+        "voog-design-editor": {
+          "title": "Edit your design with the Voog design editor",
+          "content": "",
+          "file": "markdown-content/en/your-websites-design//voog-design-editor.md"
+        }
+,
+        "voog-designs-on-tablets-and-mobile-screens": {
+          "title": "View Voog designs on tablets and mobile screens",
+          "content": "",
+          "file": "markdown-content/en/your-websites-design//voog-designs-on-tablets-and-mobile-screens.md"
+        }
+,
+      }
+,
+    },
+    "et": {
+      "blogi": {
+        "blogi-autori-ja-avaldamise-kuupaeva-haldamine": {
+          "title": "Muuda blogi autorit ja avaldamiskuupäeva | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/blogi//blogi-autori-ja-avaldamise-kuupaeva-haldamine.md"
+        }
+,
+        "blogi-kommentaaride-haldamine": {
+          "title": "Kuidas hallata blogi kommentaare | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/blogi//blogi-kommentaaride-haldamine.md"
+        }
+,
+        "blogipostituse-avaldamine": {
+          "title": "Kuidas blogipostitusi avalikustada | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/blogi//blogipostituse-avaldamine.md"
+        }
+,
+        "kuidas-kohandada-blogipostitusi-sotsiaalmeedias-jagamiseks": {
+          "title": "Kuidas kohandada blogipostitusi sotsiaalmeedias jagamiseks? | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/blogi//kuidas-kohandada-blogipostitusi-sotsiaalmeedias-jagamiseks.md"
+        }
+,
+        "siltide-haldamine": {
+          "title": "Halda ja muuda blogi silte | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/blogi//siltide-haldamine.md"
+        }
+,
+        "sinu-esimese-blogi-loomine-voos": {
+          "title": "Kuidas alustada blogimisega | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/blogi//sinu-esimese-blogi-loomine-voos.md"
+        }
+,
+        "uute-postituste-lisamine-ja-vanade-kustutamine": {
+          "title": "Kuidas luua blogi alamleht ja lisada uusi ning kustuta vanu postitusi | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/blogi//uute-postituste-lisamine-ja-vanade-kustutamine.md"
+        }
+,
+      }
+,
+      "domeenid": {
+        "domeeni-seaded": {
+          "title": "Muuda domeeni seadeid | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/domeenid//domeeni-seaded.md"
+        }
+,
+        "domeenide-hinnad": {
+          "title": "Vaata domeenide hinnakirja | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/domeenid//domeenide-hinnad.md"
+        }
+,
+        "domeeninime-pikendamine": {
+          "title": "Kuidas pikendada oma domeeni | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/domeenid//domeeninime-pikendamine.md"
+        }
+,
+        "kas-voog-pakub-e-maili-teenust": {
+          "title": "Kas Voog pakub e-maili teenust? | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/domeenid//kas-voog-pakub-e-maili-teenust.md"
+        }
+,
+        "kasuta-juba-eelnevalt-eksisteerivat-domeeni": {
+          "title": "Kasutad juba eelnevalt eksisteerivat domeeni | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/domeenid//kasuta-juba-eelnevalt-eksisteerivat-domeeni.md"
+        }
+,
+        "lisa-saidile-rohkem-tasuta-aadresse": {
+          "title": "Lisa saidile tasuta .voog.com domeene | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/domeenid//lisa-saidile-rohkem-tasuta-aadresse.md"
+        }
+,
+        "milliseid-aadresseid-saad-enda-voo-saidiga-kasutada": {
+          "title": "Lisa oma Voo saidile tehniline ja personaalne domeen | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/domeenid//milliseid-aadresseid-saad-enda-voo-saidiga-kasutada.md"
+        }
+,
+        "personaalse-domeeni-ostmine": {
+          "title": "Kuidas osta personaalne domeen Voos | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/domeenid//personaalse-domeeni-ostmine.md"
+        }
+,
+        "ssl-sertifikaadi-lisamine-domeenile": {
+          "title": "Lisa tasuta SSL-sertifikaat oma domeenile | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/domeenid//ssl-sertifikaadi-lisamine-domeenile.md"
+        }
+,
+      }
+,
+      "e-pood": {
+        "e-mailide-eelvaade": {
+          "title": "Vaata e-poe tellimusteavituste eelvaadet | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/e-pood//e-mailide-eelvaade.md"
+        }
+,
+        "kuidas-e-poodi-kohaletoimetamisviise-lisada": {
+          "title": "Kuidas e-poodi tarneviise lisada | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/e-pood//kuidas-e-poodi-kohaletoimetamisviise-lisada.md"
+        }
+,
+        "kuidas-e-poodi-tooteid-lisada": {
+          "title": "Kuidas e-poodi tooteid lisada | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/e-pood//kuidas-e-poodi-tooteid-lisada.md"
+        }
+,
+        "lisa-saidile-pood": {
+          "title": "Kuidas lisada Voo saidile e-poodi | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/e-pood//lisa-saidile-pood.md"
+        }
+,
+        "makseviisid": {
+          "title": "Kuidas e-poodi makseviise lisada | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/e-pood//makseviisid.md"
+        }
+,
+        "ostukorvi-valjad": {
+          "title": "Kuidas kohandada e-poe ostukorvi välju  | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/e-pood//ostukorvi-valjad.md"
+        }
+,
+        "sooduskoodid": {
+          "title": "Kuidas luua e-poe kampaania sooduskoodi | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/e-pood//sooduskoodid.md"
+        }
+,
+        "tellimuste-haldamine": {
+          "title": "Halda e-poe tellimusi | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/e-pood//tellimuste-haldamine.md"
+        }
+,
+        "toodete-import": {
+          "title": "Kuidas e-poodi tooteid importida | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/e-pood//toodete-import.md"
+        }
+,
+        "veebipoe-struktuur": {
+          "title": "Kuidas tooteid tootekategooriatesse paigutada | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/e-pood//veebipoe-struktuur.md"
+        }
+,
+        "videojuhend-makse-ja-tarneviisi-lisamine": {
+          "title": "Videojuhend: makse- ja tarneviisi lisamine | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/e-pood//videojuhend-makse-ja-tarneviisi-lisamine.md"
+        }
+,
+      }
+,
+      "keeled": {
+        "kasutajaliidese-keele-muutmine": {
+          "title": "Muuda kasutajaliidese keelt | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/keeled//kasutajaliidese-keele-muutmine.md"
+        }
+,
+        "keelemenuu-kuvamine": {
+          "title": "Seadista saidi keelemenüü kuvamine  | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/keeled//keelemenuu-kuvamine.md"
+        }
+,
+        "sinu-saidi-ehitamine-mitmes-keeles": {
+          "title": "Kuidas ehitada mitmekeelset saiti | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/keeled//sinu-saidi-ehitamine-mitmes-keeles.md"
+        }
+,
+        "sinu-saidi-keelemenuu-seadistamine": {
+          "title": "Seadista oma saidi keelemenüü | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/keeled//sinu-saidi-keelemenuu-seadistamine.md"
+        }
+,
+        "vaikekeele-valimine-sinu-saidi-kulastajatele": {
+          "title": "Kuidas määrata oma saidi vaikekeel asukohapõhise tuvastuse asemel | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/keeled//vaikekeele-valimine-sinu-saidi-kulastajatele.md"
+        }
+,
+        "videojuhend-veebilehe-mitmekeelseks-muutmine": {
+          "title": "Videojuhend: kuidas veebileht ja e-pood mitmekeelseks muuta | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/keeled//videojuhend-veebilehe-mitmekeelseks-muutmine.md"
+        }
+,
+      }
+,
+      "konto-loomine": {
+        "mida-teha-kui-oled-loonud-mitu-voo-saiti-uhe-meiliaadressiga": {
+          "title": "Kuidas hallata mitut saiti sama e-posti aadressiga | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/konto-loomine//mida-teha-kui-oled-loonud-mitu-voo-saiti-uhe-meiliaadressiga.md"
+        }
+,
+        "parooli-vahetamine": {
+          "title": "Kuidas vahetada oma Voo saidi salasõna | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/konto-loomine//parooli-vahetamine.md"
+        }
+,
+        "saidile-sisselogimine": {
+          "title": "Kuidas logida sisse oma Voo saidile ja muuta sisu | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/konto-loomine//saidile-sisselogimine.md"
+        }
+,
+        "teiste-kasutajate-lisamine-sinu-voo-saidile": {
+          "title": "Lisa uusi kasutajaid ja halda nende õigusi saidil | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/konto-loomine//teiste-kasutajate-lisamine-sinu-voo-saidile.md"
+        }
+,
+        "vooga-liitumine": {
+          "title": "Kuidas registreeruda ja alustada oma saidi loomist | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/konto-loomine//vooga-liitumine.md"
+        }
+,
+      }
+,
+      "kujundus": {
+        "kuidas-lisada-enda-saidile-ikoon": {
+          "title": "Lisa favicon oma saidile | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/kujundus//kuidas-lisada-enda-saidile-ikoon.md"
+        }
+,
+        "kuidas-saan-lehe-jaluses-voo-logo-ara-peita": {
+          "title": "Kuidas peita Voo logo saidi jaluses | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/kujundus//kuidas-saan-lehe-jaluses-voo-logo-ara-peita.md"
+        }
+,
+        "kujunduse-taielik-kohandamine": {
+          "title": "Muuda oma saidi kujundust täielikult | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/kujundus//kujunduse-taielik-kohandamine.md"
+        }
+,
+        "kujunduse-vahetamine": {
+          "title": "Kuidas vahetada olemasolevat saidi kujundust | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/kujundus//kujunduse-vahetamine.md"
+        }
+,
+        "kujunduse-valimine-vooga-liitumisel": {
+          "title": "Kuidas valida kujundus Vooga liitumisel | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/kujundus//kujunduse-valimine-vooga-liitumisel.md"
+        }
+,
+        "standard-kujunduste-piltide-ja-tausta-muutmine": {
+          "title": "Kuidas muuta kujunduse taustavärvi ja -pilti | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/kujundus//standard-kujunduste-piltide-ja-tausta-muutmine.md"
+        }
+,
+        "voo-disainid-mobiilsetel-seadmetel": {
+          "title": "Kuidas saidi kujundus mobiilseadmetel töötab | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/kujundus//voo-disainid-mobiilsetel-seadmetel.md"
+        }
+,
+        "voo-disainitooriist": {
+          "title": "Kujunda oma sait Voo disainitööriistaga | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/kujundus//voo-disainitooriist.md"
+        }
+,
+      }
+,
+      "lehed": {
+        "isikuparaste-401-ja-404-lehtede-loomine": {
+          "title": "Kohanda saidi 401 ja 404 veateate lehed | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/lehed//isikuparaste-401-ja-404-lehtede-loomine.md"
+        }
+,
+        "lehe-aadressi-muutmine": {
+          "title": "Muuda lehe aadressi (URL-i) | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/lehed//lehe-aadressi-muutmine.md"
+        }
+,
+        "lehe-asemel-lingi-loomine": {
+          "title": "Muuda leht lingiks | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/lehed//lehe-asemel-lingi-loomine.md"
+        }
+,
+        "lehe-malli-vahetamine": {
+          "title": "Kuidas vahetada lehe malli | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/lehed//lehe-malli-vahetamine.md"
+        }
+,
+        "lehe-peitmine-ja-avalikustamine": {
+          "title": "Kuidas lehti peita ja avalikuks teha | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/lehed//lehe-peitmine-ja-avalikustamine.md"
+        }
+,
+        "lehe-sisu-kopeerimine": {
+          "title": "Kuidas kopeerida lehe sisu teisele lehele või keelde | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/lehed//lehe-sisu-kopeerimine.md"
+        }
+,
+        "lehtede-pealkirjade-ja-kirjelduste-muutmine": {
+          "title": "Muuda lehtede pealkirju ja kirjeldusi | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/lehed//lehtede-pealkirjade-ja-kirjelduste-muutmine.md"
+        }
+,
+        "otsingumootori-kasutamine": {
+          "title": "Kuidas kasutada oma saidi sisseehitatud otsingut | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/lehed//otsingumootori-kasutamine.md"
+        }
+,
+        "saidi-struktuuri-korrastamine": {
+          "title": "Korrasta oma saidi struktuuri | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/lehed//saidi-struktuuri-korrastamine.md"
+        }
+,
+        "salasonaga-kaitstud-lehed": {
+          "title": "Kaitse saidi lehed salasõnaga | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/lehed//salasonaga-kaitstud-lehed.md"
+        }
+,
+        "uute-lehtede-loomine-ja-vanade-kustutamine": {
+          "title": "Lisa uusi lehti ja kustuta vanu | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/lehed//uute-lehtede-loomine-ja-vanade-kustutamine.md"
+        }
+,
+      }
+,
+      "pildid-ja-failid": {
+        "galeriide-loomine": {
+          "title": "Kuidas luua galeriid | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/pildid-ja-failid//galeriide-loomine.md"
+        }
+,
+        "kollektsioonid": {
+          "title": "Lisa failid kollektsioonidesse | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/pildid-ja-failid//kollektsioonid.md"
+        }
+,
+        "multimeedia-kustutamine-teksti-sisualas": {
+          "title": "Eemalda pildid ja failid teksti sisualast | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/pildid-ja-failid//multimeedia-kustutamine-teksti-sisualas.md"
+        }
+,
+        "piltide-ja-failide-uleslaadimine": {
+          "title": "Kuidas saidile pilte ja faile üles laadida | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/pildid-ja-failid//piltide-ja-failide-uleslaadimine.md"
+        }
+,
+        "piltide-lisamine-ja-haldamine": {
+          "title": "Lisa ja halda pilte | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/pildid-ja-failid//piltide-lisamine-ja-haldamine.md"
+        }
+,
+      }
+,
+      "seo": {
+        "kuidas-ma-saan-oma-kodulehe-otsingumootorite-jaoks-nahtavaks-muuta": {
+          "title": "Tõsta oma saidi nähtavust otsingumootorites | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/seo//kuidas-ma-saan-oma-kodulehe-otsingumootorite-jaoks-nahtavaks-muuta.md"
+        }
+,
+        "pealkirjad-ja-kirjeldused": {
+          "title": "Optimeeri oma saidi pealkirju ja kirjeldusi | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/seo//pealkirjad-ja-kirjeldused.md"
+        }
+,
+        "seo-optimeerimine-voos": {
+          "title": "Mis on SEO | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/seo//seo-optimeerimine-voos.md"
+        }
+,
+        "seo-teemalised-veebiseminarid": {
+          "title": "Veebiseminarid SEO teemadel | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/seo//seo-teemalised-veebiseminarid.md"
+        }
+,
+        "videojuhend-seo-optimeerimine-otsingumootorile": {
+          "title": "Videojuhend: kuidas optimeerida SEO’d otsingumootoritele | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/seo//videojuhend-seo-optimeerimine-otsingumootorile.md"
+        }
+,
+      }
+,
+      "sisu-haldamine": {
+        "booklux-broneeringuvormi-lisamine": {
+          "title": "Lisa BookLux broneeringuvorm | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisu-haldamine//booklux-broneeringuvormi-lisamine.md"
+        }
+,
+        "google-kalendri-lisamine-saidile": {
+          "title": "Lisa Google kalender oma saidile | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisu-haldamine//google-kalendri-lisamine-saidile.md"
+        }
+,
+        "linkide-loomine": {
+          "title": "Kuidas muuta tekst, pilt või dokument lingiks | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisu-haldamine//linkide-loomine.md"
+        }
+,
+        "mailchimp-pop-up-registreeringu-vormi-lisamine-saidile": {
+          "title": "Lisa Mailchimp pop-up registreeringu vorm | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisu-haldamine//mailchimp-pop-up-registreeringu-vormi-lisamine-saidile.md"
+        }
+,
+        "nuppude-loomine": {
+          "title": "Kuidas nuppu luua | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisu-haldamine//nuppude-loomine.md"
+        }
+,
+        "taasta-funktsiooni-kasutamine": {
+          "title": "Kuidas taasta funktsiooni kasutada | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisu-haldamine//taasta-funktsiooni-kasutamine.md"
+        }
+,
+        "tabelite-ehitamine": {
+          "title": "Loo ja halda tabeleid  | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisu-haldamine//tabelite-ehitamine.md"
+        }
+,
+        "teksti-haldamine": {
+          "title": "Kuidas Voo tekstitööriistaga teksti muuta | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisu-haldamine//teksti-haldamine.md"
+        }
+,
+        "valise-rakenduse-lisamine": {
+          "title": "Kuidas välist rakendust lisada | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisu-haldamine//valise-rakenduse-lisamine.md"
+        }
+,
+        "vestlusakna-lisamine-saidile": {
+          "title": "Lisa vestlusaken oma saidile | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisu-haldamine//vestlusakna-lisamine-saidile.md"
+        }
+,
+        "video-ja-google-kaardi-lisamine": {
+          "title": "Lisa video või Google kaart sisuala | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisu-haldamine//video-ja-google-kaardi-lisamine.md"
+        }
+,
+        "voo-kodulehele-smaily-liitumisvormi-lisamine": {
+          "title": "Lisa Smaily liitumisvorm  | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisu-haldamine//voo-kodulehele-smaily-liitumisvormi-lisamine.md"
+        }
+,
+      }
+,
+      "sisualad": {
+        "mis-on-sisuala": {
+          "title": "Mis on sisuala | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisualad//mis-on-sisuala.md"
+        }
+,
+        "sisualade-lisamine-ja-eemaldamine": {
+          "title": "Lisa ja eemalda sisualasid | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisualad//sisualade-lisamine-ja-eemaldamine.md"
+        }
+,
+        "sisualade-umber-tostmine": {
+          "title": "Kuidas sisualasid ümber tõsta | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/sisualad//sisualade-umber-tostmine.md"
+        }
+,
+      }
+,
+      "statistika-ja-saidi-haldamine": {
+        "facebook-pixeli-lisamine-sinu-veebilehele": {
+          "title": "Lisa Facebook Pixel oma saidile | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/statistika-ja-saidi-haldamine//facebook-pixeli-lisamine-sinu-veebilehele.md"
+        }
+,
+        "google-analyticsi-lisamine-sinu-veebilehele": {
+          "title": "Lisa Google Analytics oma saidile | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/statistika-ja-saidi-haldamine//google-analyticsi-lisamine-sinu-veebilehele.md"
+        }
+,
+        "kas-voo-veebilehte-saab-kasutada-isiklikus-serveris": {
+          "title": "Kas Voo saiti saab kasutada isiklikus serveris | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/statistika-ja-saidi-haldamine//kas-voo-veebilehte-saab-kasutada-isiklikus-serveris.md"
+        }
+,
+        "kuidas-genereerida-api-votit": {
+          "title": "Kuidas genereerida API võtit | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/statistika-ja-saidi-haldamine//kuidas-genereerida-api-votit.md"
+        }
+,
+        "kupsiste-kasutamise-teavitus": {
+          "title": "Kuidas lisada saidile küpsiste kasutamise kohta teavitust | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/statistika-ja-saidi-haldamine//kupsiste-kasutamise-teavitus.md"
+        }
+,
+        "milliseid-veebilehitsejaid-voog-toetab": {
+          "title": "Milliseid veebilehitsejaid Voog toetab | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/statistika-ja-saidi-haldamine//milliseid-veebilehitsejaid-voog-toetab.md"
+        }
+,
+        "tagavara-koopia-saidist-ja-selle-allalaadimine": {
+          "title": "Telli tagavarakoopia saidist ja lae see alla | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/statistika-ja-saidi-haldamine//tagavara-koopia-saidist-ja-selle-allalaadimine.md"
+        }
+,
+        "ulevaade-voo-statistika-menuust": {
+          "title": "Tutvu Voo statistika tööriistadega | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/statistika-ja-saidi-haldamine//ulevaade-voo-statistika-menuust.md"
+        }
+,
+        "varundamine-ja-teenuse-kattesaadavus": {
+          "title": "Tutvu saidi varukoopia põhimõtetega | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/statistika-ja-saidi-haldamine//varundamine-ja-teenuse-kattesaadavus.md"
+        }
+,
+      }
+,
+      "tellimus": {
+        "e-poe-vahendustasu-arvestus": {
+          "title": "Vaata e-poe vahendustasu arvestust | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/tellimus//e-poe-vahendustasu-arvestus.md"
+        }
+,
+        "krediitkaardi-maksed": {
+          "title": "Aktiveeri krediitkaardimaksed oma saidil | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/tellimus//krediitkaardi-maksed.md"
+        }
+,
+        "kuidas-ja-miks-saada-voo-partnerarendajaks": {
+          "title": "Kuidas ja miks saada Voo partnerarendajaks? | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/tellimus//kuidas-ja-miks-saada-voo-partnerarendajaks.md"
+        }
+,
+        "kuidas-kasutada-voo-sooduskoodi": {
+          "title": "Kuidas kasutada Voo sooduskoodi tellimuse jaoks | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/tellimus//kuidas-kasutada-voo-sooduskoodi.md"
+        }
+,
+        "kus-void-leida-tasutud-arved": {
+          "title": "Vaata oma tasutud arveid  | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/tellimus//kus-void-leida-tasutud-arved.md"
+        }
+,
+        "sobiva-tellimuse-valimine": {
+          "title": "Leia endale sobiv Voo tellimus | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/tellimus//sobiva-tellimuse-valimine.md"
+        }
+,
+        "soovita-ja-teeni": {
+          "title": "Kuidas soovitada Voogu ja teenida tasu | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/tellimus//soovita-ja-teeni.md"
+        }
+,
+        "tellimuse-lopetamine": {
+          "title": "Kuidas saidi tellimust lõpetada | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/tellimus//tellimuse-lopetamine.md"
+        }
+,
+        "tellimuse-vahetamine": {
+          "title": "Kuidas olemasolevat tellimust vahetada | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/tellimus//tellimuse-vahetamine.md"
+        }
+,
+      }
+,
+      "veebiseminar": {
+        "veebiseminar-sinu-e-poe-ostukorv": {
+          "title": "Veebiseminar: seadistame koos sinu e-poe ostukorvi | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/veebiseminar//veebiseminar-sinu-e-poe-ostukorv.md"
+        }
+,
+        "veebiseminar-veebipood-nuuk": {
+          "title": "Veebiseminar: vaata, millise veebilehe ja e-poe saad luua Voo võimsaima kujundusmalliga Nuuk | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/veebiseminar//veebiseminar-veebipood-nuuk.md"
+        }
+,
+        "voo-seminar-alustame-koos-sinu-veebipoe-loomisega": {
+          "title": "Veebiseminar: alustame koos sinu e-poe loomisega | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/veebiseminar//voo-seminar-alustame-koos-sinu-veebipoe-loomisega.md"
+        }
+,
+        "voo-seminar-seo": {
+          "title": "Veebiseminar: SEO ehk kuidas otsingumootoris esile tõusta  | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/veebiseminar//voo-seminar-seo.md"
+        }
+,
+        "voo-seo-seminari-erisaade": {
+          "title": "SEO erisaade turundusspetsialisti Priit Kallasega | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/veebiseminar//voo-seo-seminari-erisaade.md"
+        }
+,
+      }
+,
+      "videojuhendid": {
+        "disainitooriist": {
+          "title": "Tutvu Voo disainitööriistaga | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/videojuhendid//disainitooriist.md"
+        }
+,
+        "facebooki-uudisvoo-lisamine": {
+          "title": "Lisa Facebooki uudisevoog | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/videojuhendid//facebooki-uudisvoo-lisamine.md"
+        }
+,
+        "tekstitooriist": {
+          "title": "Tuvu Voo tekstitööriista võimalustega | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/videojuhendid//tekstitooriist.md"
+        }
+,
+        "uue-keele-lisamine": {
+          "title": "Uue keele lisamine | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/videojuhendid//uue-keele-lisamine.md"
+        }
+,
+        "veebilehe-kirjeldus-otsingumootoris": {
+          "title": "Veebilehe kirjeldus otsingumootoris | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/videojuhendid//veebilehe-kirjeldus-otsingumootoris.md"
+        }
+,
+        "veebipoe-tingimuste-lehe-loomine": {
+          "title": "Kuidas luua e-poe tingimuste leht | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/videojuhendid//veebipoe-tingimuste-lehe-loomine.md"
+        }
+,
+      }
+,
+      "vormid": {
+        "muuda-vormi-valju": {
+          "title": "Muuda vormi välju | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/vormid//muuda-vormi-valju.md"
+        }
+,
+        "utle-tere-vormidele": {
+          "title": "Tutvu vormide kasutamisega Voos | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/vormid//utle-tere-vormidele.md"
+        }
+,
+        "uue-vormi-loomine": {
+          "title": "Loo uus vorm | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/vormid//uue-vormi-loomine.md"
+        }
+,
+        "vormide-kaudu-sisestatud-info-haldamine": {
+          "title": "Kuidas hallata vormide kaudu sisestatud infot | Voog mitmekeelne koduleht ja e-pood",
+          "content": "",
+          "file": "markdown-content/et/vormid//vormide-kaudu-sisestatud-info-haldamine.md"
+        }
+,
+      }
+,
+    }
+  }
+}

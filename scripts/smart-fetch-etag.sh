@@ -317,34 +317,210 @@ fetch_estonian_articles() {
     log_message "Estonian fetch complete: $total_articles total, $updated_articles updated, $skipped_articles skipped, $failed_articles failed"
 }
 
-# Main function
-main() {
+# Function to check for updates without fetching
+check_for_updates() {
     local language="${1:-all}"
     
     # Initialize log file
-    echo "=== Smart Fetch Log - $(date) ===" > "$LOG_FILE"
+    echo "=== Update Check Log - $(date) ===" > "$LOG_FILE"
     
     # Initialize ETag file if it doesn't exist
     touch "$ETAG_FILE"
     
-    log_message "Starting smart fetch process using ETags..."
+    log_message "Starting update check process using ETags..."
     
     case "$language" in
         "en"|"english")
-            fetch_english_articles
+            check_english_updates
             ;;
         "et"|"estonian")
-            fetch_estonian_articles
+            check_estonian_updates
             ;;
         "all")
-            fetch_english_articles
-            fetch_estonian_articles
+            check_english_updates
+            check_estonian_updates
             ;;
         *)
-            echo "Usage: $0 [en|et|all]"
-            echo "  en/english  - Fetch only English articles"
-            echo "  et/estonian - Fetch only Estonian articles"
-            echo "  all         - Fetch both languages default"
+            echo "Usage: $0 check-only [en|et|all]"
+            echo "  en/english  - Check only English articles"
+            echo "  et/estonian - Check only Estonian articles"
+            echo "  all         - Check both languages default"
+            exit 1
+            ;;
+    esac
+    
+    log_message "Update check process completed."
+    
+    echo ""
+    echo "=== Update Check Summary ==="
+    echo "Log file: $LOG_FILE"
+    echo "ETag file: $ETAG_FILE"
+    echo "Updated articles found: $(grep -c "UPDATE:" "$LOG_FILE")"
+    echo "Current articles: $(grep -c "CURRENT:" "$LOG_FILE")"
+    echo "Failed checks: $(grep -c "ERROR:" "$LOG_FILE")"
+}
+
+# Function to check English updates
+check_english_updates() {
+    local sections=(
+        "all-about-languages"
+        "contact"
+        "content-areas"
+        "creating-and-managing-forms"
+        "managing-your-blog"
+        "managing-your-content"
+        "managing-your-website-pages"
+        "online-store"
+        "seo"
+        "setting-up-your-account"
+        "stats-and-maintenance"
+        "video-tutorials"
+        "webinars"
+        "your-pictures-and-files"
+        "your-subscriptions"
+        "your-website-addresses"
+        "your-websites-design"
+    )
+    
+    local total_articles=0
+    local updated_articles=0
+    local current_articles=0
+    local failed_checks=0
+    
+    for section in "${sections[@]}"; do
+        log_message "Checking English section: $section"
+        
+        # Discover articles in this section
+        local section_url="$BASE_URL_EN/$section"
+        local article_urls=$(discover_articles "$section_url")
+        
+        for article_url in $article_urls; do
+            # Extract article filename
+            local filename=$(basename "$article_url")
+            local output_file="$OUTPUT_DIR_EN/$section/$filename"
+            
+            total_articles=$((total_articles + 1))
+            
+            # Check if remote has changed
+            if has_remote_changed "$article_url" "$output_file"; then
+                log_message "UPDATE: $section/$filename"
+                updated_articles=$((updated_articles + 1))
+            else
+                log_message "CURRENT: $section/$filename"
+                current_articles=$((current_articles + 1))
+            fi
+            
+            # Add a small delay to be respectful to the server
+            sleep 0.1
+        done
+    done
+    
+    log_message "English check complete: $total_articles total, $updated_articles updated, $current_articles current, $failed_checks failed"
+}
+
+# Function to check Estonian updates
+check_estonian_updates() {
+    local sections=(
+        "blogi"
+        "domeenid"
+        "e-pood"
+        "keeled"
+        "kontakt"
+        "konto-loomine"
+        "kujundus"
+        "lehed"
+        "pildid-ja-failid"
+        "seo"
+        "sisu-haldamine"
+        "sisualad"
+        "statistika-ja-saidi-haldamine"
+        "tellimus"
+        "veebiseminar"
+        "videojuhendid"
+        "vormid"
+    )
+    
+    local total_articles=0
+    local updated_articles=0
+    local current_articles=0
+    local failed_checks=0
+    
+    for section in "${sections[@]}"; do
+        log_message "Checking Estonian section: $section"
+        
+        # Discover articles in this section
+        local section_url="$BASE_URL_ET/$section"
+        local article_urls=$(discover_articles "$section_url")
+        
+        for article_url in $article_urls; do
+            # Extract article filename
+            local filename=$(basename "$article_url")
+            local output_file="$OUTPUT_DIR_ET/$section/$filename"
+            
+            total_articles=$((total_articles + 1))
+            
+            # Check if remote has changed
+            if has_remote_changed "$article_url" "$output_file"; then
+                log_message "UPDATE: $section/$filename"
+                updated_articles=$((updated_articles + 1))
+            else
+                log_message "CURRENT: $section/$filename"
+                current_articles=$((current_articles + 1))
+            fi
+            
+            # Add a small delay to be respectful to the server
+            sleep 0.1
+        done
+    done
+    
+    log_message "Estonian check complete: $total_articles total, $updated_articles updated, $current_articles current, $failed_checks failed"
+}
+
+# Main function
+main() {
+    local mode="${1:-fetch}"
+    local language="${2:-all}"
+    
+    case "$mode" in
+        "check-only")
+            check_for_updates "$language"
+            ;;
+        "fetch")
+            # Initialize log file
+            echo "=== Smart Fetch Log - $(date) ===" > "$LOG_FILE"
+            
+            # Initialize ETag file if it doesn't exist
+            touch "$ETAG_FILE"
+            
+            log_message "Starting smart fetch process using ETags..."
+            
+            case "$language" in
+                "en"|"english")
+                    fetch_english_articles
+                    ;;
+                "et"|"estonian")
+                    fetch_estonian_articles
+                    ;;
+                "all")
+                    fetch_english_articles
+                    fetch_estonian_articles
+                    ;;
+                *)
+                    echo "Usage: $0 fetch [en|et|all]"
+                    echo "  en/english  - Fetch only English articles"
+                    echo "  et/estonian - Fetch only Estonian articles"
+                    echo "  all         - Fetch both languages default"
+                    exit 1
+                    ;;
+            esac
+            ;;
+        *)
+            echo "Usage: $0 [check-only|fetch] [en|et|all]"
+            echo "  check-only - Check for updates without fetching"
+            echo "  fetch      - Fetch updated content (default)"
+            echo "  en/english - English articles only"
+            echo "  et/estonian - Estonian articles only"
+            echo "  all        - Both languages (default)"
             exit 1
             ;;
     esac

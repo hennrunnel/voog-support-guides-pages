@@ -1,191 +1,131 @@
-# Voog Support Guides - Multilingual Documentation
+# Voog Support Guides - AI-Ready Content Extraction
 
-Complete multilingual support documentation for Voog website builder, featuring both English and Estonian articles with cross-language navigation.
+A comprehensive system for extracting and converting Voog support documentation into AI-friendly formats for content generation, analysis, and automation.
 
-## 📊 Overview
+## 🎯 Overview
 
-This repository contains a complete mirror of Voog's support documentation in two languages:
-- **English**: 109 articles across 17 sections
-- **Estonian**: 115 articles across 17 sections
-
-## 🚀 Quick Start
-
-- **Main Index**: [index.html](index.html) - Multilingual overview
-- **English Articles**: [en/index.html](en/index.html) - Browse English guides
-- **Estonian Articles**: [et/index.html](et/index.html) - Vaata eestikeelseid juhendeid
-- **Text Indexes**: [en/index.txt](en/index.txt) | [et/index.txt](et/index.txt)
-
-📖 **Complete Usage Guide**: [USAGE.md](USAGE.md) - How to use with AI assistance and independently
+This repository contains tools to extract Voog support guides from HTML format and convert them into multiple AI-friendly formats:
+- **Individual Markdown files** with rich metadata
+- **Aggregated Markdown files** for broad analysis
+- **JSON structure** for programmatic access
 
 ## 📁 Repository Structure
 
 ```
 voog-support-guides-pages/
-├── index.html                 # Main multilingual index
-├── update-articles.sh         # Smart article updater
-├── fetch-log.txt             # Update logs
-├── en/                       # English articles (109 files)
-│   ├── index.html           # English index with search
-│   ├── index.txt            # Plain text index
-│   └── [17 sections]/       # Organized by topic
-├── et/                       # Estonian articles (115 files)
-│   ├── index.html           # Estonian index with search
-│   ├── index.txt            # Plain text index
-│   └── [17 sections]/       # Organized by topic
-└── scripts/                  # Automation scripts
-    ├── smart-fetch.sh       # Smart updater (respects server load)
-    ├── fetch-all-support.sh # Full English fetcher
-    ├── fetch-estonian.sh    # Full Estonian fetcher
-    └── [index generators]   # Index creation scripts
+├── en/                          # English HTML source files
+├── et/                          # Estonian HTML source files
+├── markdown-content/            # Extracted markdown files
+│   ├── en/                      # English markdown files
+│   ├── et/                      # Estonian markdown files
+│   └── aggregated/              # Combined content files
+├── json-content/                # Machine-readable JSON structure
+├── scripts/                     # Automation scripts
+│   ├── extract-to-markdown.sh   # Main extraction script
+│   ├── check-updates.sh         # Update detection
+│   ├── automated-workflow.sh    # Complete workflow
+│   └── validate-extraction.sh   # Quality validation
+└── README.md                    # This file
 ```
 
-## ✨ Features
+## 🚀 Quick Start
 
-- **Smart Updates**: Only downloads articles that have been updated on Voog's servers
-- **Cross-Language Navigation**: Links between equivalent English and Estonian articles
-- **Search & Filter**: Find articles quickly with built-in search functionality
-- **Server-Friendly**: Respects Voog's servers with intelligent delays and update checking
-- **Complete Coverage**: All support sections and articles from both languages
-- **Image Support**: Properly displays images with absolute URLs
-
-## 🔄 Smart Article Updates
-
-The repository includes a smart updating system that respects Voog's servers:
-
-### Easy Update (Recommended)
+### Extract Content to Markdown
 ```bash
-./update-articles.sh
+# Extract all HTML content to markdown
+./scripts/extract-to-markdown.sh
 ```
-Interactive script that lets you choose what to update.
 
-### Manual Update
+### Check for Updates
 ```bash
-# Update all articles (English + Estonian)
-./scripts/smart-fetch.sh all
-
-# Update only English articles
-./scripts/smart-fetch.sh en
-
-# Update only Estonian articles
-./scripts/smart-fetch.sh et
+# Check if any content has been updated on Voog servers
+./scripts/check-updates.sh all
 ```
 
-### Smart Features
-- **Update Detection**: Uses HTTP `Last-Modified` headers to check for changes
-- **Server Respect**: 0.5-second delays between requests
-- **Selective Downloads**: Only fetches articles that have been updated
-- **Automatic Indexing**: Regenerates indexes when articles are updated
-- **Detailed Logging**: Complete log of all operations in `fetch-log.txt`
-
-## 📋 Section Mapping
-
-| Estonian | English |
-|----------|---------|
-| Blogi | managing-your-blog |
-| Domeenid | your-website-addresses |
-| E-pood | online-store |
-| Keeled | all-about-languages |
-| Kontakt | contact |
-| Konto loomine | setting-up-your-account |
-| Kujundus | your-websites-design |
-| Lehed | managing-your-website-pages |
-| Pildid ja failid | your-pictures-and-files |
-| SEO | seo |
-| Sisu haldamine | managing-your-content |
-| Sisualad | content-areas |
-| Statistika ja saidi haldamine | stats-and-maintenance |
-| Tellimus | your-subscriptions |
-| Veebiseminar | webinars |
-| Videojuhendid | video-tutorials |
-| Vormid | creating-and-managing-forms |
-
-## 🛠 Development
-
-### Prerequisites
-- Bash shell
-- `curl` for HTTP requests
-- `sed`, `awk`, `grep` for text processing
-
-### Testing
-Run the comprehensive test suite to verify repository integrity:
+### Run Complete Workflow
 ```bash
-./test.sh
+# Check for updates, extract, and validate
+./scripts/automated-workflow.sh
 ```
 
-The test suite checks:
-- ✅ Directory structure and file validity
-- ✅ HTML structure and title extraction
-- ✅ Cross-language link integrity
-- ✅ Index file completeness
-- ✅ Script permissions and executability
-- ✅ ETag file format and integrity
-- ✅ Image URL fixes
-- ✅ Article count validation
-- ✅ Recent activity detection
+## 📊 Content Statistics
 
-### Script Usage Examples
+- **Total Articles**: 224 (109 English + 115 Estonian)
+- **Sections**: 18 per language
+- **Output Formats**: 3 (Individual MD, Aggregated MD, JSON)
+- **Total Content**: ~400KB of clean markdown
 
+## 🛠️ Scripts Overview
+
+### Core Scripts
+- **`extract-to-markdown.sh`**: Converts HTML to clean markdown with metadata
+- **`check-updates.sh`**: Detects changes using HTTP headers
+- **`automated-workflow.sh`**: Complete pipeline with backup and validation
+- **`validate-extraction.sh`**: Quality assurance and validation
+
+### Output Formats
+1. **Individual Files**: `markdown-content/en/section/article.md`
+2. **Aggregated Files**: `markdown-content/aggregated/all-content-en.md`
+3. **JSON Index**: `json-content/content-index.json`
+
+## 📋 Usage Examples
+
+### For AI Content Generation
 ```bash
-# Initial fetch (full download)
-./scripts/fetch-all-support.sh
-./scripts/fetch-estonian.sh
+# Use individual files for targeted content
+cat markdown-content/en/managing-your-blog/starting-your-first-blog-with-voog.md
 
-# Smart updates (incremental)
-./scripts/smart-fetch.sh all
+# Use aggregated files for broad analysis
+cat markdown-content/aggregated/all-content-en.md
 
-# Generate indexes
-./scripts/generate-simple-index.sh
-./scripts/generate-estonian-index.sh
-./scripts/generate-text-index.sh
-./scripts/generate-estonian-text-index.sh
+# Use JSON for programmatic access
+cat json-content/content-index.json
 ```
 
-### Update Process
-1. **Check for Updates**: Script checks HTTP headers for `Last-Modified` timestamps
-2. **Compare with Local**: Compares remote timestamps with local file modification times
-3. **Selective Download**: Only downloads articles that are newer on the server
-4. **Apply Fixes**: Automatically applies image and URL fixes to downloaded content
-5. **Regenerate Indexes**: Updates all index files when articles are modified
+### For Content Updates
+```bash
+# Check for updates
+./scripts/check-updates.sh all
 
-## 📚 Original Sources
+# Extract updated content
+./scripts/extract-to-markdown.sh
 
-- **English Support**: https://www.voog.com/support
-- **Estonian Support**: https://www.voog.com/tugi
+# Run complete workflow
+./scripts/automated-workflow.sh
+```
+
+## 🔧 Configuration
+
+The system supports:
+- **Multiple languages**: English and Estonian
+- **Incremental updates**: Only processes changed content
+- **Quality validation**: Ensures extraction quality
+- **Backup system**: Automatic backups before changes
+
+## 📈 Output Quality
+
+Each extracted markdown file includes:
+- **Title**: Article title
+- **Section**: Content category
+- **Language**: Source language
+- **Original URL**: Source location
+- **Extraction timestamp**: When content was processed
+- **Clean content**: HTML-free, AI-ready text
+
+## 🎯 Use Cases
+
+- **AI Content Generation**: Blog posts, tutorials, documentation
+- **Content Analysis**: SEO optimization, content gaps
+- **Automation**: Automated content updates and monitoring
+- **Research**: Content structure and organization analysis
 
 ## 📝 Notes
 
-- All articles are stored as HTML files with embedded CSS for proper image display
-- Cross-language links are verified and tested to ensure they work correctly
-- The smart fetcher respects server load and only downloads when necessary
-- Indexes are automatically regenerated when articles are updated
+- Content is extracted from Voog's public support documentation
+- All scripts are designed to be respectful to Voog's servers
+- The system includes error handling and validation
+- Output is optimized for AI processing and analysis
 
-## 🤝 Contributing
+---
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-### Quick Start for Contributors
-```bash
-git clone https://github.com/hennrunnel/voog-support-guides-pages.git
-cd voog-support-guides-pages
-chmod +x scripts/*.sh *.sh
-./test.sh
-```
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-**Note**: This repository contains content from Voog's support documentation. The original content belongs to Voog and is used for educational and reference purposes.
-
-## 🚀 GitHub Features
-
-- **Automated Testing**: GitHub Actions run tests on every PR and weekly
-- **Issue Tracking**: Report bugs and suggest improvements
-- **Pull Requests**: Contribute code and documentation
-- **Discussions**: Ask questions and share ideas
-
-## 📊 Repository Status
-
-![Tests](https://github.com/hennrunnel/voog-support-guides-pages/workflows/Test%20Repository%20Integrity/badge.svg)
-![Last Updated](https://img.shields.io/github/last-commit/hennrunnel/voog-support-guides-pages)
-![Repository Size](https://img.shields.io/github/repo-size/hennrunnel/voog-support-guides-pages)
+**Ready for AI-powered content generation and analysis!** 🚀
