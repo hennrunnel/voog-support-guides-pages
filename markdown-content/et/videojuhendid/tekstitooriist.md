@@ -1,14 +1,10 @@
-# Tuvu Voo tekstitööriista võimalustega | Voog mitmekeelne koduleht ja e-pood
-
-**Section:** Videojuhendid  
-**Language:** et  
-**Original URL:** https://www.voog.com/support/videojuhendid/tekstitooriist.html  
-**Extracted:** 2025-08-05 07:49:05 UTC
-
 ---
-
-
-
+title: Tuvu Voo tekstitööriista võimalustega
+lang: et
+section: videojuhendid
+slug: tekstitooriist
+original_url: https://www.voog.com/tugi/videojuhendid/tekstitooriist
+updated_at: 2025-08-07T21:25:01Z
+word_count: 20
 ---
-
-*This content was extracted from Voog's support documentation for AI-friendly processing.*
+Tekstitööriist on enamat kui pealtväha paistab. Sellega saab luua linke ja lisada oma veebilehele videosid, pilte ning isegi väliseid rakendusi.

@@ -1,45 +1,18 @@
-# Log files
-*.log
-fetch-log.txt
-test-results.log
+# Analysis and marketing content (excluded from GitHub)
+analysis/
+local-content/
 
 # Temporary files
+temp-*/
 *.tmp
 *.bak
-*.swp
-*~
 
-# macOS system files
+# OS files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
-# Backup directories
-*-backup-*
-en-backup-*
-et-backup-*
+# Logs
+*.log
 
-# Test artifacts
-test-results/
-coverage/
-
-# IDE files
-.vscode/
-.idea/
-*.sublime-*
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Local content files (not for public repository)
-local-content/ 
+# Backup files
+*.backup 

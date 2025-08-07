@@ -1042,71 +1042,101 @@
     </div>
 
     <script>
-        // Set last updated date
-        document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('et-EE', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
+      (function(){
+        const sectionDisplay = {
+          "blogi": "Blogi",
+          "domeenid": "Domeenid",
+          "e-pood": "E-pood",
+          "keeled": "Keeled",
+          "kontakt": "Kontakt",
+          "konto-loomine": "Konto Loomine",
+          "kujundus": "Kujundus",
+          "lehed": "Lehed",
+          "pildid-ja-failid": "Pildid ja Failid",
+          "seo": "SEO",
+          "sisu-haldamine": "Sisu Haldamine",
+          "sisualad": "Sisualad",
+          "statistika-ja-saidi-haldamine": "Statistika ja Saidi Haldamine",
+          "tellimus": "Tellimus",
+          "veebiseminar": "Veebiseminar",
+          "videojuhendid": "Videojuhendid",
+          "vormid": "Vormid"
+        };
 
-        function updateStats() {
-            const totalArticles = document.querySelectorAll('#articles-table tr').length;
-            const visibleArticles = document.querySelectorAll('#articles-table tr:not([style*="display: none"])').length;
-            const totalSections = new Set(Array.from(document.querySelectorAll('#articles-table tr')).map(row => row.dataset.section)).size;
-            
-            document.getElementById('total-articles').textContent = totalArticles;
-            document.getElementById('total-sections').textContent = totalSections;
+        const fmtSize = (bytes) => bytes > 1024 ? Math.round(bytes/1024) + 'KB' : bytes + 'B';
+        const tbody = document.getElementById('articles-table');
+        const searchInput = document.getElementById('search');
+        const totalArticlesEl = document.getElementById('total-articles');
+        const totalSectionsEl = document.getElementById('total-sections');
+        const lastUpdatedEl = document.getElementById('lastUpdated');
+
+        const state = { items: [], filter: 'all', q: '' };
+
+        function render(){
+          const q = state.q.toLowerCase();
+          const filtered = state.items.filter(i =>
+            (state.filter === 'all' || i.section === state.filter) &&
+            (i.title.toLowerCase().includes(q) || i.section.toLowerCase().includes(q))
+          );
+          tbody.innerHTML = '';
+          for (const i of filtered){
+            const tr = document.createElement('tr');
+            tr.setAttribute('data-section', i.section);
+            tr.setAttribute('data-title', i.title);
+            const titleTd = document.createElement('td');
+            const a = document.createElement('a');
+            a.className = 'title-link';
+            a.textContent = i.title;
+            a.href = `${i.section}/${i.slug}.html`;
+            titleTd.appendChild(a);
+            const sectionTd = document.createElement('td');
+            sectionTd.innerHTML = `<span class="section-badge">${sectionDisplay[i.section] || i.section}</span>`;
+            const origTd = document.createElement('td');
+            const oa = document.createElement('a');
+            oa.className = 'original-link';
+            oa.target = '_blank';
+            oa.href = i.original_url;
+            oa.textContent = 'Originaal';
+            origTd.appendChild(oa);
+            const enTd = document.createElement('td');
+            enTd.innerHTML = '<span style="color:#ccc;">—</span>';
+            const sizeTd = document.createElement('td');
+            sizeTd.className = 'size';
+            sizeTd.textContent = fmtSize(i.size_bytes);
+            tr.append(titleTd, sectionTd, origTd, enTd, sizeTd);
+            tbody.appendChild(tr);
+          }
         }
 
-        function setupSearch() {
-            const searchInput = document.getElementById('search');
-            const rows = document.querySelectorAll('#articles-table tr');
-            
-            searchInput.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase();
-                
-                rows.forEach(row => {
-                    const title = row.dataset.title.toLowerCase();
-                    const section = row.querySelector('.section-badge').textContent.toLowerCase();
-                    const isVisible = title.includes(searchTerm) || section.includes(searchTerm);
-                    
-                    row.style.display = isVisible ? '' : 'none';
-                });
-                
-                updateStats();
+        function bindFilters(){
+          document.querySelectorAll('.controls .btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+              document.querySelectorAll('.controls .btn').forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+              state.filter = btn.dataset.filter || 'all';
+              render();
             });
+          });
         }
 
-        function setupFilters() {
-            const filterButtons = document.querySelectorAll('.controls .btn');
-            const rows = document.querySelectorAll('#articles-table tr');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const filter = this.dataset.filter;
-                    
-                    // Update active button
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Filter rows
-                    rows.forEach(row => {
-                        const section = row.dataset.section;
-                        const isVisible = filter === 'all' || section === filter;
-                        row.style.display = isVisible ? '' : 'none';
-                    });
-                    
-                    updateStats();
-                });
-            });
-        }
+        fetch('../json-content/index-flat.json')
+          .then(r => r.json())
+          .then(all => {
+            state.items = all.filter(i => i.lang === 'et');
+            const sections = new Set(state.items.map(i => i.section));
+            totalArticlesEl.textContent = state.items.length;
+            totalSectionsEl.textContent = sections.size;
+            const latest = state.items.reduce((a,b) => a.updated_at > b.updated_at ? a : b, state.items[0]);
+            if (latest) {
+              lastUpdatedEl.textContent = new Date(latest.updated_at).toLocaleDateString('et-EE', {year:'numeric', month:'long', day:'numeric'});
+            }
+            tbody.innerHTML = '';
+            bindFilters();
+            render();
+          });
 
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            updateStats();
-            setupSearch();
-            setupFilters();
-        });
+        searchInput.addEventListener('input', (e)=>{ state.q = e.target.value; render(); });
+      })();
     </script>
 </body>
 </html>

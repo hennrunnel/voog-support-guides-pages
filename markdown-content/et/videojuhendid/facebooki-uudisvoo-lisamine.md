@@ -1,14 +1,10 @@
-# Lisa Facebooki uudisevoog | Voog mitmekeelne koduleht ja e-pood
-
-**Section:** Videojuhendid  
-**Language:** et  
-**Original URL:** https://www.voog.com/support/videojuhendid/facebooki-uudisvoo-lisamine.html  
-**Extracted:** 2025-08-05 07:49:05 UTC
-
 ---
-
-Facebooki arendajate lehe leiad siit.
-
+title: Lisa Facebooki uudisevoog
+lang: et
+section: videojuhendid
+slug: facebooki-uudisvoo-lisamine
+original_url: https://www.voog.com/tugi/videojuhendid/facebooki-uudisvoo-lisamine
+updated_at: 2025-08-07T21:25:01Z
+word_count: 11
 ---
-
-*This content was extracted from Voog's support documentation for AI-friendly processing.*
+Facebooki arendajate lehe leiad [siit](https://developers.facebook.com/docs/plugins).

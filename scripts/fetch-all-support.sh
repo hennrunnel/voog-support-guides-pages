@@ -278,6 +278,14 @@ main() {
     
     # Apply image fixes
     apply_image_fixes
+
+    # Clean fetched HTML by removing global nav/footer/scripts/styles
+    echo "\nCleaning fetched HTML (removing headers/footers/scripts/styles)..."
+    if command -v python3 >/dev/null 2>&1; then
+        python3 "scripts/clean_support_html.py" --lang en || true
+    else
+        echo "Python3 not found; skipping HTML cleanup"
+    fi
     
     echo ""
     echo "All done! 🎉"

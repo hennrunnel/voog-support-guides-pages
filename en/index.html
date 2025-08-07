@@ -950,5 +950,105 @@
             setupFilters();
         });
     </script>
+
+    <!-- Dynamic renderer: overrides static table using JSON index -->
+    <script>
+      (function(){
+        const sectionDisplay = {
+          "all-about-languages": "Languages",
+          "content-areas": "Content Areas",
+          "creating-and-managing-forms": "Forms",
+          "managing-your-blog": "Blog",
+          "managing-your-content": "Content",
+          "managing-your-website-pages": "Pages",
+          "online-store": "Online Store",
+          "seo": "SEO",
+          "setting-up-your-account": "Account",
+          "stats-and-maintenance": "Stats & Maintenance",
+          "video-tutorials": "Video Tutorials",
+          "webinars": "Webinars",
+          "your-pictures-and-files": "Pictures & Files",
+          "your-subscriptions": "Subscriptions",
+          "your-website-addresses": "Addresses",
+          "your-websites-design": "Design",
+          "contact": "Contact"
+        };
+
+        const fmtSize = (bytes) => bytes > 1024 ? Math.round(bytes/1024) + 'KB' : bytes + 'B';
+        const tbody = document.querySelector('#articlesTable tbody');
+        const searchInput = document.getElementById('searchInput');
+        const totalArticlesEl = document.getElementById('totalArticles');
+        const totalSectionsEl = document.getElementById('totalSections');
+        const lastUpdatedEl = document.getElementById('lastUpdated');
+
+        const state = { items: [], filter: 'all', q: '' };
+
+        function render(){
+          const q = state.q.toLowerCase();
+          const filtered = state.items.filter(i =>
+            (state.filter === 'all' || i.section === state.filter) &&
+            (i.title.toLowerCase().includes(q) || i.section.toLowerCase().includes(q))
+          );
+          tbody.innerHTML = '';
+          for (const i of filtered){
+            const tr = document.createElement('tr');
+            tr.setAttribute('data-section', i.section);
+            const titleTd = document.createElement('td');
+            const a = document.createElement('a');
+            a.className = 'title-link';
+            a.textContent = i.title;
+            a.href = `${i.section}/${i.slug}.html`;
+            titleTd.appendChild(a);
+            const sectionTd = document.createElement('td');
+            sectionTd.innerHTML = `<span class="section-badge">${sectionDisplay[i.section] || i.section}</span>`;
+            const origTd = document.createElement('td');
+            const oa = document.createElement('a');
+            oa.className = 'original-link';
+            oa.target = '_blank';
+            oa.href = i.original_url;
+            oa.textContent = 'Original';
+            origTd.appendChild(oa);
+            const etTd = document.createElement('td');
+            etTd.innerHTML = '<span style="color:#ccc;">—</span>';
+            const sizeTd = document.createElement('td');
+            sizeTd.className = 'size';
+            sizeTd.textContent = fmtSize(i.size_bytes);
+            tr.append(titleTd, sectionTd, origTd, etTd, sizeTd);
+            tbody.appendChild(tr);
+          }
+        }
+
+        function bindFilters(){
+          document.querySelectorAll('.controls .btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+              document.querySelectorAll('.controls .btn').forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+              state.filter = btn.dataset.filter || 'all';
+              render();
+            });
+          });
+        }
+
+        fetch('../json-content/index-flat.json')
+          .then(r => r.json())
+          .then(all => {
+            state.items = all.filter(i => i.lang === 'en');
+            // Update stats
+            const sections = new Set(state.items.map(i => i.section));
+            totalArticlesEl.textContent = state.items.length;
+            totalSectionsEl.textContent = sections.size;
+            const latest = state.items.reduce((a,b) => a.updated_at > b.updated_at ? a : b, state.items[0]);
+            if (latest) {
+              lastUpdatedEl.textContent = new Date(latest.updated_at).toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+            }
+            // Clear static and render dynamic
+            tbody.innerHTML = '';
+            bindFilters();
+            render();
+          });
+
+        searchInput.addEventListener('input', (e)=>{ state.q = e.target.value; render(); });
+      })();
+    </script>
 </body>
 </html>

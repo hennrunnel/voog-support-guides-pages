@@ -1,0 +1,41 @@
+{
+  "display": {
+    "all-about-languages": "Languages",
+    "content-areas": "Content Areas",
+    "creating-and-managing-forms": "Forms",
+    "managing-your-blog": "Blog",
+    "managing-your-content": "Content",
+    "managing-your-website-pages": "Pages",
+    "online-store": "Online Store",
+    "seo": "SEO",
+    "setting-up-your-account": "Account",
+    "stats-and-maintenance": "Stats & Maintenance",
+    "video-tutorials": "Video Tutorials",
+    "webinars": "Webinars",
+    "your-pictures-and-files": "Pictures & Files",
+    "your-subscriptions": "Subscriptions",
+    "your-website-addresses": "Addresses",
+    "your-websites-design": "Design",
+    "contact": "Contact"
+  },
+  "et_from_en": {
+    "managing-your-blog": "blogi",
+    "your-website-addresses": "domeenid",
+    "online-store": "e-pood",
+    "all-about-languages": "keeled",
+    "contact": "kontakt",
+    "setting-up-your-account": "konto-loomine",
+    "your-websites-design": "kujundus",
+    "managing-your-website-pages": "lehed",
+    "your-pictures-and-files": "pildid-ja-failid",
+    "seo": "seo",
+    "managing-your-content": "sisu-haldamine",
+    "content-areas": "sisualad",
+    "stats-and-maintenance": "statistika-ja-saidi-haldamine",
+    "your-subscriptions": "tellimus",
+    "webinars": "veebiseminar",
+    "video-tutorials": "videojuhendid",
+    "creating-and-managing-forms": "vormid"
+  }
+}
+

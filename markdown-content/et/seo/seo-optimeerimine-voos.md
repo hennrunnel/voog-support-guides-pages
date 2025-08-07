@@ -1,19 +1,109 @@
-# Mis on SEO | Voog mitmekeelne koduleht ja e-pood
-
-**Section:** SEO  
-**Language:** et  
-**Original URL:** https://www.voog.com/support/seo/seo-optimeerimine-voos.html  
-**Extracted:** 2025-08-05 07:49:07 UTC
-
 ---
-
-Mis on SEOSEO (Search Engine Optimization) ehk otsingumootorile optimeerimine aitab su veebilehel otsingumootorites paremini esile tulla. Kui sinu sait on hästi optimeeritud, leiavad külastajad selle Google’is ja teistes otsingumootorites lihtsamini üles. SEO optimeerimiseks on Voogu sisse ehitatud SEO tööriistad, millega saad hallata, millist infot otsingumootorid sinu saidi ja iga konkreetse lehe kohta näevad.SEO seadedSEO vaatesse jõuad, kui klõpsad all tööriistaribal Sisu > SEO, kus näed alljärgnevat infot.
-Saidi nimetus – sinu veebilehe nimetus, mida kuvatakse otsinguvastete pealkirjana ja ka ülal brauseriribal.Vormingud – saad määrata, kas otsinguvastetes ja brauseriribal kuvatakse saidi nimetust, lehe pealkirja või mõlemat koos ja seda, mis järjekorras (nt “Minu sait – Esileht”).Otsingumootoritele nähtav – saad saidi otsingumootorite eest ära “peita” (noindex), aga kui sinu veebileht on juba avaldamiseks valmis ja soovid külastajate jaoks nähtav olla, siis kindlasti jälgi, et see lüliti oleks sees.Google Search Console’i verifitseerimiskood - vaata täpsemalt, mida Google Search Console endast kujutab ja kuidas see SEO optimeerimisel abiks on.Sisukaart ja robotidVoos luuakse sitemap.xml (eesti k – sisukaart) ja robots.txt failid automaatselt.Sisukaart ehk sitemap.xml fail – selle faili abil näevad otsingumootorid sinu veebilehe struktuuri. Sisukaardi saad vajadusel väljalülitada, mille järel ei näe otsimootorid sinu vebeilehe struktuuri. Pane aga tähele, et sisukaardi väljalülitamisega ei saa sa oma veebilehte otsimootorite eest täiesti peitu panna, kuna otsingumootorid võivad siiski sisemiste ja välimiste viidete abil su kodulehe kaardistada ning sisu indekseerida. Lisaks sisukaardi osas saad ise otsustada, kas blogipostitused, blogi sildid ja automaatselt genereeritud tootelehed lisatakse sisukaarti või mitte. Automaatselt genereeritud tootelehte kaasamine sisukaarti (ing k - "sitemap.xml’i") –poepidajana on sul seega võimalus lubada või keelata automaatselt genereeritud tootelehtede kaasamist sisukaarti. Vaikimisi on seadistus väljas ja automaatselt genereeritud tootelehtede linke sisukaarti ei lisata. Sisukaardis on automaatselt genereeritud toodete lingid juhul, kui on täidetud järgmised tingimused:toodete sitemap on lubatud (Sisu > SEO > Sisukaart > Näita sisukaardil automaatselt loodud tootelehti).pood on olemas ja sisselülitatud staatuses.toode on "Avalik" olekus.robots.txt fail – juhib kodulehele otsingumootoreid ja annab märku, millist osa kodulehest võiks otsingumootorid külastada, indekseerida ja milliseid mitte. Kodulehel saad soovi korral ise oma robot.txt faili kohandada.SEO skoor ja saidi lehedLehtede vaates, Sisu > SEO > Lehed, näed kõik saidi lehti ja alamlehti koos pealkirjade ja kirjeldustega ning toodud on ka lehe SEO skoor Voo hinnangul. Lehe real klõpsates saad avada selle lehe SEO seaded. Kui sul on saidil lehti rohkem, saad neid pealkirjade ja kirjelduste järgi sorteerida või otsingukasti abil filtreerida.
-Loe rohkem lehtede pealkirjade ja kirjelduste kohta.Voo ümbersuunamistööriistKui soovid jagada mõnda alamlehte, mis on väga pika ja kohmaka aadressiga, või oled teinud struktuurimuudatusi, mille käigus mõni leht on asukohta muutnud, on abiks ümbersuunamistööriist.
-Uue suunamisreegli lisamiseks klõpsa nupul Uus suunamine.
-Vana aadress väljale kirjuta see aadress, millelt tuleks edasi suunata. See võib näiteks olla mõni vana URL, mis enam su lehele ei vii, aga mida võidakse ikka veel kasutada. Võid tekitada ka uue, lühema aadressi mõnele väga pika aadressiga alamlehele. Pane tähele, et väljale Vana aadress sisestatud URL-iga leht ei pea tegelikult olemas olema.Uus aadress väljale kirjuta see aadress, kuhu külastaja suunatakse. Ümbersuunamiste vaates näed kõiki saidile lisatud ümbersuunamisi ja saad neid sisse ja välja lülitada. Pane tähele, et muutmisvaates ümbersuunamised ei toimi – see on selleks, et pääseksid kõikele enda saidi lehtedele ligi.SEO optimeerimine: märksõnade kasutamine Märksõna on sõna või fraas, mille järgi klient oma probleemile otsingumootori abil vastust otsib. Selleks, et otsingumootor teaks kliendile sinu toodet või teenust pakkuda, tuleks oma lehel kasutusele võtta võimalikult täpsed märksõnad.  Kindlasti ei tohi unustada, et sisu on mõeldud ennekõike inimeste ja mitte robotite jaoks. Liigset trikitamist on otsimootorid lõpuks alati karistama hakanud. Sellest räägib meie veebiseminaris lähemalt ka Priit Kallas.Kuidas märksõnu valida?Märksõnade leidmiseks vii läbi märksõnade analüüs. Märksõnad peavad olema toote, teenuse ja valdkonna põhised ning vastavuses lehe sisuga. Alustuseks koosta loend umbes 10 teemast, mis seostuvad sinu toote või teenusega ning seejärel tee valitud teemade põhjal loend otsinguterminitest. Kasuta SEO tööriistu (nt Google'i märksõnatööriist, Keyword Tool, SEMRush või GrowthBar), et tuvastada nende sõnade otsingumaht ja leida variatsioonid, mis sobiksid kõige paremini.Analüüsides on olulisim jälgida märksõna tüüpi, otsingute arvu kuus ning konkurentsi. Alustava veebilehe puhul tuleks pigem valida märksõnad, mille konkurents ei ole väga suur. Sellised on peamiselt pika sabaga ehk kolmest või enamast sõnast koosnevad märksõnad.Mida täpsem on märksõna, seda tõhusamalt see sinu kasuks töötab. Näitena on halb märksõna “domeen” ja hea märksõna “domeeni registreerimine”. Veelgi parem on “domeeni registreerimine hind”, mis sealjuures viitab ka kliendi soovile teenust osta. Samuti on väga kasulikud asukohapõhised märksõnad.Seo iga sisulehe ja blogipostitusega üks tähtsaim märksõna, mainides seda URL-is, pealkirjas, mõne olulisema pildi kirjelduses ja paar korda sisus. Kasutamisel lähtu kõhutundest ja ära pinguta kordamisega üle.Lehe SEO skoori kontrollimiseks kasuta näiteks SEOptimer-i.Leheväline SEOLeheväline ehk off-page SEO aitab tõsta otsingumootorite usaldust sinu lehekülgedel oleva info vastu. Üldiselt tähendab see teiste lehtede sinu lehele viitamist. Viitavat linki nimetatakse sellisel juhul backlink ehk tagasilingiks.Kuidas tagasilinke saada?Esmatähtis on jälgida, et loodavad lingid oleksid kvaliteetsed ja viitamisel kasu toovad. Madala kvaliteediga lingid, mis on kergesti automatiseeritavad, ebaloomulike mustritega ja kontrollitava ankurtekstiga mõjuvad optimeerimisel hoopis negatiivselt.Kvaliteetsel tagasilingil on 4 omadust. Viide tuleb teemakohaselt ja usaldusväärselt leheküljelt, mis suunab sinu lehele esimest korda ning on do-follow ehk otsimootoritele nähtavaks tehtud link.Võimalused backlink’ide ehitamiseks on näiteks:Partneri või kliendi lehel mainimineBlogides või sotsiaalmeedias mainimineKülalispostituses mainimineLuua informatiivne leht, mida inimestel on põhjust mainidaEsmasteks viideteks sobivad lingid neti.ee ja teistelt sarnastelt lehtedelt. Analüüsi veel, millised leheküljed viitavad sinu konkurentide lehtedele ja kas nende hulgas on võimalusi sinu lehele tagasilingi saamiseks. Otsingumootorid hindavad kvaliteetsete ja sisu poolest sarnaste lehekülgede viiitamisi kõrgemalt, kui teisi.
-Seda, millised leheküljed sinu lehele viitavad, saad kontrollida Backlink Checker tööriista abil.
-
+title: Mis on SEO
+lang: et
+section: seo
+slug: seo-optimeerimine-voos
+original_url: https://www.voog.com/tugi/seo/seo-optimeerimine-voos
+updated_at: 2025-08-07T21:25:01Z
+word_count: 1085
 ---
+## Mis on SEO
 
-*This content was extracted from Voog's support documentation for AI-friendly processing.*
+SEO (*Search Engine Optimization*) ehk otsingumootorile optimeerimine aitab su veebilehel otsingumootorites paremini esile tulla. Kui sinu sait on hästi optimeeritud, leiavad külastajad selle Google’is ja teistes otsingumootorites lihtsamini üles.   
+  
+SEO optimeerimiseks on Voogu sisse ehitatud SEO tööriistad, millega saad hallata, millist infot otsingumootorid sinu saidi ja iga konkreetse lehe kohta näevad.
+
+## SEO seaded
+
+SEO vaatesse jõuad, kui klõpsad all tööriistaribal **Sisu >** **SEO**, kus näed alljärgnevat infot.  
+
+![Lehe SEO seadete menüü.](https://media.voog.com/0000/0036/2183/photos/SEO_optimeerimine_Voos1_block.png "Lehe SEO seadete menüü.")
+
+- **Saidi nimetus** – sinu veebilehe nimetus, mida kuvatakse otsinguvastete pealkirjana ja ka ülal brauseriribal.
+- **Vormingud** – saad määrata, kas otsinguvastetes ja brauseriribal kuvatakse saidi nimetust, lehe pealkirja või mõlemat koos ja seda, mis järjekorras (nt “Minu sait – Esileht”).
+- **Otsingumootoritele nähtav** – saad saidi otsingumootorite eest ära “peita” (noindex), aga kui sinu veebileht on juba avaldamiseks valmis ja soovid külastajate jaoks nähtav olla, siis kindlasti jälgi, et see lüliti oleks sees.
+- **Google Search Console’i verifitseerimiskood** - vaata täpsemalt, mida [Google Search Console](/tugi/statistika-ja-saidi-haldamine/sinu-veebilehe-lisamine-google-i-otsingumootorisse) endast kujutab ja kuidas see SEO optimeerimisel abiks on.
+
+## Sisukaart ja robotid
+
+Voos luuakse sitemap.xml (eesti k – sisukaart) ja robots.txt failid automaatselt.  
+  
+**Sisukaart** ehk **sitemap.xml fail** – selle faili abil näevad otsingumootorid sinu veebilehe struktuuri. Sisukaardi saad vajadusel väljalülitada, mille järel ei näe otsimootorid sinu vebeilehe struktuuri. Pane aga tähele, et **sisukaardi väljalülitamisega ei saa sa oma veebilehte otsimootorite eest täiesti peitu panna**, kuna otsingumootorid võivad siiski sisemiste ja välimiste viidete abil su kodulehe kaardistada ning sisu indekseerida. Lisaks sisukaardi osas saad ise otsustada, kas blogipostitused, blogi sildid ja automaatselt genereeritud tootelehed lisatakse sisukaarti või mitte.   
+  
+**Automaatselt genereeritud tootelehte kaasamine sisukaarti (ing k - "sitemap.xml’i") –**poepidajana on sul seega võimalus lubada või keelata automaatselt genereeritud tootelehtede kaasamist sisukaarti. Vaikimisi on seadistus väljas ja automaatselt genereeritud tootelehtede linke sisukaarti ei lisata.   
+  
+Sisukaardis on automaatselt genereeritud toodete lingid juhul, kui on täidetud järgmised tingimused:  
+
+- toodete sitemap on lubatud (**Sisu** > **SEO** > **Sisukaart** > **Näita sisukaardil automaatselt loodud tootelehti**).
+- pood on olemas ja sisselülitatud staatuses.
+- toode on "Avalik" olekus.
+
+  
+**robots.txt fail** – juhib kodulehele otsingumootoreid ja annab märku, millist osa kodulehest võiks otsingumootorid külastada, indekseerida ja milliseid mitte. Kodulehel saad soovi korral ise oma robot.txt faili kohandada.
+
+## SEO skoor ja saidi lehed
+
+Lehtede vaates, **Sisu > SEO > Lehed**, näed kõik saidi lehti ja alamlehti koos pealkirjade ja kirjeldustega ning toodud on ka lehe SEO skoor Voo hinnangul. Lehe real klõpsates saad avada selle lehe SEO seaded. Kui sul on saidil lehti rohkem, saad neid pealkirjade ja kirjelduste järgi sorteerida või otsingukasti abil filtreerida.  
+
+![Lehekülgede SEO menüü.](https://media.voog.com/0000/0036/2183/photos/SEO_optimeerimine_Voos2_block.png "Lehekülgede SEO menüü.")
+
+Loe rohkem [lehtede pealkirjade ja kirjelduste kohta](/tugi/seo/pealkirjad-ja-kirjeldused).
+
+## Voo ümbersuunamistööriist
+
+Kui soovid jagada mõnda alamlehte, mis on väga pika ja kohmaka aadressiga, või oled teinud struktuurimuudatusi, mille käigus mõni leht on asukohta muutnud, on abiks ümbersuunamistööriist.  
+
+![Ümbersuunamiste menüü.](https://media.voog.com/0000/0036/2183/photos/SEO_optimeerimine_Voos3_block.png "Ümbersuunamiste menüü.")
+
+Uue suunamisreegli lisamiseks klõpsa nupul **Uus suunamine**.  
+
+![Uue suunamise lisamise aken.](https://media.voog.com/0000/0036/2183/photos/SEO_optimeerimine_Voos4ng_block.png "Uue suunamise lisamise aken.")
+
+- **Vana aadress** väljale kirjuta see aadress, millelt tuleks edasi suunata. See võib näiteks olla mõni vana URL, mis enam su lehele ei vii, aga mida võidakse ikka veel kasutada. Võid tekitada ka uue, lühema aadressi mõnele väga pika aadressiga alamlehele. Pane tähele, et väljale **Vana aadress** sisestatud URL-iga leht ei pea tegelikult olemas olema.
+- **Uus aadress** väljale kirjuta see aadress, kuhu külastaja suunatakse. Ümbersuunamiste vaates näed kõiki saidile lisatud ümbersuunamisi ja saad neid sisse ja välja lülitada. Pane tähele, et muutmisvaates ümbersuunamised ei toimi – see on selleks, et pääseksid kõikele enda saidi lehtedele ligi.
+
+## SEO optimeerimine: märksõnade kasutamine
+
+Märksõna on sõna või fraas, mille järgi klient oma probleemile otsingumootori abil vastust otsib. Selleks, et otsingumootor teaks kliendile sinu toodet või teenust pakkuda, tuleks oma lehel kasutusele võtta võimalikult täpsed märksõnad. Kindlasti ei tohi unustada, et sisu on mõeldud ennekõike inimeste ja mitte robotite jaoks. Liigset trikitamist on otsimootorid lõpuks alati karistama hakanud. Sellest räägib meie [veebiseminaris](/tugi/veebiseminar/voo-seminar-seo) lähemalt ka Priit Kallas.
+
+## Kuidas märksõnu valida?
+
+Märksõnade leidmiseks vii läbi märksõnade analüüs. Märksõnad peavad olema toote, teenuse ja valdkonna põhised ning vastavuses lehe sisuga.   
+  
+Alustuseks koosta loend umbes 10 teemast, mis seostuvad sinu toote või teenusega ning seejärel tee valitud teemade põhjal loend otsinguterminitest. Kasuta SEO tööriistu (nt [Google'i märksõnatööriist](https://ads.google.com/intl/et_ee/home/tools/keyword-planner/), [Keyword Tool](https://keywordtool.io/), [SEMRush](https://www.semrush.com/projects/) või [GrowthBar](https://growthbarseo.com/)), et tuvastada nende sõnade otsingumaht ja leida variatsioonid, mis sobiksid kõige paremini.  
+  
+Analüüsides on olulisim jälgida märksõna tüüpi, otsingute arvu kuus ning konkurentsi. Alustava veebilehe puhul tuleks pigem valida märksõnad, mille konkurents ei ole väga suur. Sellised on peamiselt pika sabaga ehk kolmest või enamast sõnast koosnevad märksõnad.  
+  
+Mida täpsem on märksõna, seda tõhusamalt see sinu kasuks töötab. Näitena on halb märksõna “domeen” ja hea märksõna “domeeni registreerimine”. Veelgi parem on “domeeni registreerimine hind”, mis sealjuures viitab ka kliendi soovile teenust osta. Samuti on väga kasulikud asukohapõhised märksõnad.  
+  
+Seo iga sisulehe ja blogipostitusega üks tähtsaim märksõna, mainides seda URL-is, pealkirjas, mõne olulisema pildi kirjelduses ja paar korda sisus. Kasutamisel lähtu kõhutundest ja ära pinguta kordamisega üle.  
+  
+Lehe SEO skoori kontrollimiseks kasuta näiteks [SEOptimer-i](https://www.seoptimer.com/).
+
+## Leheväline SEO
+
+Leheväline ehk *off-page* SEO aitab tõsta otsingumootorite usaldust sinu lehekülgedel oleva info vastu. Üldiselt tähendab see teiste lehtede sinu lehele viitamist. Viitavat linki nimetatakse sellisel juhul *backlink* ehk tagasilingiks.
+
+## Kuidas tagasilinke saada?
+
+Esmatähtis on jälgida, et loodavad lingid oleksid kvaliteetsed ja viitamisel kasu toovad. Madala kvaliteediga lingid, mis on kergesti automatiseeritavad, ebaloomulike mustritega ja kontrollitava ankurtekstiga mõjuvad optimeerimisel hoopis negatiivselt.  
+  
+Kvaliteetsel tagasilingil on 4 omadust. Viide tuleb **teemakohaselt** ja **usaldusväärselt** leheküljelt, mis **suunab sinu lehele esimest korda** ning on **do-follow** ehk otsimootoritele nähtavaks tehtud link.  
+  
+Võimalused *backlink*’ide ehitamiseks on näiteks:  
+  
+
+- Partneri või kliendi lehel mainimine
+- Blogides või sotsiaalmeedias mainimine
+- Külalispostituses mainimine
+- Luua informatiivne leht, mida inimestel on põhjust mainida
+
+  
+Esmasteks viideteks sobivad lingid neti.ee ja teistelt sarnastelt lehtedelt.   
+  
+Analüüsi veel, millised leheküljed viitavad sinu konkurentide lehtedele ja kas nende hulgas on võimalusi sinu lehele tagasilingi saamiseks. Otsingumootorid hindavad kvaliteetsete ja sisu poolest sarnaste lehekülgede viiitamisi kõrgemalt, kui teisi.
+
+![Backlink Checker tööriista analüüsi tulemuste näidis.](https://media.voog.com/0000/0036/2183/photos/SEO_optimeerimine_Voos5_block.png "Backlink Checker tööriista analüüsi tulemuste näidis.")
+
+  
+Seda, millised leheküljed sinu lehele viitavad, saad kontrollida [Backlink Checker](https://ahrefs.com/backlink-checker) tööriista abil.

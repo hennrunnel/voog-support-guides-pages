@@ -1,14 +1,12 @@
-# Lisa favicon oma saidile | Voog mitmekeelne koduleht ja e-pood
-
-**Section:** Kujundus  
-**Language:** et  
-**Original URL:** https://www.voog.com/support/kujundus/kuidas-lisada-enda-saidile-ikoon.html  
-**Extracted:** 2025-08-05 07:49:05 UTC
-
 ---
-
-Selleks, et enda veebilehele favicon ehk ikoon lisada, ava menüü Seaded > Sait. Seejärel vajuta real Saidi ikoon asuvale nupule Laadi üles.Kui ikoon on edukalt üles laetud, näed seda ka sel samal real. Juhul, kui see ei sobi, saad selle prügikasti ikoonile vajutades ära kustutada.
-
+title: Lisa favicon oma saidile
+lang: et
+section: kujundus
+slug: kuidas-lisada-enda-saidile-ikoon
+original_url: https://www.voog.com/tugi/kujundus/kuidas-lisada-enda-saidile-ikoon
+updated_at: 2025-08-07T21:25:01Z
+word_count: 45
 ---
+Selleks, et enda veebilehele *favicon* ehk ikoon lisada, ava menüü **Seaded > Sait**. Seejärel vajuta real **Saidi ikoon** asuvale nupule **Laadi üles.**
 
-*This content was extracted from Voog's support documentation for AI-friendly processing.*
+Kui ikoon on edukalt üles laetud, näed seda ka sel samal real. Juhul, kui see ei sobi, saad selle prügikasti ikoonile vajutades ära kustutada.

@@ -71,19 +71,19 @@
             <h2>📊 Overview</h2>
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-number">224</div>
-                    <div class="stat-label">Total Articles</div>
+                <div class="stat-number" id="rootTotal">0</div>
+                <div class="stat-label">Total Articles</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">2</div>
+                <div class="stat-number" id="rootLangs">2</div>
                     <div class="stat-label">Languages</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">17</div>
+                <div class="stat-number" id="rootSections">0</div>
                     <div class="stat-label">Sections</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">34</div>
+                <div class="stat-number" id="rootFiles">0</div>
                     <div class="stat-label">Total Files</div>
                 </div>
             </div>
@@ -123,11 +123,23 @@
     </div>
 
     <script>
-        // Set last updated date
-        document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
+      // Populate stats from index-flat.json
+      fetch('json-content/index-flat.json')
+        .then(r => r.json())
+        .then(all => {
+          const total = all.length;
+          const langs = new Set(all.map(i => i.lang)).size;
+          const sections = new Set(all.filter(i => i.lang==='en').map(i => i.section)).size; // display EN count
+          const files = new Set(all.map(i => i.md_path)).size;
+          document.getElementById('rootTotal').textContent = total;
+          document.getElementById('rootLangs').textContent = langs;
+          document.getElementById('rootSections').textContent = sections;
+          document.getElementById('rootFiles').textContent = files;
+          const latest = all.reduce((a,b)=> a.updated_at > b.updated_at ? a : b, all[0]);
+          document.getElementById('lastUpdated').textContent = new Date(latest.updated_at).toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+        })
+        .catch(()=>{
+          document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
         });
     </script>
 </body>

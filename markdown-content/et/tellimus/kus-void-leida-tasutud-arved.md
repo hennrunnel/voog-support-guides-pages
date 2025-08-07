@@ -1,15 +1,20 @@
-# Vaata oma tasutud arveid  | Voog mitmekeelne koduleht ja e-pood
-
-**Section:** Tellimus  
-**Language:** et  
-**Original URL:** https://www.voog.com/support/tellimus/kus-void-leida-tasutud-arved.html  
-**Extracted:** 2025-08-05 07:49:06 UTC
-
 ---
-
-Kui oled teinud makse, siis arve selle eest tekib automaatselt. Saad selle alla laadidaSeaded > Maksed lehelt.Palun arvesta sellega, et arved on kättesaadavad ainult omaniku rollis kasutajatele. Toimetaja rollis kasutajad nendele ligi ei pääse.
-Kui soovid tasuda läbi panga siis palun kontakteeru meiega enne makse tegemist, et saaksime sulle väljastada uue, korrektse arve. Palun ära kasuta vana arvet ega informatsiooni sellelt uue ülekande jaoks.
-
+title: Vaata oma tasutud arveid
+lang: et
+section: tellimus
+slug: kus-void-leida-tasutud-arved
+original_url: https://www.voog.com/tugi/tellimus/kus-void-leida-tasutud-arved
+updated_at: 2025-08-07T21:25:01Z
+word_count: 98
 ---
+Kui oled teinud makse, siis arve selle eest tekib automaatselt. Saad selle alla laadida
 
-*This content was extracted from Voog's support documentation for AI-friendly processing.*
+**Seaded > Maksed** lehelt.
+
+Palun arvesta sellega, et arved on kättesaadavad ainult [omaniku rollis kasutajatele](/tugi/konto-loomine/teiste-kasutajate-lisamine-sinu-voo-saidile#kasutaja-rolli-vahetamine). Toimetaja rollis kasutajad nendele ligi ei pääse.
+
+![Kursor lingil 'Arved' tellimuste menüüs.](https://media.voog.com/0000/0036/2183/photos/Tasutud_arved_1-1_block.jpg "Kursor lingil 'Arved' tellimuste menüüs.")
+
+Kui soovid tasuda läbi panga siis palun kontakteeru meiega enne makse tegemist, et saaksime sulle väljastada uue, korrektse arve.
+
+Palun ära kasuta vana arvet ega informatsiooni sellelt uue ülekande jaoks.

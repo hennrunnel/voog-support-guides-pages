@@ -1,14 +1,10 @@
-# Edit page descriptions
-
-**Section:** Video Tutorials  
-**Language:** en  
-**Original URL:** https://www.voog.com/support/video-tutorials/descriptions-for-your-website.html  
-**Extracted:** 2025-08-05 07:49:01 UTC
-
 ---
-
+title: Edit page descriptions
+lang: en
+section: video-tutorials
+slug: descriptions-for-your-website
+original_url: https://www.voog.com/support/video-tutorials/descriptions-for-your-website
+updated_at: 2025-08-07T21:25:01Z
+word_count: 13
+---
 You can add descriptions to your website pages from the page settings menu.
-
----
-
-*This content was extracted from Voog's support documentation for AI-friendly processing.*

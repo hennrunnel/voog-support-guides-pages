@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Voog Support Guides - HTML to Markdown Converter
-# Extracts content from HTML files and converts to multiple AI-friendly formats
+# Voog Blog Articles - HTML to Markdown Converter
+# Extracts content from blog HTML files and converts to multiple AI-friendly formats
 
 set -e
 
@@ -17,60 +17,6 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
-
-# Section mapping function
-get_section_name() {
-    local dir_name="$1"
-    local language="$2"
-    
-    case "$language" in
-        "en")
-            case "$dir_name" in
-                "all-about-languages") echo "Languages" ;;
-                "contact") echo "Contact" ;;
-                "content-areas") echo "Content Areas" ;;
-                "creating-and-managing-forms") echo "Forms" ;;
-                "managing-your-blog") echo "Blog" ;;
-                "managing-your-content") echo "Content Management" ;;
-                "managing-your-website-pages") echo "Pages" ;;
-                "online-store") echo "Online Store" ;;
-                "seo") echo "SEO" ;;
-                "setting-up-your-account") echo "Account Setup" ;;
-                "stats-and-maintenance") echo "Stats & Maintenance" ;;
-                "video-tutorials") echo "Video Tutorials" ;;
-                "webinars") echo "Webinars" ;;
-                "your-pictures-and-files") echo "Media" ;;
-                "your-subscriptions") echo "Subscriptions" ;;
-                "your-website-addresses") echo "Domains" ;;
-                "your-websites-design") echo "Design" ;;
-                *) echo "$dir_name" ;;
-            esac
-            ;;
-        "et")
-            case "$dir_name" in
-                "blogi") echo "Blogi" ;;
-                "domeenid") echo "Domeenid" ;;
-                "e-pood") echo "E-pood" ;;
-                "keeled") echo "Keeled" ;;
-                "kontakt") echo "Kontakt" ;;
-                "konto-loomine") echo "Konto loomine" ;;
-                "kujundus") echo "Kujundus" ;;
-                "lehed") echo "Lehed" ;;
-                "pildid-ja-failid") echo "Pildid ja failid" ;;
-                "seo") echo "SEO" ;;
-                "sisu-haldamine") echo "Sisu haldamine" ;;
-                "sisualad") echo "Sisualad" ;;
-                "statistika-ja-saidi-haldamine") echo "Statistika ja saidi haldamine" ;;
-                "tellimus") echo "Tellimus" ;;
-                "veebiseminar") echo "Veebiseminar" ;;
-                "videojuhendid") echo "Videojuhendid" ;;
-                "vormid") echo "Vormid" ;;
-                *) echo "$dir_name" ;;
-            esac
-            ;;
-        *) echo "$dir_name" ;;
-    esac
-}
 
 # Helper functions
 log_info() {
@@ -89,69 +35,124 @@ log_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
 
+# Extract metadata from HTML
+extract_metadata() {
+    local html_file="$1"
+    local temp_file="$2"
+    
+    # Extract title
+    local title=$(grep -o '<title>[^<]*</title>' "$html_file" | sed 's/<title>\(.*\)<\/title>/\1/' | sed 's/ | Voog//')
+    
+    # Extract author
+    local author=$(grep -o '<meta[^>]*name="author"[^>]*content="[^"]*"' "$html_file" | sed 's/.*content="\([^"]*\)".*/\1/')
+    if [ -z "$author" ]; then
+        author=$(grep -o '<span[^>]*class="[^"]*author[^"]*"[^>]*>[^<]*</span>' "$html_file" | sed 's/<[^>]*>//g')
+    fi
+    if [ -z "$author" ]; then
+        author="Unknown"
+    fi
+    
+    # Extract publication date
+    local pub_date=$(grep -o '<meta[^>]*property="article:published_time"[^>]*content="[^"]*"' "$html_file" | sed 's/.*content="\([^"]*\)".*/\1/')
+    if [ -z "$pub_date" ]; then
+        pub_date=$(grep -o '<time[^>]*datetime="[^"]*"' "$html_file" | sed 's/.*datetime="\([^"]*\)".*/\1/')
+    fi
+    if [ -z "$pub_date" ]; then
+        pub_date=$(grep -o '<meta[^>]*name="date"[^>]*content="[^"]*"' "$html_file" | sed 's/.*content="\([^"]*\)".*/\1/')
+    fi
+    if [ -z "$pub_date" ]; then
+        pub_date="Unknown"
+    fi
+    
+    # Extract tags
+    local tags=$(grep -o '<meta[^>]*property="article:tag"[^>]*content="[^"]*"' "$html_file" | sed 's/.*content="\([^"]*\)".*/\1/' | tr '\n' ',' | sed 's/,$//')
+    if [ -z "$tags" ]; then
+        tags=$(grep -o '<a[^>]*class="[^"]*tag[^"]*"[^>]*>[^<]*</a>' "$html_file" | sed 's/<[^>]*>//g' | tr '\n' ',' | sed 's/,$//')
+    fi
+    if [ -z "$tags" ]; then
+        tags="None"
+    fi
+    
+    # Extract categories
+    local categories=$(grep -o '<meta[^>]*property="article:section"[^>]*content="[^"]*"' "$html_file" | sed 's/.*content="\([^"]*\)".*/\1/' | tr '\n' ',' | sed 's/,$//')
+    if [ -z "$categories" ]; then
+        categories=$(grep -o '<a[^>]*class="[^"]*category[^"]*"[^>]*>[^<]*</a>' "$html_file" | sed 's/<[^>]*>//g' | tr '\n' ',' | sed 's/,$//')
+    fi
+    if [ -z "$categories" ]; then
+        categories="Blog"
+    fi
+    
+    # Write metadata
+    echo "$title" > "$temp_file"
+    echo "$author" >> "$temp_file"
+    echo "$pub_date" >> "$temp_file"
+    echo "$tags" >> "$temp_file"
+    echo "$categories" >> "$temp_file"
+}
+
 # Clean HTML and extract content
 extract_content() {
     local html_file="$1"
     local temp_file="$2"
     
-    # Extract title
-    local title=$(grep -o '<title>[^<]*</title>' "$html_file" | sed 's/<title>\(.*\)<\/title>/\1/' | sed 's/ | Voog website builder//')
-    
     # Extract main content using multiple strategies
     local content=""
     
-    # Strategy 1: Look for ListingArticleContent div (most reliable)
-    # Extract everything between the opening and closing tags, handling nested divs
+    # Strategy 1: Look for article content div
     content=$(awk '
-        /<div class="ListingArticleContent">/ {
-            in_content = 1
-            div_depth = 1
-            next
-        }
-        in_content {
-            if ($0 ~ /<div[^>]*>/) {
-                div_depth++
-            }
-            if ($0 ~ /<\/div>/) {
-                div_depth--
-                if (div_depth == 0) {
-                    in_content = 0
-                    next
-                }
-            }
+        /<article[^>]*>/,/<\/article>/ {
             print
         }
     ' "$html_file")
     
-    # Strategy 2: Look for article tag
+    # Strategy 2: Look for main content area
     if [ -z "$content" ] || [ "$(echo "$content" | wc -w)" -lt 10 ]; then
-        content=$(awk '/<article/,/<\/article>/' "$html_file")
+        content=$(awk '
+            /<div[^>]*class="[^"]*content[^"]*">/,/<\/div>/ {
+                print
+            }
+        ' "$html_file")
     fi
     
-    # Strategy 3: Look for main content area with specific classes
+    # Strategy 3: Look for post content
     if [ -z "$content" ] || [ "$(echo "$content" | wc -w)" -lt 10 ]; then
-        content=$(awk '/<div[^>]*class="[^"]*content[^"]*">/,/<\/div>/' "$html_file")
+        content=$(awk '
+            /<div[^>]*class="[^"]*post[^"]*">/,/<\/div>/ {
+                print
+            }
+        ' "$html_file")
     fi
     
-    # Strategy 4: Look for body content, excluding navigation and footer
+    # Strategy 4: Look for entry content
     if [ -z "$content" ] || [ "$(echo "$content" | wc -w)" -lt 10 ]; then
-        content=$(awk '/<body/,/<\/body>/' "$html_file" | sed 's/<body[^>]*>//' | sed 's/<\/body>//' | sed '/<nav/,/<\/nav>/d' | sed '/<footer/,/<\/footer>/d' | sed '/<header/,/<\/header>/d')
+        content=$(awk '
+            /<div[^>]*class="[^"]*entry[^"]*">/,/<\/div>/ {
+                print
+            }
+        ' "$html_file")
     fi
     
-    # Strategy 5: If still no content, try a more aggressive approach
+    # Strategy 5: Look for main content, excluding navigation and footer
     if [ -z "$content" ] || [ "$(echo "$content" | wc -w)" -lt 10 ]; then
-        # Look for any div with content-like classes
-        content=$(awk '/<div[^>]*class="[^"]*[Aa]rticle[^"]*">/,/<\/div>/' "$html_file")
+        content=$(awk '
+            /<main[^>]*>/,/<\/main>/ {
+                print
+            }
+        ' "$html_file")
     fi
     
-    # Clean up HTML tags and formatting (simplified approach)
+    # Clean up HTML tags and formatting
     local cleaned_content=$(echo "$content" | \
         # Remove script and style tags and their content
         sed '/<script/,/<\/script>/d' | \
         sed '/<style/,/<\/style>/d' | \
-        # Remove picture and source tags (image containers)
-        sed '/<picture/,/<\/picture>/d' | \
-        sed '/<source/d' | \
+        # Remove navigation and footer
+        sed '/<nav/,/<\/nav>/d' | \
+        sed '/<footer/,/<\/footer>/d' | \
+        sed '/<header/,/<\/header>/d' | \
+        # Remove social sharing and related content
+        sed '/<div[^>]*class="[^"]*share[^"]*"/,/<\/div>/d' | \
+        sed '/<div[^>]*class="[^"]*related[^"]*"/,/<\/div>/d' | \
         # Remove all remaining HTML tags but preserve text
         sed 's/<[^>]*>//g' | \
         # Decode HTML entities
@@ -174,8 +175,7 @@ extract_content() {
         sed 's/^[[:space:]]*//' | \
         sed 's/[[:space:]]*$//')
     
-    # Write title and cleaned content
-    echo "$title" > "$temp_file"
+    # Append cleaned content to temp file
     echo "$cleaned_content" >> "$temp_file"
 }
 
@@ -184,20 +184,33 @@ convert_to_markdown() {
     local temp_file="$1"
     local markdown_file="$2"
     local original_url="$3"
-    local section="$4"
-    local language="$5"
+    local language="$4"
     
-    # Read title and content
+    # Read metadata and content
     local title=$(head -n 1 "$temp_file")
-    local content=$(tail -n +2 "$temp_file")
+    local author=$(head -n 2 "$temp_file" | tail -n 1)
+    local pub_date=$(head -n 3 "$temp_file" | tail -n 1)
+    local tags=$(head -n 4 "$temp_file" | tail -n 1)
+    local categories=$(head -n 5 "$temp_file" | tail -n 1)
+    local content=$(tail -n +6 "$temp_file")
+    
+    # Format publication date
+    local formatted_date="$pub_date"
+    if [[ "$pub_date" != "Unknown" ]] && [[ "$pub_date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2} ]]; then
+        formatted_date=$(date -d "$pub_date" +"%Y-%m-%d" 2>/dev/null || echo "$pub_date")
+    fi
     
     # Create Markdown file
     cat > "$markdown_file" << EOF
 # $title
 
-**Section:** $section  
+**Section:** Blog  
 **Language:** $language  
 **Original URL:** $original_url  
+**Author:** $author  
+**Published:** $formatted_date  
+**Tags:** $tags  
+**Categories:** $categories  
 **Extracted:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")
 
 ---
@@ -206,7 +219,7 @@ $content
 
 ---
 
-*This content was extracted from Voog's support documentation for AI-friendly processing.*
+*This content was extracted from Voog's blog for AI-friendly processing.*
 EOF
 }
 
@@ -237,36 +250,24 @@ process_files() {
     local processed_count=0
     local error_count=0
     
-    log_info "Processing $language files..."
+    log_info "Processing $language blog files..."
     
     # Find all HTML files in the language directory
     while IFS= read -r -d '' html_file; do
-        # Skip index files
-        if [[ "$html_file" == *"index.html" ]]; then
-            continue
-        fi
-        
         # Extract file path components
         local relative_path="${html_file#$language/}"
-        local dir_name=$(dirname "$relative_path")
         local base_name=$(basename "$relative_path" .html)
-        
-        # Create output directory
-        mkdir -p "$OUTPUT_DIR/$language/$dir_name"
-        
-        # Determine section name
-        local section_name=$(get_section_name "$dir_name" "$language")
         
         # Create temp file for extraction
         local temp_file="$TEMP_DIR/${language}_${base_name}.tmp"
         
-        # Extract content
-        if extract_content "$html_file" "$temp_file"; then
+        # Extract metadata and content
+        if extract_metadata "$html_file" "$temp_file" && extract_content "$html_file" "$temp_file"; then
             # Convert to Markdown
-            local markdown_file="$OUTPUT_DIR/$language/$dir_name/${base_name}.md"
-            local original_url="https://www.voog.com/support/$relative_path"
+            local markdown_file="$OUTPUT_DIR/$language/${base_name}.md"
+            local original_url="https://www.voog.com/${language == "en" ? "blog" : "blogi"}/$relative_path"
             
-            convert_to_markdown "$temp_file" "$markdown_file" "$original_url" "$section_name" "$language"
+            convert_to_markdown "$temp_file" "$markdown_file" "$original_url" "$language"
             
             ((processed_count++))
             log_success "Processed: $relative_path"
@@ -288,9 +289,9 @@ create_aggregated_files() {
     log_info "Creating aggregated files..."
     
     # All English content
-    log_info "Creating all-content-en.md..."
+    log_info "Creating all-blog-content-en.md..."
     {
-        echo "# Voog Support Guides - All English Content"
+        echo "# Voog Blog Articles - All English Content"
         echo ""
         echo "**Generated:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
         echo "**Total Articles:** $(find "$OUTPUT_DIR/en" -name "*.md" | wc -l)"
@@ -298,30 +299,21 @@ create_aggregated_files() {
         echo "---"
         echo ""
         
-        # Process each section
-        for section_dir in "$OUTPUT_DIR/en"/*/; do
-            if [ -d "$section_dir" ]; then
-                section_name=$(basename "$section_dir")
-                echo "## Section: $section_name"
+        # Process each article
+        for article_file in "$OUTPUT_DIR/en"/*.md; do
+            if [ -f "$article_file" ]; then
+                cat "$article_file"
                 echo ""
-                
-                # Process each article in the section
-                for article_file in "$section_dir"/*.md; do
-                    if [ -f "$article_file" ]; then
-                        cat "$article_file"
-                        echo ""
-                        echo "---"
-                        echo ""
-                    fi
-                done
+                echo "---"
+                echo ""
             fi
         done
-    } > "$OUTPUT_DIR/aggregated/all-content-en.md"
+    } > "$OUTPUT_DIR/aggregated/all-blog-content-en.md"
     
     # All Estonian content
-    log_info "Creating all-content-et.md..."
+    log_info "Creating all-blog-content-et.md..."
     {
-        echo "# Voog Support Guides - All Estonian Content"
+        echo "# Voog Blog Articles - All Estonian Content"
         echo ""
         echo "**Generated:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
         echo "**Total Articles:** $(find "$OUTPUT_DIR/et" -name "*.md" | wc -l)"
@@ -329,89 +321,16 @@ create_aggregated_files() {
         echo "---"
         echo ""
         
-        # Process each section
-        for section_dir in "$OUTPUT_DIR/et"/*/; do
-            if [ -d "$section_dir" ]; then
-                section_name=$(basename "$section_dir")
-                echo "## Section: $section_name"
+        # Process each article
+        for article_file in "$OUTPUT_DIR/et"/*.md; do
+            if [ -f "$article_file" ]; then
+                cat "$article_file"
                 echo ""
-                
-                # Process each article in the section
-                for article_file in "$section_dir"/*.md; do
-                    if [ -f "$article_file" ]; then
-                        cat "$article_file"
-                        echo ""
-                        echo "---"
-                        echo ""
-                    fi
-                done
-            fi
-        done
-    } > "$OUTPUT_DIR/aggregated/all-content-et.md"
-    
-    # Content by section (English)
-    log_info "Creating content-by-section-en.md..."
-    {
-        echo "# Voog Support Guides - English Content by Section"
-        echo ""
-        echo "**Generated:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
-        echo ""
-        
-        for section_dir in "$OUTPUT_DIR/en"/*/; do
-            if [ -d "$section_dir" ]; then
-                section_name=$(basename "$section_dir")
-                echo "## $section_name"
-                echo ""
-                
-                for article_file in "$section_dir"/*.md; do
-                    if [ -f "$article_file" ]; then
-                        # Extract just the title and content (skip metadata)
-                        local title=$(grep "^# " "$article_file" | head -1 | sed 's/^# //')
-                        local content=$(awk '/^---$/{p=!p;next}p' "$article_file" | head -n -3)
-                        
-                        echo "### $title"
-                        echo ""
-                        echo "$content"
-                        echo ""
-                    fi
-                done
                 echo "---"
                 echo ""
             fi
         done
-    } > "$OUTPUT_DIR/aggregated/content-by-section-en.md"
-    
-    # Content by section (Estonian)
-    log_info "Creating content-by-section-et.md..."
-    {
-        echo "# Voog Support Guides - Estonian Content by Section"
-        echo ""
-        echo "**Generated:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
-        echo ""
-        
-        for section_dir in "$OUTPUT_DIR/et"/*/; do
-            if [ -d "$section_dir" ]; then
-                section_name=$(basename "$section_dir")
-                echo "## $section_name"
-                echo ""
-                
-                for article_file in "$section_dir"/*.md; do
-                    if [ -f "$article_file" ]; then
-                        # Extract just the title and content (skip metadata)
-                        local title=$(grep "^# " "$article_file" | head -1 | sed 's/^# //')
-                        local content=$(awk '/^---$/{p=!p;next}p' "$article_file" | head -n -3)
-                        
-                        echo "### $title"
-                        echo ""
-                        echo "$content"
-                        echo ""
-                    fi
-                done
-                echo "---"
-                echo ""
-            fi
-        done
-    } > "$OUTPUT_DIR/aggregated/content-by-section-et.md"
+    } > "$OUTPUT_DIR/aggregated/all-blog-content-et.md"
     
     log_success "Aggregated files created"
 }
@@ -420,7 +339,7 @@ create_aggregated_files() {
 create_json_structure() {
     log_info "Creating JSON structure..."
     
-    # Create content index
+    # Create blog index
     {
         echo "{"
         echo "  \"metadata\": {"
@@ -429,85 +348,76 @@ create_json_structure() {
         echo "      \"en\": $(find "$OUTPUT_DIR/en" -name "*.md" | wc -l),"
         echo "      \"et\": $(find "$OUTPUT_DIR/et" -name "*.md" | wc -l)"
         echo "    },"
-        echo "    \"sections\": {"
-        echo "      \"en\": $(find "$OUTPUT_DIR/en" -maxdepth 1 -type d | wc -l),"
-        echo "      \"et\": $(find "$OUTPUT_DIR/et" -maxdepth 1 -type d | wc -l)"
-        echo "    }"
+        echo "    \"source\": \"Voog Blog Articles\""
         echo "  },"
         echo "  \"articles\": {"
         
         # Process English articles
         echo "    \"en\": {"
-        for section_dir in "$OUTPUT_DIR/en"/*/; do
-            if [ -d "$section_dir" ]; then
-                section_name=$(basename "$section_dir")
-                echo "      \"$section_name\": {"
-                
-                for article_file in "$section_dir"/*.md; do
-                    if [ -f "$article_file" ]; then
-                        local base_name=$(basename "$article_file" .md)
-                        local title=$(grep "^# " "$article_file" | head -1 | sed 's/^# //')
-                        local content=$(awk '/^---$/{p=!p;next}p' "$article_file" | head -n -3 | tr '\n' ' ' | sed 's/"/\\"/g')
-                        
-                        echo "        \"$base_name\": {"
-                        echo "          \"title\": \"$title\","
-                        echo "          \"content\": \"$content\","
-                        echo "          \"file\": \"$article_file\""
-                        echo "        }"
-                        
-                        # Add comma if not last article
-                        if [ "$(ls "$section_dir"/*.md | wc -l)" -gt 1 ]; then
-                            echo ","
-                        fi
-                    fi
-                done
-                echo "      }"
-                
-                # Add comma if not last section
-                if [ "$(find "$OUTPUT_DIR/en" -maxdepth 1 -type d | wc -l)" -gt 1 ]; then
+        local first_en=true
+        for article_file in "$OUTPUT_DIR/en"/*.md; do
+            if [ -f "$article_file" ]; then
+                if [ "$first_en" = true ]; then
+                    first_en=false
+                else
                     echo ","
                 fi
+                
+                local base_name=$(basename "$article_file" .md)
+                local title=$(grep "^# " "$article_file" | head -1 | sed 's/^# //')
+                local author=$(grep "**Author:**" "$article_file" | sed 's/.*\*\*Author:\*\* //')
+                local pub_date=$(grep "**Published:**" "$article_file" | sed 's/.*\*\*Published:\*\* //')
+                local tags=$(grep "**Tags:**" "$article_file" | sed 's/.*\*\*Tags:\*\* //')
+                local categories=$(grep "**Categories:**" "$article_file" | sed 's/.*\*\*Categories:\*\* //')
+                local content=$(awk '/^---$/{p=!p;next}p' "$article_file" | head -n -3 | tr '\n' ' ' | sed 's/"/\\"/g')
+                
+                echo "      \"$base_name\": {"
+                echo "        \"title\": \"$title\","
+                echo "        \"author\": \"$author\","
+                echo "        \"published\": \"$pub_date\","
+                echo "        \"tags\": \"$tags\","
+                echo "        \"categories\": \"$categories\","
+                echo "        \"content\": \"$content\","
+                echo "        \"file\": \"$article_file\""
+                echo "      }"
             fi
         done
         echo "    },"
         
         # Process Estonian articles
         echo "    \"et\": {"
-        for section_dir in "$OUTPUT_DIR/et"/*/; do
-            if [ -d "$section_dir" ]; then
-                section_name=$(basename "$section_dir")
-                echo "      \"$section_name\": {"
-                
-                for article_file in "$section_dir"/*.md; do
-                    if [ -f "$article_file" ]; then
-                        local base_name=$(basename "$article_file" .md)
-                        local title=$(grep "^# " "$article_file" | head -1 | sed 's/^# //')
-                        local content=$(awk '/^---$/{p=!p;next}p' "$article_file" | head -n -3 | tr '\n' ' ' | sed 's/"/\\"/g')
-                        
-                        echo "        \"$base_name\": {"
-                        echo "          \"title\": \"$title\","
-                        echo "          \"content\": \"$content\","
-                        echo "          \"file\": \"$article_file\""
-                        echo "        }"
-                        
-                        # Add comma if not last article
-                        if [ "$(ls "$section_dir"/*.md | wc -l)" -gt 1 ]; then
-                            echo ","
-                        fi
-                    fi
-                done
-                echo "      }"
-                
-                # Add comma if not last section
-                if [ "$(find "$OUTPUT_DIR/et" -maxdepth 1 -type d | wc -l)" -gt 1 ]; then
+        local first_et=true
+        for article_file in "$OUTPUT_DIR/et"/*.md; do
+            if [ -f "$article_file" ]; then
+                if [ "$first_et" = true ]; then
+                    first_et=false
+                else
                     echo ","
                 fi
+                
+                local base_name=$(basename "$article_file" .md)
+                local title=$(grep "^# " "$article_file" | head -1 | sed 's/^# //')
+                local author=$(grep "**Author:**" "$article_file" | sed 's/.*\*\*Author:\*\* //')
+                local pub_date=$(grep "**Published:**" "$article_file" | sed 's/.*\*\*Published:\*\* //')
+                local tags=$(grep "**Tags:**" "$article_file" | sed 's/.*\*\*Tags:\*\* //')
+                local categories=$(grep "**Categories:**" "$article_file" | sed 's/.*\*\*Categories:\*\* //')
+                local content=$(awk '/^---$/{p=!p;next}p' "$article_file" | head -n -3 | tr '\n' ' ' | sed 's/"/\\"/g')
+                
+                echo "      \"$base_name\": {"
+                echo "        \"title\": \"$title\","
+                echo "        \"author\": \"$author\","
+                echo "        \"published\": \"$pub_date\","
+                echo "        \"tags\": \"$tags\","
+                echo "        \"categories\": \"$categories\","
+                echo "        \"content\": \"$content\","
+                echo "        \"file\": \"$article_file\""
+                echo "      }"
             fi
         done
         echo "    }"
         echo "  }"
         echo "}"
-    } > "$JSON_DIR/content-index.json"
+    } > "$JSON_DIR/blog-index.json"
     
     log_success "JSON structure created"
 }
@@ -517,27 +427,19 @@ create_markdown_readme() {
     log_info "Creating README for markdown content..."
     
     cat > "$OUTPUT_DIR/README.md" << 'EOF'
-# Voog Support Guides - AI-Friendly Markdown Content
+# Voog Blog Articles - AI-Friendly Markdown Content
 
-This directory contains Voog support documentation converted to AI-friendly Markdown format.
+This directory contains Voog blog articles converted to AI-friendly Markdown format.
 
 ## Structure
 
 ```
 markdown-content/
-├── en/                          # English articles by section
-│   ├── all-about-languages/
-│   ├── managing-your-blog/
-│   └── ...
-├── et/                          # Estonian articles by section
-│   ├── keeled/
-│   ├── blogi/
-│   └── ...
+├── en/                          # English blog articles
+├── et/                          # Estonian blog articles
 ├── aggregated/                  # Combined content files
-│   ├── all-content-en.md       # All English content
-│   ├── all-content-et.md       # All Estonian content
-│   ├── content-by-section-en.md
-│   └── content-by-section-et.md
+│   ├── all-blog-content-en.md   # All English blog content
+│   └── all-blog-content-et.md   # All Estonian blog content
 └── README.md                    # This file
 ```
 
@@ -545,27 +447,27 @@ markdown-content/
 
 ### Individual Files
 - Use individual `.md` files for targeted analysis
-- Each file contains metadata (section, language, original URL)
+- Each file contains rich metadata (author, date, tags, categories)
 - Clean content without HTML markup
 
 ### Aggregated Files
-- `all-content-en.md` / `all-content-et.md`: Complete content for broad analysis
-- `content-by-section-en.md` / `content-by-section-et.md`: Organized by topic
+- `all-blog-content-en.md` / `all-blog-content-et.md`: Complete blog content for broad analysis
+- Useful for content strategy and marketing analysis
 
 ### JSON Structure
-- See `../json-content/content-index.json` for programmatic access
-- Machine-readable format with metadata
+- See `../json-content/blog-index.json` for programmatic access
+- Machine-readable format with full metadata
 
 ## Content Statistics
 
-- **English Articles**: [COUNT] across [SECTIONS] sections
-- **Estonian Articles**: [COUNT] across [SECTIONS] sections
+- **English Articles**: [COUNT]
+- **Estonian Articles**: [COUNT]
 - **Last Updated**: [DATE]
 
 ## AI-Friendly Features
 
 - Clean Markdown format
-- Preserved structure and metadata
+- Rich metadata (author, date, tags, categories)
 - Cross-language linking maintained
 - No HTML markup or navigation clutter
 - Consistent formatting across all files
@@ -582,12 +484,10 @@ EOF
     # Update statistics in README
     local en_count=$(find "$OUTPUT_DIR/en" -name "*.md" | wc -l)
     local et_count=$(find "$OUTPUT_DIR/et" -name "*.md" | wc -l)
-    local en_sections=$(find "$OUTPUT_DIR/en" -maxdepth 1 -type d | wc -l)
-    local et_sections=$(find "$OUTPUT_DIR/et" -maxdepth 1 -type d | wc -l)
     local current_date=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
     
-    sed -i.bak "s/\[COUNT\]/$en_count/g; s/\[SECTIONS\]/$en_sections/g; s/\[DATE\]/$current_date/g" "$OUTPUT_DIR/README.md"
-    sed -i.bak "s/Estonian Articles.*\[COUNT\]/Estonian Articles: $et_count across $et_sections sections/g" "$OUTPUT_DIR/README.md"
+    sed -i.bak "s/\[COUNT\]/$en_count/g; s/\[DATE\]/$current_date/g" "$OUTPUT_DIR/README.md"
+    sed -i.bak "s/Estonian Articles.*\[COUNT\]/Estonian Articles: $et_count/g" "$OUTPUT_DIR/README.md"
     rm -f "$OUTPUT_DIR/README.md.bak"
     
     log_success "README created"
@@ -595,7 +495,7 @@ EOF
 
 # Main execution
 main() {
-    log_info "Starting HTML to Markdown conversion..."
+    log_info "Starting HTML to Markdown conversion for blog articles..."
     
     # Check if source directories exist
     for dir in "${SOURCE_DIRS[@]}"; do
